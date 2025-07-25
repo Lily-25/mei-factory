@@ -1,0 +1,385 @@
+global:
+  indicator_signal_dict:
+    evaluate_continue_signal_falling_three_methods:
+      description: Similar to the Rising Three Methods but in a downtrend, with three
+        small bullish candles between two long bearish candles.Indicates that the
+        downtrend is likely to continue.
+      function_name: identify_falling_three_methods
+      parameter_set:
+        target: Falling_Three_Methods
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Falling_Three_Methods
+    evaluate_continue_signal_rectangle:
+      description: A horizontal price consolidation pattern, which typically occurs
+        after a strong trend.When the price breaks out of the rectangle, the trend
+        may continue.
+      function_name: identify_rectangle
+      parameter_set:
+        min_touches: 2
+        target: Rectangle
+        tolerance: 0.1
+        window: 5
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Rectangle
+    evaluate_continue_signal_rising_three_methods:
+      description: A five-candle pattern where three small bearish candles occur between
+        two long bullish candles.Indicates that the uptrend is likely to continue.
+      function_name: identify_rising_three_methods
+      parameter_set:
+        target: Rising_Three_Methods
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Rising_Three_Methods
+    evaluate_downtrend_signal_bearish_engulfing:
+      description: A small green candle followed by a large red candle that completely
+        engulfs the previous one. Suggests strong selling pressure and reversal to
+        the downside.
+      function_name: identify_bearish_engulfing
+      parameter_set:
+        target: Bearish_Engulfing
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Bearish_Engulfing
+    evaluate_downtrend_signal_dark_cloud_cover:
+      description: "A two-candle pattern where a green candle is followed by a red\
+        \ candle that opens abovethe previous candle\u2019s high and closes below\
+        \ its midpoint. Indicates a bearish reversal."
+      function_name: identify_dark_cloud_cover
+      parameter_set:
+        target: Dark_Cloud_Cover
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Dark_Cloud_Cover
+    evaluate_downtrend_signal_evening_star:
+      description: A three-candle pattern where the first candle is a long bullish
+        candle, followed by a small-bodied candle,and the third is a long bearish
+        candle. Signals a reversal from an uptrend to a downtrend.
+      function_name: identify_evening_star
+      parameter_set:
+        target: Evening_Star
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Evening_Star
+    evaluate_downtrend_signal_gravestone_doji:
+      description: A Doji with a long upper shadow and no lower shadow.Appears at
+        the top of an uptrend and indicates potential bearish reversal.
+      function_name: identify_gravestone_doji
+      parameter_set:
+        target: Gravestone_Doji
+        tolerance: 0.1
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Gravestone_Doji
+    evaluate_downtrend_signal_shooting_star:
+      description: A small body near the low of the candle with a long upper shadow.Appears
+        after an uptrend and signals a potential bearish reversal.
+      function_name: identify_shooting_star
+      parameter_set:
+        target: Shooting_Star
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Shooting_Star
+    evaluate_downtrend_signal_three_black_crows:
+      description: Three consecutive long red candles with each opening within the
+        body of the previous candle.Indicates strong bearish momentum.
+      function_name: identify_three_black_crows
+      parameter_set:
+        target: Three_Black_Crows
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Three_Black_Crows
+    evaluate_downtrend_signal_tweezer_top:
+      description: Two candles with equal lows, often following a downtrend. Indicates
+        potential reversal.
+      function_name: identify_tweezer_top
+      parameter_set:
+        target: Tweezer_Top
+        tolerance: 0.1
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Tweezer_Top
+    evaluate_fund_flow_ma_fork:
+      description: Compute the moving average line for main net fund flowin order
+        to find a positive or negative signals
+      function_name: calculate_ma_fork
+      parameter_set:
+        indicator_prefix: Fund
+        observation_item: FundFlowMNI
+        period_list:
+        - - 5
+          - 5
+        - - 10
+          - 5
+        - - 30
+          - 10
+        - - 60
+          - 10
+      validated_function: validate_ma_fork
+      validated_parameter_set:
+        indicator_prefix: Fund
+        observation_item: FundFlowMNI
+        period_list:
+        - - 5
+          - 5
+        - - 10
+          - 5
+        - - 30
+          - 10
+        - - 60
+          - 10
+        target: PriceCR
+    evaluate_price_kdj:
+      description: Compare the current closing value to the high-low range over the
+        past N days in order to find a positive or negative signals
+      function_name: calculate_kdj
+      parameter_set:
+        observation_item: Close
+        observation_item_h: High
+        observation_item_l: Low
+        period_m: 3
+        period_n: 9
+      validated_function: validate_kdj
+      validated_parameter_set:
+        observation_item: Close
+        observation_item_h: High
+        observation_item_l: Low
+        period_m: 3
+        period_n: 9
+        target: PriceCR
+        validated_period: 10
+    evaluate_price_ma_fork:
+      description: Compute the moving average line for pricein order to find a positive
+        or negative signals
+      function_name: calculate_ma_fork
+      parameter_set:
+        indicator_prefix: Price
+        observation_item: Close
+        period_list:
+        - - 5
+          - 5
+        - - 10
+          - 5
+        - - 30
+          - 10
+        - - 60
+          - 10
+      validated_function: validate_ma_fork
+      validated_parameter_set:
+        indicator_prefix: Price
+        observation_item: Close
+        period_list:
+        - - 5
+          - 5
+        - - 10
+          - 5
+        - - 30
+          - 10
+        - - 60
+          - 10
+        target: PriceCR
+    evaluate_price_macd:
+      description: Compute the Moving Average Convergence Divergence of pricein order
+        to find a positive or negative signals
+      function_name: calculate_ma_cd
+      parameter_set:
+        observation_item: Close
+        period_m: 26
+        period_n: 12
+        period_s: 9
+    evaluate_price_rsi:
+      description: Measure the speed and change of value movementsin order to find
+        a positive or negative signals
+      function_name: calculate_rsi
+      parameter_set:
+        observation_item: PriceCA
+        period_list:
+        - 5
+        - 10
+        - 20
+    evaluate_support_resistance_lines:
+      description: Compute the support and resistence lines in order to evaluate revenue
+        and risk of investment
+      function_name: calculate_support_resistance_lines
+      parameter_set:
+        indicator_prefix: Price
+        observation_item: Close
+        period_list:
+        - 30
+        - 60
+        - 120
+    evaluate_uptrend_signal_bullish_engulfing:
+      description: A small red candle followed by a large green candle that completely
+        engulfs the previous one.Suggests strong buying pressure and reversal to the
+        upside.
+      function_name: identify_bullish_engulfing
+      parameter_set:
+        target: Bullish_Engulfing
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Bullish_Engulfing
+    evaluate_uptrend_signal_hammer:
+      description: A Hammer often signals a potential bullish reversal after a downtrend,suggesting
+        that sellers were in control for most of the session,but buyers pushed the
+        price up before the close.
+      function_name: identify_hammer
+      parameter_set:
+        target: Hammer
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Hammer
+    evaluate_uptrend_signal_inverted_hammer:
+      description: A small body with a long upper shadow and little or no lower shadow.
+        Appears in a downtrend and can signal a reversal to the upside.
+      function_name: identify_inverted_hammer
+      parameter_set:
+        target: Inverted_Hammer
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Inverted_Hammer
+    evaluate_uptrend_signal_morning_doji_star:
+      description: Similar to the Morning Star, but the middle candle is a Doji (a
+        candle with an open and close at roughlythe same level). Stronger indication
+        of a reversal.
+      function_name: identify_morning_doji_star
+      parameter_set:
+        target: Morning_Doji_Star
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Morning_Doji_Star
+    evaluate_uptrend_signal_morning_star:
+      description: A three-candle pattern where the first candle is a long bearish
+        candle, followed by a small-bodied candle (either bullish or bearish), and
+        the third is a long bullish candle. A sign of a reversal from downtrend to
+        uptrend.
+      function_name: identify_morning_star
+      parameter_set:
+        target: Morning_Star
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Morning_Star
+    evaluate_uptrend_signal_piercing_line:
+      description: "A two-candle pattern where a red candle is followed by a green\
+        \ candle that opens below the previous candle\u2019s low and closes above\
+        \ its midpoint. Indicates bullish reversal."
+      function_name: identify_piercing_line
+      parameter_set:
+        target: Piercing_Line
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Piercing_Line
+    evaluate_uptrend_signal_three_white_soldiers:
+      description: Three consecutive long green candles with each opening within the
+        body of the previous candle.Indicates strong bullish momentum.
+      function_name: identify_three_white_soldiers
+      parameter_set:
+        target: Three_White_Soldiers
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Three_White_Soldiers
+    evaluate_uptrend_signal_tweezer_bottom:
+      description: Two candles with equal lows, often following a downtrend. Indicates
+        potential reversal.
+      function_name: identify_tweezer_bottom
+      parameter_set:
+        target: Tweezer_Bottom
+        tolerance: 0.1
+      validated_function: validate_trend
+      validated_parameter_set:
+        period_list:
+        - 5
+        - 10
+        signal_column: Tweezer_Bottom
+    evaluate_volume_ma_fork:
+      description: Compute the moving average line for main net fund flowin order
+        to find a positive or negative signals
+      function_name: calculate_ma_fork
+      parameter_set:
+        indicator_prefix: Volume
+        observation_item: Volume
+        period_list:
+        - - 5
+          - 5
+        - - 10
+          - 5
+        - - 30
+          - 10
+        - - 60
+          - 10
+      validated_function: validate_ma_fork
+      validated_parameter_set:
+        indicator_prefix: Volume
+        observation_item: Volume
+        period_list:
+        - - 5
+          - 5
+        - - 10
+          - 5
+        - - 30
+          - 10
+        - - 60
+          - 10
+        target: PriceCR
+    evaluate_volume_vr:
+      description: "Measure the relative strength of an asset\u2019s price movements,\
+        \ taking into account the volume of trades."
+      function_name: calculate_vr
+      parameter_set:
+        indicator_prefix: Volume
+        observation_item: Volume
+        period_list:
+        - 30
+        - 60
+        - 120

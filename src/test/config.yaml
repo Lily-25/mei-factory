@@ -1,0 +1,12 @@
+database:
+  host: remote_host
+  password: secret
+  port: 5432
+  user: admin
+features:
+  enable_feature_x: true
+  max_retries: 5
+logging:
+  level: INFO
+server:
+  host: 127.0.0.1

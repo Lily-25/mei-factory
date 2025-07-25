@@ -1,0 +1,220 @@
+from datetime import datetime
+import os, time
+from itertools import count
+
+import akshare as ak
+import pandas as pd
+from anyio import sleep
+from sqlalchemy.util import symbol
+
+from src.utils.customize_timer import last_day_of_last_season, absolute_timer
+from src.utils.operate_files import create_directory, walk_directory
+from src.stock.crawl_data_from_em import DataSourceEM as stock_etl_dataSourceEM
+from src.common.abstract_define import BasicManager
+
+
+class DataSourceEM(BasicManager):
+
+    def __init__(self):
+        super().__init__()
+        self.etf_name_dir = self.dir + 'etf_org_data/etf_name_em/'
+        self.stock_hold_detail_dir = self.dir + 'etf_org_data/stock_hold_detail/'
+        self.hist_price_dir = self.dir + 'etf_org_data/hist_price_em/'
+        self.hist_price_spot_dir = self.dir + 'etf_org_data/fund_etf_spot_em/'
+        self.hist_fund_flow_dir = self.dir + 'etf_org_data/hist_fund_flow_em/'
+
+        self.stock = stock_etl_dataSourceEM()
+
+        self.refresh_config()
+
+    def refresh_config(self):
+        self.basic_config_mgt.insert('etf.etf_name_dir',os.path.abspath(self.etf_name_dir) + '/')
+        self.basic_config_mgt.insert('etf.stock_hold_detail_dir',
+                                  os.path.abspath(self.stock_hold_detail_dir) + '/')
+        self.basic_config_mgt.insert('etf.hist_price_dir',
+                                  os.path.abspath(self.hist_price_dir) + '/')
+        self.basic_config_mgt.insert('etf.hist_fund_flow_dir',
+                                  os.path.abspath(self.hist_fund_flow_dir) + '/')
+        self.basic_config_mgt.insert('etf.hist_price_spot_dir',
+                                  os.path.abspath(self.hist_price_spot_dir) + '/')
+
+    def etf_basic_info(self):
+        """
+        获取etf清单
+        :return:
+        """
+        create_directory(self.etf_name_dir)
+
+        try:
+            fund_name_em_df = ak.fund_name_em()
+            fund_name_em_df.to_csv(self.etf_name_dir + "overview.csv", index=False)
+        except Exception as e:
+            print(f'Crawl etf overview Error:{e}')
+            pass
+
+    def filter_etf_via_prefix(self):
+        etf_overall_df = pd.read_csv(self.basic_config['etf']['etf_name_dir'] + 'overview.csv', dtype={'基金代码': 'string'})
+
+        etf_dict = {}
+        for prefix in self.etf_observation_pool_prefix:
+            etf_limited_set = etf_overall_df[etf_overall_df['基金代码'].str.startswith(prefix)]
+
+            etf_dict.update(dict(zip(list(etf_limited_set['基金代码']), list(etf_limited_set['基金简称']))))
+
+        self.refresh_observation_etf(etf_dict)
+
+    def crawl_etf_history_price(self, period="daily", start_date="20250101", adjust="hfq"):
+        """
+        根据ETF索引获取etf价格历史记录
+        """
+        create_directory(self.hist_price_dir)
+
+        end_date = datetime.now().strftime('%Y%m%d')
+
+        for symbol_index in self.etf_observation_pool_list:
+            try:
+                file_name = self.hist_price_dir + f'{symbol_index}.csv'
+
+                exist_df = pd.DataFrame()
+                if os.path.exists(file_name):
+                    exist_df = pd.read_csv(file_name, index_col=0)
+                    start_date = datetime.strptime(exist_df.index[-1], '%Y-%m-%d').strftime('%Y%m%d')
+
+                fund_etf_hist_em_df = ak.fund_etf_hist_em(symbol=symbol_index,
+                                                          period=period,
+                                                          start_date=start_date,
+                                                          end_date=end_date,
+                                                          adjust=adjust).set_index('日期')
+                fund_etf_hist_em_df = fund_etf_hist_em_df.loc[:,
+                                                 ~fund_etf_hist_em_df.columns.str.contains('^Unnamed')]
+
+                if not exist_df.empty:
+                    # unique the type of index
+                    fund_etf_hist_em_df = exist_df.iloc[:-1].combine_first(fund_etf_hist_em_df)
+
+                fund_etf_hist_em_df.to_csv(file_name)
+
+            except Exception as e:
+                print(f'Crawl {symbol_index} history data Error:{e}')
+                pass
+
+    def crawl_history_fund_flow(self):
+        """
+        根据etf获取etf主力资金流入情况
+        :return:
+        """
+
+        create_directory(self.hist_fund_flow_dir)
+
+        for symbol_index in self.etf_observation_pool_list:
+            try:
+                file_name = self.hist_fund_flow_dir + f'{symbol_index}.csv'
+                market = self.get_stock_market_abbreviation(symbol_index)
+                stock_individual_fund_flow_df = ak.stock_individual_fund_flow(stock=symbol_index,
+                                                                              market=market).set_index('日期')
+                stock_individual_fund_flow_df = stock_individual_fund_flow_df.loc[:,
+                                      ~stock_individual_fund_flow_df.columns.str.contains('^Unnamed')]
+
+                if os.path.exists(file_name):
+                    exist_df = pd.read_csv(file_name, index_col=0)
+                    exist_df.index = pd.to_datetime(exist_df.index)
+                    stock_individual_fund_flow_df.index = pd.to_datetime(stock_individual_fund_flow_df.index)
+
+                    stock_individual_fund_flow_df = pd.concat([
+                        exist_df.iloc[:-1],
+                        stock_individual_fund_flow_df
+                    ]).groupby(level=0).last()
+
+                stock_individual_fund_flow_df.to_csv(file_name)
+
+            except Exception as e:
+                print(e)
+                pass
+
+    def crawl_etf_stock_hold_detail(self):
+        """
+        抓去etf关联的股票信息
+        :return:
+        """
+        create_directory(self.stock_hold_detail_dir)
+
+        date = last_day_of_last_season(backward=1)
+        for symbol_index in self.etf_index_list:
+            try:
+                stock_report_fund_hold_df = ak.stock_report_fund_hold_detail(symbol=symbol_index,
+                                                                            date=date)
+                file_name = self.stock_hold_detail_dir + f'{symbol_index}.csv'
+                stock_report_fund_hold_df.to_csv(file_name, index=False)
+            except Exception as e:
+                print(f'Crawl {symbol_index} stock detail Error:{e}')
+                pass
+
+    def craw_relative_stock_history_data(self, file):
+        """
+        抓去ETF关联的股票的历史几个变化
+        :param file:
+        :return:
+        """
+        df = pd.read_csv(file)
+        end_date = datetime.now().strftime('%Y%m%d')
+        for symbol in df['股票代码']:
+            flag = self.get_stock_market_abbreviation(str(symbol))
+            self.stock.crawl_history_price_by_daily(symbol_index=f'{flag}{symbol}',
+                                                    start_date='20250101',
+                                                    end_date=end_date)
+
+    def crawl_realtime_data(self):
+        """
+        获取实时的ETF价格数据
+        :return:
+        """
+
+        path_dir = (self.hist_price_spot_dir
+                    + datetime.now().strftime('%y%m%d')) + '/'
+        create_directory(path_dir)
+
+        try:
+            fund_etf_spot_em_df = ak.fund_etf_spot_em()
+            fund_etf_spot_em_df.to_csv(path_dir
+                                       + datetime.now().strftime('%H%M')
+                                       + '.csv')
+        except Exception as e:
+            print(f'Crawl etf realtime data Error:{e}')
+            pass
+
+    def refresh_hist_data(self):
+
+        # 获取etf清单
+        self.etf_basic_info()
+
+        # 刷新观测的etf范围
+        self.filter_etf_via_prefix()
+
+        # 获取目标etf历史价格数据
+        self.crawl_etf_history_price()
+
+        # 获取目标etf历史资金流入情况
+        self.crawl_history_fund_flow()
+
+    def refresh_related_stock_etl_data(self):
+
+        # 获取关联股票信息
+        self.crawl_etf_stock_hold_detail()
+        walk_directory(self.stock_hold_detail_dir, self.craw_relative_stock_history_data)
+
+
+if __name__ == '__main__':
+
+    obj_etf = DataSourceEM()
+
+    obj_etf.refresh_hist_data()
+
+    # 抓取实时数据
+    # absolute_timer(1, obj_etf.crawl_realtime_data)
+
+    # 新浪获取etf数据
+    # ak.stock_zh_index_spot_sina() # 实时接口
+    # ak.fund_etf_hist_sina('sh512480') # 单指数历史数据
+    # ak.fund_etf_category_sina(symbol='ETF基金') # 全部指数的数据
+
+
