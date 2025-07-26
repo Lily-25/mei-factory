@@ -2,7 +2,7 @@ from abc import abstractmethod
 
 import pandas as pd
 
-from src.utils.manage_config import ConfigManager
+from src.StockAgent.utils.manage_config import ConfigManager
 import numpy as np
 from scipy.signal import argrelextrema
 
@@ -10,7 +10,7 @@ from scipy.signal import argrelextrema
 class BasicManager():
     def __init__(self):
 
-        self.dir = './dataset/'
+        self.dir = 'dataset/'
 
         self.etf_observation_dict = {
             '515790':'光伏ETF',

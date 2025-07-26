@@ -1,8 +1,8 @@
 import pandas as pd
 
-from src.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
-from src.common.statistics_indicator_tools import StatisticsIndicator
-from src.utils.operate_files import create_directory, walk_directory
+from src.StockAgent.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
+from src.StockAgent.common.statistics_indicator_tools import StatisticsIndicator
+from src.StockAgent.utils.operate_files import create_directory, walk_directory
 
 
 class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,StatisticsIndicator):
@@ -16,6 +16,7 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
             self.refresh_active_indicator(list(self.indicator_signal_dict.keys()))
 
         self.indicator_signal_dir = self.dir + 'stock_analysis/indicator_signal/'
+        self.recommend_stock_dir = self.dir + 'stock_recommendation/'
 
 
     def evaluate_statistics_indicator(self):
@@ -40,7 +41,7 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
 
         print(column_list)
 
-    def recommend_potential_stocks(self):
+    def recommend_low_cost_stocks(self):
         stock_df = pd.read_csv(self.indicator_signal_dir + 'overview.csv', dtype={'symbol': str})
 
         # rule1
@@ -49,12 +50,15 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
                                          | ((stock_df['PriceL2_Risk_exponent'] < 30)
                                             & stock_df['PriceL2_Fluctuation_window'] > 5))))
 
+        recommend_sectors_and_stocks_df = stock_df[stock_df['rule_1'] & stock_df['VolumePW30D']]
         stock_observation_dict = self.basic_config['stock']['stock_observation_dict']
 
-        # print(list(stock_df['symbol'].where(stock_df['rule_1'] & stock_df['VolumePW30D']).dropna()))
-        for symbol in list(stock_df['symbol'].where(stock_df['rule_1'] & stock_df['VolumePW30D']).dropna()):
+        for symbol in list(recommend_sectors_and_stocks_df['symbol'].dropna()):
             if symbol in stock_observation_dict.keys():
                 print(f'{symbol} : {stock_observation_dict[symbol]}')
+
+        create_directory(self.recommend_stock_dir)
+        recommend_sectors_and_stocks_df.to_csv(self.recommend_stock_dir + 'recommend_low_cost_stocks.csv', index=False)
 
 
 if __name__ == '__main__':

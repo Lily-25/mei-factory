@@ -1,15 +1,12 @@
 import pandas as pd
 import numpy as np
-import os
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.lines import Line2D
 import mplcursors
 from sympy.physics.control.control_plots import matplotlib
 
-from src.common.abstract_define import BasicManager
-from src.sector.model_data import IndicatorMonitor
-from src.utils.operate_files import get_latest_file
+from src.StockAgent.sector.model_data import IndicatorMonitor
 
 
 class DashBoard(IndicatorMonitor):

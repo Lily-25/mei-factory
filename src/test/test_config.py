@@ -1,7 +1,7 @@
-from src.utils.manage_config import ConfigManager
+from src.StockAgent.utils.manage_config import ConfigManager
 
 # Create a ConfigManager instance
-config_manager = ConfigManager("../config/basic_config.yaml")
+config_manager = ConfigManager("../StockAgent/config/basic_config.yaml")
 
 # Step 1: Load and print the original configuration
 print("Original Configuration:")

@@ -1,7 +1,6 @@
 import pandas as pd
 
-from src.common.abstract_indicator_tools import IndicatorTools
-from src.utils.operate_files import walk_directory
+from src.StockAgent.common.abstract_indicator_tools import IndicatorTools
 
 
 class BullishReversal(IndicatorTools):

@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import mplfinance as mpf
 
-from src.common.abstract_define import BasicManager
+from src.StockAgent.common.abstract_define import BasicManager
 
 
 class DashboardManager(BasicManager):

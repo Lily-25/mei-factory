@@ -1,16 +1,13 @@
 from datetime import datetime
-import os, time
-from itertools import count
+import os
 
 import akshare as ak
 import pandas as pd
-from anyio import sleep
-from sqlalchemy.util import symbol
 
-from src.utils.customize_timer import last_day_of_last_season, absolute_timer
-from src.utils.operate_files import create_directory, walk_directory
-from src.stock.crawl_data_from_em import DataSourceEM as stock_etl_dataSourceEM
-from src.common.abstract_define import BasicManager
+from src.StockAgent.utils.customize_timer import last_day_of_last_season
+from src.StockAgent.utils.operate_files import create_directory, walk_directory
+from src.StockAgent.stock.crawl_data_from_em import DataSourceEM as stock_etl_dataSourceEM
+from src.StockAgent.common.abstract_define import BasicManager
 
 
 class DataSourceEM(BasicManager):

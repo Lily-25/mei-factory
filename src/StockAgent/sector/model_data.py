@@ -1,8 +1,8 @@
 import pandas as pd
 
-from src.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
-from src.common.statistics_indicator_tools import StatisticsIndicator
-from src.utils.operate_files import walk_directory
+from src.StockAgent.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
+from src.StockAgent.common.statistics_indicator_tools import StatisticsIndicator
+from src.StockAgent.utils.operate_files import walk_directory
 
 
 class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,StatisticsIndicator):

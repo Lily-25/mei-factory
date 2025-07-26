@@ -1,14 +1,14 @@
-from src.sector.crawl_data_from_em import DataSourceEM as Sector_DataSourceEM
-from src.sector.prepare_data import DataFactory as Sector_ataFactory
-from src.sector.model_data import IndicatorMonitor as Sector_IndicatorMonitor
+from src.StockAgent.sector.crawl_data_from_em import DataSourceEM as Sector_DataSourceEM
+from src.StockAgent.sector.prepare_data import DataFactory as Sector_ataFactory
+from src.StockAgent.sector.model_data import IndicatorMonitor as Sector_IndicatorMonitor
 
-from src.etf.crawl_data_from_em import DataSourceEM as ETF_DataSourceEM
-from src.etf.prepare_data import DataFactory as ETF_DataFactory
-from src.etf.model_data import IndicatorMonitor as ETF_IndicatorMonitor
+from src.StockAgent.etf.crawl_data_from_em import DataSourceEM as ETF_DataSourceEM
+from src.StockAgent.etf.prepare_data import DataFactory as ETF_DataFactory
+from src.StockAgent.etf.model_data import IndicatorMonitor as ETF_IndicatorMonitor
 
-from src.stock.crawl_data_from_em import DataSourceEM as Stock_DataSourceEM
-from src.stock.prepare_data import DataFactory as Stock_DataFactory
-from src.stock.model_data import IndicatorMonitor as Stock_IndicatorMonitor
+from src.StockAgent.stock.crawl_data_from_em import DataSourceEM as Stock_DataSourceEM
+from src.StockAgent.stock.prepare_data import DataFactory as Stock_DataFactory
+from src.StockAgent.stock.model_data import IndicatorMonitor as Stock_IndicatorMonitor
 
 def discover_low_cost_products():
 
@@ -49,7 +49,7 @@ def discover_low_cost_products():
 
 def recommend_sectors_and_stocks():
     obj_stock = Stock_IndicatorMonitor([])
-    obj_stock.recommend_potential_stocks()
+    obj_stock.recommend_low_cost_stocks()
 
 if __name__ == '__main__':
     recommend_sectors_and_stocks()
