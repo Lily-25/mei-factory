@@ -1,16 +1,16 @@
 from datetime import datetime
-import os
+import os,time
 
 import akshare as ak
 import pandas as pd
 
-from src.StockAgent.utils.customize_timer import last_day_of_last_season
-from src.StockAgent.utils.operate_files import create_directory, walk_directory
+from src.StockAgent.common.abstract_schema_define import SchemaManager
+from src.StockAgent.utils.customize_timer import last_day_of_last_season, absolute_timer
+from src.StockAgent.utils.operate_files import create_directory, walk_directory, check_whether_files_created_today
 from src.StockAgent.stock.crawl_data_from_em import DataSourceEM as stock_etl_dataSourceEM
-from src.StockAgent.common.abstract_define import BasicManager
 
 
-class DataSourceEM(BasicManager):
+class DataSourceEM(SchemaManager):
 
     def __init__(self):
         super().__init__()
@@ -25,14 +25,14 @@ class DataSourceEM(BasicManager):
         self.refresh_config()
 
     def refresh_config(self):
-        self.basic_config_mgt.insert('etf.etf_name_dir',os.path.abspath(self.etf_name_dir) + '/')
-        self.basic_config_mgt.insert('etf.stock_hold_detail_dir',
+        self.schema_config_mgt.insert('etf.etf_name_dir',os.path.abspath(self.etf_name_dir) + '/')
+        self.schema_config_mgt.insert('etf.stock_hold_detail_dir',
                                   os.path.abspath(self.stock_hold_detail_dir) + '/')
-        self.basic_config_mgt.insert('etf.hist_price_dir',
+        self.schema_config_mgt.insert('etf.hist_price_dir',
                                   os.path.abspath(self.hist_price_dir) + '/')
-        self.basic_config_mgt.insert('etf.hist_fund_flow_dir',
+        self.schema_config_mgt.insert('etf.hist_fund_flow_dir',
                                   os.path.abspath(self.hist_fund_flow_dir) + '/')
-        self.basic_config_mgt.insert('etf.hist_price_spot_dir',
+        self.schema_config_mgt.insert('etf.hist_price_spot_dir',
                                   os.path.abspath(self.hist_price_spot_dir) + '/')
 
     def etf_basic_info(self):
@@ -49,16 +49,65 @@ class DataSourceEM(BasicManager):
             print(f'Crawl etf overview Error:{e}')
             pass
 
-    def filter_etf_via_prefix(self):
-        etf_overall_df = pd.read_csv(self.basic_config['etf']['etf_name_dir'] + 'overview.csv', dtype={'基金代码': 'string'})
+    def refresh_etf_observation_pool_by_popularity(self, max_etfs=50):
+        # get the top ETF sorted by volume periodically
+        etf_spot_em_df = ak.fund_etf_spot_em().sort_values(by='成交量', ascending=False).head(max_etfs)
+        self.etf_observation_pool_dict = (self.etf_focus_dict
+                                          | dict(zip(etf_spot_em_df['代码'], etf_spot_em_df['名称'])))
 
-        etf_dict = {}
-        for prefix in self.etf_observation_pool_prefix:
-            etf_limited_set = etf_overall_df[etf_overall_df['基金代码'].str.startswith(prefix)]
 
-            etf_dict.update(dict(zip(list(etf_limited_set['基金代码']), list(etf_limited_set['基金简称']))))
+    def refresh_etf_observation_pool_by_sector(self, max_etfs=50):
+        """
+        the method to query this information will trigger frequent visit to the finance platform
+        , bringing about that the platform rejects requires from this tool.
+        """
 
-        self.refresh_observation_etf(etf_dict)
+        # get the top ETF sorted by volume periodically
+        etf_spot_em_df = ak.fund_etf_spot_em().sort_values(by='成交量', ascending=False).head(max_etfs)
+
+        # get the stocks related to low-cost sectors
+        target_sector_df = pd.read_csv(self.schema_config['stock']['stock_low_cost_observation_pool_file'])
+
+        # set the time to get holding information
+        date = last_day_of_last_season(backward=1)
+
+        def get_sector_by_stock(stock_id):
+            if stock_id in target_sector_df['代码'].values:
+                return target_sector_df[stock_id]['sector']
+            else:
+                return 'Unknown'
+
+        etf_observation_pool_df = pd.DataFrame([])
+        for _, row in etf_spot_em_df.iterrows():
+            etf_code = row['代码']
+            etf_name = row['名称']
+
+            try:
+                holdings = ak.stock_report_fund_hold_detail(symbol=etf_code, date=date)
+                time.sleep(1)  # Be gentle to avoid blocking
+
+                # Step 2: Map stocks to sectors
+                holdings['sector'] = holdings['股票代码'].apply(get_sector_by_stock)
+                holdings['etf_code'] = etf_code
+                holdings['etf_name'] = etf_name
+
+                if etf_observation_pool_df.empty:
+                    etf_observation_pool_df = holdings
+                else:
+                    etf_observation_pool_df = pd.concat([etf_observation_pool_df, holdings])
+
+            except Exception as e:
+                print(e)
+                pass
+
+        etf_observation_pool_df = etf_observation_pool_df[etf_observation_pool_df['sector'] != 'Unknown']
+        if not etf_observation_pool_df.empty:
+            self.etf_observation_pool_dict = (self.etf_focus_dict
+                                          | dict(zip(etf_observation_pool_df['etf_code'], etf_observation_pool_df['etf_name'])))
+        else:
+            self.etf_observation_pool_dict = self.etf_focus_dict
+
+        print(self.etf_observation_pool_dict)
 
     def crawl_etf_history_price(self, period="daily", start_date="20250101", adjust="hfq"):
         """
@@ -68,9 +117,13 @@ class DataSourceEM(BasicManager):
 
         end_date = datetime.now().strftime('%Y%m%d')
 
-        for symbol_index in self.etf_observation_pool_list:
+        for symbol_index in self.etf_observation_pool_dict.keys():
             try:
                 file_name = self.hist_price_dir + f'{symbol_index}.csv'
+
+                # this action just do onetime per day
+                if check_whether_files_created_today(file_name):
+                    continue
 
                 exist_df = pd.DataFrame()
                 if os.path.exists(file_name):
@@ -103,9 +156,15 @@ class DataSourceEM(BasicManager):
 
         create_directory(self.hist_fund_flow_dir)
 
-        for symbol_index in self.etf_observation_pool_list:
+        for symbol_index in self.etf_observation_pool_dict.keys():
             try:
                 file_name = self.hist_fund_flow_dir + f'{symbol_index}.csv'
+
+                # this action just do onetime per day
+                if check_whether_files_created_today(file_name):
+                    print(f'crawl_history_fund_flow {file_name} has been updated today')
+                    continue
+
                 market = self.get_stock_market_abbreviation(symbol_index)
                 stock_individual_fund_flow_df = ak.stock_individual_fund_flow(stock=symbol_index,
                                                                               market=market).set_index('日期')
@@ -136,11 +195,17 @@ class DataSourceEM(BasicManager):
         create_directory(self.stock_hold_detail_dir)
 
         date = last_day_of_last_season(backward=1)
-        for symbol_index in self.etf_index_list:
+        for symbol_index in self.etf_focus_dict.keys():
             try:
+                file_name = self.stock_hold_detail_dir + f'{symbol_index}.csv'
+
+                # this action just do onetime per day
+                if check_whether_files_created_today(file_name):
+                    print(f'crawl_etf_stock_hold_detail {file_name} has been updated today')
+                    continue
+
                 stock_report_fund_hold_df = ak.stock_report_fund_hold_detail(symbol=symbol_index,
                                                                             date=date)
-                file_name = self.stock_hold_detail_dir + f'{symbol_index}.csv'
                 stock_report_fund_hold_df.to_csv(file_name, index=False)
             except Exception as e:
                 print(f'Crawl {symbol_index} stock detail Error:{e}')
@@ -166,6 +231,8 @@ class DataSourceEM(BasicManager):
         :return:
         """
 
+        print(f"enter crawl_realtime_data at {datetime.now().strftime('%y%m%d %h%m')}")
+
         path_dir = (self.hist_price_spot_dir
                     + datetime.now().strftime('%y%m%d')) + '/'
         create_directory(path_dir)
@@ -181,11 +248,8 @@ class DataSourceEM(BasicManager):
 
     def refresh_hist_data(self):
 
-        # 获取etf清单
-        self.etf_basic_info()
-
         # 刷新观测的etf范围
-        self.filter_etf_via_prefix()
+        self.refresh_etf_observation_pool_by_popularity()
 
         # 获取目标etf历史价格数据
         self.crawl_etf_history_price()
@@ -204,10 +268,8 @@ if __name__ == '__main__':
 
     obj_etf = DataSourceEM()
 
-    obj_etf.refresh_hist_data()
-
     # 抓取实时数据
-    # absolute_timer(1, obj_etf.crawl_realtime_data)
+    absolute_timer(5, obj_etf.crawl_realtime_data)
 
     # 新浪获取etf数据
     # ak.stock_zh_index_spot_sina() # 实时接口

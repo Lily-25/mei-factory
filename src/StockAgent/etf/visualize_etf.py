@@ -2,10 +2,10 @@ import os
 import pandas as pd
 import mplfinance as mpf
 
-from src.StockAgent.common.abstract_define import BasicManager
+from src.StockAgent.common.abstract_schema_define import SchemaManager
 
 
-class DashboardManager(BasicManager):
+class DashboardManager(SchemaManager):
     def __init__(self):
         super().__init__()
         self.dashboard_dir = self.dir + 'dashboard/'

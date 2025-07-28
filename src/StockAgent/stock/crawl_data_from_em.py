@@ -4,23 +4,26 @@ from datetime import datetime
 import akshare as ak
 import pandas as pd
 
-from src.StockAgent.utils.operate_files import create_directory
-from src.StockAgent.common.abstract_define import BasicManager
+from src.StockAgent.common.abstract_schema_define import SchemaManager
+from src.StockAgent.utils.operate_files import create_directory, check_whether_files_created_today
 
 
-class DataSourceEM(BasicManager):
+class DataSourceEM(SchemaManager):
 
     def __init__(self):
         super().__init__()
+        self.stock_low_cost_observation_pool_file = self.dir + 'stock_org_data/stock_low_cost_observation_pool.csv'
         self.hist_price_dir = self.dir + 'stock_org_data/hist_price_em/'
         self.hist_fund_flow_dir = self.dir + 'stock_org_data/hist_fund_flow_em/'
 
         self.refresh_config()
 
     def refresh_config(self):
-        self.basic_config_mgt.insert('stock.hist_price_dir',os.path.abspath(self.hist_price_dir) + '/')
-        self.basic_config_mgt.insert('stock.hist_fund_flow_dir',
+        self.schema_config_mgt.insert('stock.hist_price_dir',os.path.abspath(self.hist_price_dir) + '/')
+        self.schema_config_mgt.insert('stock.hist_fund_flow_dir',
                                   os.path.abspath(self.hist_fund_flow_dir) + '/')
+        self.schema_config_mgt.insert('stock.stock_low_cost_observation_pool_file',
+                                  os.path.abspath(self.stock_low_cost_observation_pool_file))
 
 
     def crawl_history_price_by_daily(self, symbol_index):
@@ -37,6 +40,11 @@ class DataSourceEM(BasicManager):
             end_date = datetime.now().strftime('%Y%m%d')
 
             file_name = self.hist_price_dir + symbol_index + '.csv'
+
+            # this action just do onetime per day
+            if check_whether_files_created_today(file_name):
+                print(f'crawl_history_price_by_daily {file_name} has been updated today')
+                return
 
             exist_df = pd.DataFrame()
             if os.path.exists(file_name):
@@ -60,13 +68,15 @@ class DataSourceEM(BasicManager):
             stock_zh_a_daily_df.to_csv(file_name)
 
         except Exception as e:
-            print(e)
+
+            print(f'crawl_history_price_by_daily report an Exception: {e}')
+
             pass
 
     def batch_crawl_history_price_by_daily(self):
 
-        for symbol_index in self.stock_observation_dict.keys():
-            print(f'{symbol_index} : {self.stock_observation_dict[symbol_index]}')
+        for symbol_index in self.stock_observation_pool_dict.keys():
+            print(f'{symbol_index} : {self.stock_observation_pool_dict[symbol_index]}')
             self.crawl_history_price_by_daily(symbol_index)
 
 
@@ -82,37 +92,49 @@ class DataSourceEM(BasicManager):
             stock_zh_a_minute_df.to_csv(self.dir +
                                             f'stock_zh_a_minute_{datetime.now()}.csv')
 
-        except:
+        except Exception as e:
+            print(f'crawl_history_data_by_min report an Exception: {e}')
             pass
 
-    def crawl_history_fund_flow(self):
+    def crawl_history_fund_flow(self, symbol_index):
+
+        try:
+            file_name = self.hist_fund_flow_dir + f'{symbol_index}.csv'
+
+            # this action just do onetime per day
+            if check_whether_files_created_today(file_name):
+                print(f'crawl_history_fund_flow {file_name} has been updated today')
+                return
+
+            market = self.get_stock_market_abbreviation(symbol_index)
+            stock_individual_fund_flow_df = ak.stock_individual_fund_flow(stock=symbol_index,
+                                                                          market=market).set_index('日期')
+            stock_individual_fund_flow_df = stock_individual_fund_flow_df.loc[:,
+                                            ~stock_individual_fund_flow_df.columns.str.contains('^Unnamed')]
+
+            if os.path.exists(file_name):
+                exist_df = pd.read_csv(file_name, index_col=0)
+                exist_df.index = pd.to_datetime(exist_df.index)
+                stock_individual_fund_flow_df.index = pd.to_datetime(stock_individual_fund_flow_df.index)
+
+                stock_individual_fund_flow_df = pd.concat([
+                    exist_df.iloc[:-1],
+                    stock_individual_fund_flow_df
+                ]).groupby(level=0).last()
+
+            stock_individual_fund_flow_df.to_csv(file_name)
+
+        except Exception as e:
+            print(f'crawl_history_fund_flow report an Exception: {e}')
+            pass
+
+    def batch_crawl_history_fund_flow(self):
 
         create_directory(self.hist_fund_flow_dir)
 
-        for symbol_index in self.stock_observation_dict.keys():
-            try:
-                file_name = self.hist_fund_flow_dir + f'{symbol_index}.csv'
-                market = self.get_stock_market_abbreviation(symbol_index)
-                stock_individual_fund_flow_df = ak.stock_individual_fund_flow(stock=symbol_index,
-                                                                              market=market).set_index('日期')
-                stock_individual_fund_flow_df = stock_individual_fund_flow_df.loc[:,
-                                      ~stock_individual_fund_flow_df.columns.str.contains('^Unnamed')]
-
-                if os.path.exists(file_name):
-                    exist_df = pd.read_csv(file_name, index_col=0)
-                    exist_df.index = pd.to_datetime(exist_df.index)
-                    stock_individual_fund_flow_df.index = pd.to_datetime(stock_individual_fund_flow_df.index)
-
-                    stock_individual_fund_flow_df = pd.concat([
-                        exist_df.iloc[:-1],
-                        stock_individual_fund_flow_df
-                    ]).groupby(level=0).last()
-
-                stock_individual_fund_flow_df.to_csv(file_name)
-
-            except Exception as e:
-                print(e)
-                pass
+        for symbol_index in self.stock_observation_pool_dict.keys():
+            print(f'{symbol_index} : {self.stock_observation_pool_dict[symbol_index]}')
+            self.crawl_history_fund_flow(symbol_index)
 
 
     def crawl_realtime_data(self):
@@ -121,19 +143,22 @@ class DataSourceEM(BasicManager):
             stock_zh_a_spot_em_df.to_csv(self.dir + f'stock_zh_a_spot_em_'
                                        + datetime.now().strftime('%y-%m-%d-%H-%M')
                                        + '.csv')
-        except:
+        except Exception as e:
+            print(f'crawl_realtime_data report an Exception: {e}')
             pass
 
-    def refresh_stock_raw_data(self):
+    def refresh_stock_holding_data(self):
 
         """
         According to the stock list that I hold to refresh the raw data
         :return:
         """
+        self.stock_observation_pool_dict = self.stock_focus_dict
+
+        self.schema_config_mgt.insert("stock.stock_observation_pool_dict", self.stock_observation_pool_dict)
 
         self.batch_crawl_history_price_by_daily()
-        self.crawl_history_fund_flow()
-
+        self.batch_crawl_history_fund_flow()
 
     def refresh_stock_observation_pool(self):
 
@@ -144,22 +169,25 @@ class DataSourceEM(BasicManager):
         """
 
         df = pd.DataFrame([])
-        for symbol in self.basic_config['sector']['low_cost_board_list']:
+        for symbol in self.schema_config['sector']['low_cost_board_list']:
             if df.empty:
                 df = ak.stock_board_industry_cons_em(symbol=symbol)
+                df['sector'] = symbol
             else:
-                df = pd.concat([df, ak.stock_board_industry_cons_em(symbol=symbol)])
+                df_extend = ak.stock_board_industry_cons_em(symbol=symbol)
+                df_extend['sector'] = symbol
+                df = pd.concat([df, df_extend])
 
         create_directory(self.dir + 'stock_org_data/')
-        df.to_csv(self.dir + 'stock_org_data/stock_pool.csv', index=False)
+        df.to_csv(self.stock_low_cost_observation_pool_file, index=False)
 
-        self.stock_observation_dict = self.stock_observation_dict | dict(zip(df['代码'], df['名称']))
+        self.stock_observation_pool_dict = self.stock_focus_dict | dict(zip(df['代码'], df['名称']))
 
-        self.basic_config_mgt.insert("stock.stock_observation_dict", self.stock_observation_dict)
+        # self.schema_config_mgt.insert("stock.stock_observation_pool_dict", self.stock_observation_pool_dict)
 
         self.batch_crawl_history_price_by_daily()
 
-        self.crawl_history_fund_flow()
+        self.batch_crawl_history_fund_flow()
 
 if __name__ == '__main__':
     obj_stock = DataSourceEM()

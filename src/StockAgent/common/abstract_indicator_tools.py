@@ -1,13 +1,12 @@
 import pandas as pd
-
 import os
 
-from src.StockAgent.common.abstract_define import BasicManager
+from src.StockAgent.common.abstract_schema_define import SchemaManager
 from src.StockAgent.utils.manage_config import ConfigManager
 from src.StockAgent.utils.operate_files import create_directory
 
 
-class IndicatorTools(BasicManager):
+class IndicatorTools(SchemaManager):
 
     def __init__(self):
 
@@ -19,7 +18,7 @@ class IndicatorTools(BasicManager):
         self.indicator_signal_dict = self.indicator_config['global']['indicator_signal_dict']
 
         # Store analytical result
-        self.indicator_signal_dir = self.dir + 'analysis/indicator_signal/'
+        self.indicator_signal_dir = self.dir + 'sector_analysis/indicator_signal/'
 
         self.refresh_config()
 
@@ -32,7 +31,7 @@ class IndicatorTools(BasicManager):
 
         self.indicator_config_mgt.insert('global.indicator_signal_dict',
                                      self.indicator_signal_dict)
-        self.basic_config_mgt.insert('global.indicator_signal_dir',
+        self.schema_config_mgt.insert('global.indicator_signal_dir',
                                      self.indicator_signal_dir)
 
     def get_indicator_dict(self, class_name):
@@ -72,7 +71,7 @@ class IndicatorTools(BasicManager):
 
         return validated_df, summary_dict
 
-    def evaluate_single_project(self, filename):
+    def evaluate_single_project(self, filename, validated_flag = True):
 
         df = pd.read_csv(filename, index_col=0)
 
@@ -89,7 +88,7 @@ class IndicatorTools(BasicManager):
                         (getattr(self, self.active_indicator_dict[item]['function_name'])(df,
                                                 **self.active_indicator_dict[item]['parameter_set']))
 
-                if 'validated_function' in self.active_indicator_dict[item]:
+                if 'validated_function' in self.active_indicator_dict[item] and validated_flag:
                     validated_df, summary_dict = (getattr(self, self.active_indicator_dict[item]['validated_function'])(df,
                                                 **self.active_indicator_dict[item]['validated_parameter_set']))
 

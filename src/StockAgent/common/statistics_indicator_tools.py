@@ -3,8 +3,8 @@ import numpy as np
 import bisect
 
 from pandas.core.interchange.dataframe_protocol import DataFrame
+from scipy.signal import argrelextrema
 
-from src.StockAgent.common.abstract_define import BasicManager
 from src.StockAgent.common.abstract_indicator_tools import IndicatorTools
 from src.StockAgent.utils.operate_files import create_directory
 
@@ -30,7 +30,7 @@ class StatisticsIndicator(IndicatorTools):
             Parameters:
             ----------
             df : pd.DataFrame
-                Input DataFrame that must include a 'close' column, and optionally others like 'high' and 'low' if used for analysis.
+                Input DataFrame that must include a 'close' column, and optionally others like 'high' and 'low' if used for sector_analysis.
 
             Returns:
             -------
@@ -84,7 +84,7 @@ class StatisticsIndicator(IndicatorTools):
 
         # Identify support line and pressure line according to extreme points
         thread = min(period_list[-1], len(df)-1)
-        _,_,ep_df = BasicManager.discover_extreme_points(df[-thread:][observation_item].to_numpy())
+        _,_,ep_df = StatisticsIndicator.discover_extreme_points(df[-thread:][observation_item].to_numpy())
         range_line[f'{indicator_prefix}Top_ep'] = max(ep_df['top'])
         range_line[f'{indicator_prefix}Bottom_ep'] = min(ep_df['bottom'])
 
@@ -129,6 +129,13 @@ class StatisticsIndicator(IndicatorTools):
                  / range_line[f'{indicator_prefix}L2_bottom']) * 100)
 
         return df, range_line
+
+    @staticmethod
+    def validate_support_resistance_lines(df:pd.DataFrame,
+                                          observation_item,
+                                          indicator_prefix,
+                                          period_list):
+        return
 
     @staticmethod
     def calculate_ma_fork(df:DataFrame,
@@ -227,7 +234,7 @@ class StatisticsIndicator(IndicatorTools):
     @staticmethod
     def calculate_ma_cd(df:pd.DataFrame, observation_item, period_n, period_m, period_s):
         """
-        The Moving Average Convergence Divergence (MACD) is a widely used technical analysis indicator that helps
+        The Moving Average Convergence Divergence (MACD) is a widely used technical sector_analysis indicator that helps
         traders identify trends in stock prices, commodities, or other financial assets. It's calculated by taking
         the difference between two exponential moving averages (EMAs) of a security’s price:
 
@@ -367,7 +374,7 @@ class StatisticsIndicator(IndicatorTools):
     @staticmethod
     def calculate_rsi(df:pd.DataFrame, observation_item, period_list=[]):
         """
-        The Relative Strength Index (RSI) is a popular momentum oscillator used in technical analysis
+        The Relative Strength Index (RSI) is a popular momentum oscillator used in technical sector_analysis
         to measure the speed and change of price movements. It is typically used to identify overbought
         or oversold conditions in a market.
 
@@ -439,9 +446,9 @@ class StatisticsIndicator(IndicatorTools):
 
         intern = 20
 
-        max1, min1, _ = df.discover_extreme_points(df.tail(intern)['FundFlowMNI5DMA'].to_numpy())
-        max2, min2, _ = df.discover_extreme_points(df.tail(intern)['FundFlowMNI'].to_numpy())
-        max3, min3, _= df.discover_extreme_points(df.tail(intern)['PriceCR'].to_numpy())
+        max1, min1, _ = StatisticsIndicator.discover_extreme_points(df.tail(intern)['FundFlowMNI5DMA'].to_numpy())
+        max2, min2, _ = StatisticsIndicator.discover_extreme_points(df.tail(intern)['FundFlowMNI'].to_numpy())
+        max3, min3, _= StatisticsIndicator.discover_extreme_points(df.tail(intern)['PriceCR'].to_numpy())
 
         x = mdates.date2num(df.tail(intern)['Date'])
         y1 = df.tail(intern)['FundFlowMNI5DMA'].to_numpy()
@@ -548,6 +555,24 @@ class StatisticsIndicator(IndicatorTools):
         plt.tight_layout()
         plt.show()
 
+    @staticmethod
+    def discover_extreme_points(data, fix_type='avg'):
+        if type(data) != np.ndarray:
+            return None, None, None
+
+        d_len = len(data)
+        if fix_type=='zero':
+            empty_data = [[0.0,0.0] for i in range(d_len)]
+        else:
+            avg = sum(data) / d_len
+            empty_data = [[avg, avg] for i in range(d_len)]
+
+        ep_df = pd.DataFrame(empty_data, columns=['top','bottom'])
+        max_idx = argrelextrema(data, np.greater)[0]
+        ep_df.loc[max_idx, 'top'] = data[max_idx]
+        min_idx = argrelextrema(data, np.less)[0]
+        ep_df.loc[min_idx, 'bottom'] = data[min_idx]
+        return max_idx, min_idx, ep_df
 
 if __name__ == '__main__':
     obj = StatisticsIndicator()

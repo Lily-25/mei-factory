@@ -2,18 +2,18 @@ import os
 
 import pandas as pd
 
-from src.StockAgent.common.abstract_define import BasicManager
+from src.StockAgent.common.abstract_schema_define import SchemaManager
 from src.StockAgent.utils.operate_files import walk_directory, create_directory
 
 
-class DataFactory(BasicManager):
+class DataFactory(SchemaManager):
     def __init__(self):
         super().__init__()
         self.price_and_fund_merger_dir = self.dir + 'etf_etl_data/price_and_fund_merger/'
         self.refresh_config()
 
     def refresh_config(self):
-        self.basic_config_mgt.insert('etf.price_and_fund_merger_dir',
+        self.schema_config_mgt.insert('etf.price_and_fund_merger_dir',
                                      os.path.abspath(self.price_and_fund_merger_dir) + '/')
 
     def align_price_and_fund_flow(self, history_price_file):
@@ -21,7 +21,7 @@ class DataFactory(BasicManager):
             return
 
         filename = os.path.basename(history_price_file)
-        history_fund_flow_file = (self.basic_config['etf']['hist_fund_flow_dir']
+        history_fund_flow_file = (self.schema_config['etf']['hist_fund_flow_dir']
                                          + filename)
 
         if not os.path.exists(history_fund_flow_file):
@@ -59,7 +59,7 @@ class DataFactory(BasicManager):
     def batch_align_price_and_fund_flow(self):
         create_directory(self.price_and_fund_merger_dir)
 
-        walk_directory(self.basic_config['etf']['hist_price_dir'], self.align_price_and_fund_flow)
+        walk_directory(self.schema_config['etf']['hist_price_dir'], self.align_price_and_fund_flow)
 
 
 if __name__ == '__main__':

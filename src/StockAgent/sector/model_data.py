@@ -19,7 +19,7 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
 
     def evaluate_statistics_indicator(self):
 
-        walk_directory(self.basic_config['sector']['price_and_fund_merger_dir'], self.evaluate_single_project)
+        walk_directory(self.schema_config['sector']['price_and_fund_merger_dir'], self.evaluate_single_project)
 
         self.indicator_signal_df.to_csv(self.indicator_signal_dir + 'overview.csv')
 
@@ -45,7 +45,7 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
                                  | ((board_df['PriceL2_Risk_exponent'] < 30)
                                  & board_df['PriceL2_Fluctuation_window'] > 5))))
 
-        self.basic_config_mgt.insert('sector.low_cost_board_list', list(board_df['symbol'].where(board_df['rule_1']
+        self.schema_config_mgt.insert('sector.low_cost_board_list', list(board_df['symbol'].where(board_df['rule_1']
                                                             & board_df['VolumePW30D'] ).dropna()))
 
         print(list(board_df['symbol'].where(board_df['rule_1'] & board_df['VolumePW30D'] ).dropna()))

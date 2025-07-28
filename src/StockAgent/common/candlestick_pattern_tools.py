@@ -555,7 +555,7 @@ class ContinuationTrend(IndicatorTools):
     def identify_rectangle(df:pd.DataFrame, target, tolerance, window, min_touches):
 
         """
-        The Rectangle pattern in technical analysis is a continuation or reversal pattern formed
+        The Rectangle pattern in technical sector_analysis is a continuation or reversal pattern formed
         when price moves sideways between parallel support and resistance levels,
         creating a “box” or “rectangle” shape on the chart. It reflects a period of consolidation
         where bulls and bears are in balance before price eventually breaks out or breaks down.

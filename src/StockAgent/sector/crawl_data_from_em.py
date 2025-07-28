@@ -4,11 +4,11 @@ from datetime import datetime
 import akshare as ak
 import pandas as pd
 
-from src.StockAgent.common.abstract_define import BasicManager
-from src.StockAgent.utils.operate_files import create_directory
+from src.StockAgent.common.abstract_schema_define import SchemaManager
+from src.StockAgent.utils.operate_files import create_directory, check_whether_files_created_today
 
 
-class DataSourceEM(BasicManager):
+class DataSourceEM(SchemaManager):
     def __init__(self):
         super().__init__()
         self.sector_board_info_dir = self.dir + 'sector_org_data/sector_board_info/'
@@ -17,10 +17,10 @@ class DataSourceEM(BasicManager):
         self.refresh_config()
 
     def refresh_config(self):
-        self.basic_config_mgt.insert('sector.sector_board_info_dir',os.path.abspath(self.sector_board_info_dir) + '/')
-        self.basic_config_mgt.insert('sector.hist_price_dir',
+        self.schema_config_mgt.insert('sector.sector_board_info_dir',os.path.abspath(self.sector_board_info_dir) + '/')
+        self.schema_config_mgt.insert('sector.hist_price_dir',
                                   os.path.abspath(self.history_price_dir) + '/')
-        self.basic_config_mgt.insert('sector.history_fund_flow_dir',
+        self.schema_config_mgt.insert('sector.history_fund_flow_dir',
                                   os.path.abspath(self.history_fund_flow_dir) + '/')
         return
 
@@ -45,12 +45,19 @@ class DataSourceEM(BasicManager):
         create_directory(self.history_fund_flow_dir)
 
         for symbol in stock_board_industry_name_em_df['板块名称']:
+
             try:
+                file_name = self.history_fund_flow_dir + symbol + '.csv'
+
+                # this action just do onetime per day
+                if check_whether_files_created_today(file_name):
+                    print(f'crawl_sector_history_fund_flow {file_name} has been updated today')
+                    continue
+
                 sector_fund_flow_hist_df = ak.stock_sector_fund_flow_hist(symbol=symbol).set_index('日期')
                 sector_fund_flow_hist_df = sector_fund_flow_hist_df.loc[:,
                                                  ~sector_fund_flow_hist_df.columns.str.contains('^Unnamed')]
 
-                file_name = self.history_fund_flow_dir + symbol + '.csv'
                 if os.path.exists(file_name):
                     exist_df = pd.read_csv(file_name,index_col=0)
 
@@ -83,6 +90,11 @@ class DataSourceEM(BasicManager):
                 end_date = datetime.now().strftime('%Y%m%d')
 
                 file_name = self.history_price_dir + symbol + '.csv'
+
+                # this action just do onetime per day
+                if check_whether_files_created_today(file_name):
+                    print(f'crawl_sector_history_fluctuation {file_name} has been updated today')
+                    continue
 
                 exist_df = pd.DataFrame()
                 if os.path.exists(file_name):

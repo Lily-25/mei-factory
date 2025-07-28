@@ -1,4 +1,5 @@
 import os, shutil
+from datetime import datetime
 
 def create_directory(dir_path, is_empty=False):
     if os.path.exists(dir_path):
@@ -64,6 +65,21 @@ def check_installed_font():
             print(f'✅ Installed: {font}')
         else:
             print(f'❌ Not Found: {font}')
+
+def check_whether_files_created_today(filename):
+
+    if not os.path.exists(filename):
+        return  False
+
+    # Get the creation time of the file
+    creation_time = os.path.getctime(filename)
+    creation_date = datetime.fromtimestamp(creation_time)
+    today = datetime.today()
+
+    if creation_date.date() == today.date():
+        return True
+    else:
+        return False
 
 if __name__ == '__main__':
     walk_directory("../etf/dataset", process_file)
