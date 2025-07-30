@@ -7,7 +7,8 @@ def crawl_online_data():
     obj_etf = ETF_DataSource()
 
     # 抓取实时数据
-    absolute_timer(5, obj_etf.crawl_realtime_data)
+    # absolute_timer(5, obj_etf.crawl_realtime_data)
+    obj_etf.crawl_realtime_data()
 
 
 if __name__ == '__main__':
