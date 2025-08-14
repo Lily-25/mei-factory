@@ -5,6 +5,7 @@ import akshare as ak
 import pandas as pd
 
 from src.StockAgent.common.abstract_schema_define import SchemaManager
+from src.StockAgent.utils.customize_timer import get_date_tag
 from src.StockAgent.utils.operate_files import create_directory, check_whether_files_created_today
 
 
@@ -121,6 +122,8 @@ class DataSourceEM(SchemaManager):
         self.crawl_sector_infor()
         self.crawl_sector_history_fund_flow()
         self.crawl_sector_history_fluctuation()
+
+        self.schema_tmp_config_mgt.insert('sector.refresh_time', get_date_tag())
 
 if __name__ == '__main__':
     df_sector = DataSourceEM()

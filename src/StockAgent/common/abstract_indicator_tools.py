@@ -20,19 +20,13 @@ class IndicatorTools(SchemaManager):
         # Store analytical result
         self.indicator_signal_dir = self.dir + 'sector_analysis/indicator_signal/'
 
-        self.refresh_config()
-
         # Store the indicators which will be analyzed through this instance.
         # it should be initiated by refresh_active_indicator
         self.active_indicator_dict = {}
         self.indicator_signal_df = pd.DataFrame([])
 
     def refresh_config(self):
-
-        self.indicator_config_mgt.insert('global.indicator_signal_dict',
-                                     self.indicator_signal_dict)
-        self.schema_config_mgt.insert('global.indicator_signal_dir',
-                                     self.indicator_signal_dir)
+        pass
 
     def get_indicator_dict(self, class_name):
         var_name = f'{class_name}_signal_dict'

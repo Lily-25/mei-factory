@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from src.StockAgent.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
 from src.StockAgent.common.statistics_indicator_tools import StatisticsIndicator
@@ -16,6 +17,8 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
             self.refresh_active_indicator(list(self.indicator_signal_dict.keys()))
 
         self.indicator_signal_dir = self.dir + 'sector_analysis/indicator_signal/'
+        self.schema_config_mgt.insert('sector.indicator_signal_dir',
+                                      os.path.abspath(self.indicator_signal_dir) + '/')
 
     def evaluate_statistics_indicator(self):
 
@@ -45,10 +48,11 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
                                  | ((board_df['PriceL2_Risk_exponent'] < 30)
                                  & board_df['PriceL2_Fluctuation_window'] > 5))))
 
-        self.schema_config_mgt.insert('sector.low_cost_board_list', list(board_df['symbol'].where(board_df['rule_1']
-                                                            & board_df['VolumePW30D'] ).dropna()))
+        board_df = board_df[board_df['rule_1'] & board_df['VolumePW30D']]
 
-        print(list(board_df['symbol'].where(board_df['rule_1'] & board_df['VolumePW30D'] ).dropna()))
+        self.schema_config_mgt.insert('sector.sector_focus_list.low_cost', list(board_df['symbol'].dropna()))
+
+        return board_df
 
 if __name__ == '__main__':
 

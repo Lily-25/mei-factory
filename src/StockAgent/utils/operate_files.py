@@ -1,7 +1,13 @@
 import os, shutil
 from datetime import datetime
 
+from ipykernel.compiler import get_file_name
+
+from src.StockAgent.utils.customize_timer import get_date_tag
+
+
 def create_directory(dir_path, is_empty=False):
+
     if os.path.exists(dir_path):
         if is_empty:
             try:
@@ -66,7 +72,7 @@ def check_installed_font():
         else:
             print(f'❌ Not Found: {font}')
 
-def check_whether_files_created_today(filename):
+def check_whether_files_created_today(filename, date=''):
 
     if not os.path.exists(filename):
         return  False
@@ -74,12 +80,33 @@ def check_whether_files_created_today(filename):
     # Get the creation time of the file
     creation_time = os.path.getctime(filename)
     creation_date = datetime.fromtimestamp(creation_time)
-    today = datetime.today()
+    c_date = creation_date.date().strftime('%y%m%d')
+    if date=='':
+        today = datetime.today()
+        date = today.date().strftime('%y%m%d')
 
-    if creation_date.date() == today.date():
+    if c_date == date:
         return True
     else:
         return False
 
+def backup_file(file_path):
+    if not os.path.exists(file_path):
+        return
+
+    back_dir = os.path.dirname(file_path) + '/backup/'
+
+    create_directory(back_dir)
+
+    backup_file_path = (back_dir
+                        + extract_filename(file_path)
+                        + '_backup_time_'
+                        + get_date_tag())
+
+    os.rename(file_path, backup_file_path)
+
+
+
 if __name__ == '__main__':
-    walk_directory("../etf/dataset", process_file)
+    # walk_directory("../etf/dataset", process_file)
+    backup_file('../task/dataset/etf_recommendation/hot_spot.csv')

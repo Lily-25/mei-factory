@@ -37,7 +37,8 @@ class BullishReversal(IndicatorTools):
             candle_height = high_price - low_price
 
             # Check if the body size is <= 30% of candle height
-            if body_size / candle_height <= 0.3:
+            if (candle_height
+                    and body_size / candle_height <= 0.3):
                 # Long lower shadow condition: lower shadow is at least twice the body size
                 lower_shadow = min(open_price, close_price) - low_price
                 if lower_shadow >= 2 * body_size:

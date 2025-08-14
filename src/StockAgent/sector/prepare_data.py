@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 from src.StockAgent.common.abstract_schema_define import SchemaManager
-from src.StockAgent.utils.operate_files import create_directory, walk_directory
+from src.StockAgent.utils.operate_files import create_directory, walk_directory, check_whether_files_created_today
 
 
 class DataFactory(SchemaManager):
@@ -18,7 +18,9 @@ class DataFactory(SchemaManager):
         return
 
     def combine_price_and_fund_flow(self, sector_history_fluctuation_file):
-        if not os.path.exists(sector_history_fluctuation_file):
+        if (not os.path.exists(sector_history_fluctuation_file)
+                or not check_whether_files_created_today(sector_history_fluctuation_file,
+                                                     self.schema_tmp_config['sector']['refresh_time'])):
             return
 
         file_name = os.path.basename(sector_history_fluctuation_file)
@@ -55,7 +57,7 @@ class DataFactory(SchemaManager):
     def batch_align_price_and_fund_flow(self):
         sector_history_fluctuation_dir = self.schema_config['sector']['hist_price_dir']
 
-        create_directory(self.price_and_fund_merger_dir)
+        create_directory(self.price_and_fund_merger_dir, is_empty=True)
 
         walk_directory(sector_history_fluctuation_dir, self.combine_price_and_fund_flow)
 

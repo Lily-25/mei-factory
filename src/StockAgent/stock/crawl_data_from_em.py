@@ -1,10 +1,12 @@
 import os
+import time
 from datetime import datetime
 
 import akshare as ak
 import pandas as pd
 
 from src.StockAgent.common.abstract_schema_define import SchemaManager
+from src.StockAgent.utils.customize_timer import get_date_tag
 from src.StockAgent.utils.operate_files import create_directory, check_whether_files_created_today
 
 
@@ -12,7 +14,6 @@ class DataSourceEM(SchemaManager):
 
     def __init__(self):
         super().__init__()
-        self.stock_low_cost_observation_pool_file = self.dir + 'stock_org_data/stock_low_cost_observation_pool.csv'
         self.hist_price_dir = self.dir + 'stock_org_data/hist_price_em/'
         self.hist_fund_flow_dir = self.dir + 'stock_org_data/hist_fund_flow_em/'
 
@@ -22,9 +23,6 @@ class DataSourceEM(SchemaManager):
         self.schema_config_mgt.insert('stock.hist_price_dir',os.path.abspath(self.hist_price_dir) + '/')
         self.schema_config_mgt.insert('stock.hist_fund_flow_dir',
                                   os.path.abspath(self.hist_fund_flow_dir) + '/')
-        self.schema_config_mgt.insert('stock.stock_low_cost_observation_pool_file',
-                                  os.path.abspath(self.stock_low_cost_observation_pool_file))
-
 
     def crawl_history_price_by_daily(self, symbol_index):
         """
@@ -75,9 +73,17 @@ class DataSourceEM(SchemaManager):
 
     def batch_crawl_history_price_by_daily(self):
 
-        for symbol_index in self.stock_observation_pool_dict.keys():
-            print(f'{symbol_index} : {self.stock_observation_pool_dict[symbol_index]}')
+        print('enter batch_crawl_history_price_by_daily')
+
+        batch_count = 0
+        for symbol_index in self.stock_current_observation_pool_dict.keys():
+            print(f'batch_crawl_history_price_by_daily - {symbol_index} : {self.stock_current_observation_pool_dict[symbol_index]}')
             self.crawl_history_price_by_daily(symbol_index)
+
+            batch_count = batch_count + 1
+            if batch_count >= self.schema_config['global']['batch_crawl']['size']:
+                time.sleep(self.schema_config['global']['batch_crawl']['break_time'])
+                batch_count = 0
 
 
     def crawl_history_data_by_min(self, symbol_index, period='1'):
@@ -132,8 +138,8 @@ class DataSourceEM(SchemaManager):
 
         create_directory(self.hist_fund_flow_dir)
 
-        for symbol_index in self.stock_observation_pool_dict.keys():
-            print(f'{symbol_index} : {self.stock_observation_pool_dict[symbol_index]}')
+        for symbol_index in self.stock_current_observation_pool_dict.keys():
+            print(f'batch_crawl_history_fund_flow - {symbol_index} : {self.stock_current_observation_pool_dict[symbol_index]}')
             self.crawl_history_fund_flow(symbol_index)
 
 
@@ -153,23 +159,29 @@ class DataSourceEM(SchemaManager):
         According to the stock list that I hold to refresh the raw data
         :return:
         """
-        self.stock_observation_pool_dict = self.stock_focus_dict
+        self.stock_current_observation_pool_dict = self.stock_focus_dict
 
-        self.schema_config_mgt.insert("stock.stock_observation_pool_dict", self.stock_observation_pool_dict)
+        self.schema_tmp_config_mgt.insert("stock.stock_current_observation_pool_dict", self.stock_current_observation_pool_dict)
 
         self.batch_crawl_history_price_by_daily()
         self.batch_crawl_history_fund_flow()
 
-    def refresh_stock_observation_pool(self):
+    def refresh_stock_observation_pool(self, sector_list, file_name):
 
         """
         According to the strategies such as low-cost boards to search high-value stocks, combining the stocks I hold and
         the potential stocks recommended by these strategies to refresh the raw data
-        :return:
+        市净率（Price-to-Book Ratio, P/B）
+        定义：市净率是股票市价与每股净资产（市净值）的比值，反映市场对净资产的溢价程度。
+        市净率 = 股票市价 / 每股净资产
+        意义：
+        P/B < 1：股价低于净资产，可能被低估（但需警惕资产质量差或盈利能力弱的企业）。
+        P/B > 1：股价高于净资产，市场对公司增长有更高预期（如科技、消费行业）。
+        P/B 过高（如>5）：可能存在泡沫，需结合盈利能力和行业特点分析。
         """
 
         df = pd.DataFrame([])
-        for symbol in self.schema_config['sector']['low_cost_board_list']:
+        for symbol in sector_list:
             if df.empty:
                 df = ak.stock_board_industry_cons_em(symbol=symbol)
                 df['sector'] = symbol
@@ -178,16 +190,29 @@ class DataSourceEM(SchemaManager):
                 df_extend['sector'] = symbol
                 df = pd.concat([df, df_extend])
 
-        create_directory(self.dir + 'stock_org_data/')
-        df.to_csv(self.stock_low_cost_observation_pool_file, index=False)
+        self.stock_current_observation_pool_dict = {}
+        if not df.empty:
+            df = df[df['市净率'] <= 3]
+            df = df[df['代码'].apply(self.check_board_category) == 'Main Boards']
 
-        self.stock_observation_pool_dict = self.stock_focus_dict | dict(zip(df['代码'], df['名称']))
+            dir_path = self.dir + 'stock_org_data/'
+            create_directory(dir_path)
+            df.to_csv(dir_path + file_name, index=False)
 
-        # self.schema_config_mgt.insert("stock.stock_observation_pool_dict", self.stock_observation_pool_dict)
+            self.stock_current_observation_pool_dict = dict(zip(df['代码'], df['名称']))
 
-        self.batch_crawl_history_price_by_daily()
+            self.schema_tmp_config_mgt.insert("stock.stock_current_observation_pool_dict",
+                                              self.stock_current_observation_pool_dict)
 
-        self.batch_crawl_history_fund_flow()
+            self.batch_crawl_history_price_by_daily()
+
+            self.batch_crawl_history_fund_flow()
+
+            self.schema_tmp_config_mgt.insert('stock.refresh_time', get_date_tag())
+
+        self.schema_tmp_config_mgt.insert("stock.stock_current_observation_pool_dict",
+                                          self.stock_current_observation_pool_dict)
+
 
 if __name__ == '__main__':
     obj_stock = DataSourceEM()

@@ -1,9 +1,10 @@
 import pandas as pd
-import csv
+import os
 
 from src.StockAgent.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
 from src.StockAgent.common.statistics_indicator_tools import StatisticsIndicator
-from src.StockAgent.utils.operate_files import create_directory, walk_directory
+from src.StockAgent.utils.customize_timer import get_date_tag
+from src.StockAgent.utils.operate_files import create_directory, walk_directory, backup_file
 
 
 class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,StatisticsIndicator):
@@ -17,20 +18,35 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
             self.refresh_active_indicator(list(self.indicator_signal_dict.keys()))
 
         self.indicator_signal_dir = self.dir + 'stock_analysis/indicator_signal/'
+        self.schema_config_mgt.insert('stock.indicator_signal_dir',
+                                      os.path.abspath(self.indicator_signal_dir) + '/')
+
         self.recommend_stock_dir = self.dir + 'stock_recommendation/'
+        self.schema_config_mgt.insert('stock.recommend_stock_dir',
+                                      os.path.abspath(self.recommend_stock_dir) + '/')
+
+        self.stock_current_observation_pool_dict = self.schema_tmp_config['stock']['stock_current_observation_pool_dict']
 
 
-    def evaluate_statistics_indicator(self):
+    def evaluate_statistics_indicator(self, filename):
 
         create_directory(self.indicator_signal_dir)
 
         walk_directory(self.schema_config['stock']['price_and_fund_merger_dir'], self.evaluate_single_project)
 
-        self.indicator_signal_df.to_csv(self.indicator_signal_dir + 'overview.csv', index=False)
+        file_path = self.indicator_signal_dir + filename
+        if not self.indicator_signal_df.empty:
+            self.indicator_signal_df.to_csv(file_path, index=False)
+        else:
+            if os.path.exists(file_path):
+                os.remove(file_path)
 
     def discover_high_value_indicator(self):
 
-        df = pd.read_csv(self.indicator_signal_dir + 'overview.csv')
+        if not os.path.exists(self.indicator_signal_dir + 'hot_spot.csv'):
+            return
+
+        df = pd.read_csv(self.indicator_signal_dir + 'hot_spot.csv')
         record_num = df.shape[0]
 
         column_list = []
@@ -43,7 +59,11 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
         print(column_list)
 
     def recommend_stocks(self, reference_dict, filename):
-        stock_df = pd.read_csv(self.indicator_signal_dir + 'overview.csv', dtype={'symbol': 'string'})
+
+        if not os.path.exists(self.indicator_signal_dir + filename):
+            return pd.DataFrame([])
+
+        stock_df = pd.read_csv(self.indicator_signal_dir + filename, dtype={'symbol': 'string'})
 
         # rule1
         stock_df['rule_1'] = ((stock_df['PriceL1_Risk_exponent'] < 30)
@@ -51,7 +71,8 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
                                          | ((stock_df['PriceL2_Risk_exponent'] < 30)
                                             & stock_df['PriceL2_Fluctuation_window'] > 5)))
 
-        recommend_sectors_and_stocks_df = stock_df[stock_df['rule_1'] & stock_df['VolumePW30D']]
+        recommend_sectors_and_stocks_df = stock_df[stock_df['rule_1']
+                                                   & stock_df['VolumePW30D']]
 
         name_list = []
         for symbol in list(recommend_sectors_and_stocks_df['symbol'].dropna()):
@@ -62,10 +83,27 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
                 name_list.append('unknown')
 
         recommend_sectors_and_stocks_df.insert(0, 'name', name_list)
+        recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df[recommend_sectors_and_stocks_df['name']
+                                                                          != 'unknown']
+        if recommend_sectors_and_stocks_df.empty:
+            return recommend_sectors_and_stocks_df
+
+        recommend_sectors_and_stocks_df['date'] = get_date_tag()
 
         create_directory(self.recommend_stock_dir)
-        recommend_sectors_and_stocks_df.to_csv(self.recommend_stock_dir + f'{filename}.csv',
-                                               index=False)
+        file_path = self.recommend_stock_dir + filename
+        if os.path.exists(file_path):
+            exist_df = pd.read_csv(file_path)
+
+            # just keep the latest analytical data per day
+            exist_df = exist_df[exist_df['date'] != get_date_tag()]
+
+            if not exist_df.empty:
+                recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df.combine_first(exist_df)
+
+        recommend_sectors_and_stocks_df.to_csv(file_path, index=False)
+
+        return recommend_sectors_and_stocks_df
 
 
 if __name__ == '__main__':

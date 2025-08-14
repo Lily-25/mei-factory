@@ -9,6 +9,9 @@ class SchemaManager():
 
         self.schema_config_mgt =ConfigManager('../config/schema_config.yaml')
         self.schema_config = self.schema_config_mgt.config
+        
+        self.schema_tmp_config_mgt =ConfigManager('../config/schema_tmp_config.yaml')
+        self.schema_tmp_config = self.schema_tmp_config_mgt.config
 
         # format column names
         self.column_maps = self.schema_config['global']['indicator_translation_dict']
@@ -16,23 +19,24 @@ class SchemaManager():
         # sector data schema
         self.sector_field_dict = {}
         self.sector_observation_pool_dict = {}
-        self.sector_low_cost_focus_dict = self.schema_config['sector']['sector_focus_dict']['low_cost']
-        self.sector_hot_spot_focus_dict = self.schema_config['sector']['sector_focus_dict']['hot_spot']
-        self.sector_focus_dict = self.sector_low_cost_focus_dict | self.sector_hot_spot_focus_dict
+        self.sector_low_cost_focus_dict = self.schema_config['sector']['sector_focus_list']['low_cost']
+        self.sector_hot_spot_focus_dict = self.schema_config['sector']['sector_focus_list']['hot_spot']
+        self.sector_focus_dict = self.sector_low_cost_focus_dict + self.sector_hot_spot_focus_dict
 
         # stock data schema
         self.stock_field_dict = {}
         self.stock_low_cost_focus_dict = self.schema_config['stock']['stock_focus_dict']['low_cost']
         self.stock_hot_spot_focus_dict = self.schema_config['stock']['stock_focus_dict']['hot_spot']
         self.stock_focus_dict = self.stock_low_cost_focus_dict | self.stock_hot_spot_focus_dict
-        self.stock_observation_pool_dict = {}
+        self.stock_current_observation_pool_dict = self.schema_tmp_config['stock']['stock_current_observation_pool_dict']
 
         # etf data schema
         self.etf_field_dict = {}
         self.etf_low_cost_focus_dict = self.schema_config['etf']['etf_focus_dict']['low_cost']
         self.etf_hot_spot_focus_dict = self.schema_config['etf']['etf_focus_dict']['hot_spot']
         self.etf_focus_dict = self.etf_low_cost_focus_dict | self.etf_hot_spot_focus_dict
-        self.etf_observation_pool_dict = {}
+        self.etf_current_observation_pool_dict = self.schema_tmp_config['etf']['etf_current_observation_pool_dict']
+
 
     @abstractmethod
     def refresh_config(self):
@@ -48,6 +52,15 @@ class SchemaManager():
             return 'bj'
         else:
             return ''
+
+    @staticmethod
+    def check_board_category(symbol_index):
+        if symbol_index.startswith(('300','301')):
+            return 'Venture Boards'
+        elif symbol_index.startswith(('688')):
+            return 'Sci-Tech Boards'
+        else:
+            return 'Main Boards'
 
     def column_translation(self, column_list, mode = 'z2e'):
         new_column = []
@@ -77,11 +90,13 @@ if __name__ == '__main__':
         '562500': '机器人ETF',
     }
 
-    stock_observation_dict = {
-            '002557' : '恰恰食品',
-            '603605' : '珀莱雅',
-            '605098' : '行动教育'}
+    stock_observation_low_cost_dict = {
+            '001215' : '千味央厨',
+            '603605' : '珀莱雅'}
 
+    stock_observation_hot_dict = {
+            '002074' : '国轩高科',
+            '600809' : '山西汾酒'}
 
     config = ConfigManager('../config/schema_config.yaml')
     config.insert('sector.sector_focus_dict.hot_spot', {})
@@ -90,5 +105,9 @@ if __name__ == '__main__':
     config.insert('etf.etf_focus_dict.hot_spot', etf_observation_dict)
     config.insert('etf.etf_focus_dict.low_cost', {})
 
-    config.insert('stock.stock_focus_dict.low_cost', stock_observation_dict)
-    config.insert('stock.stock_focus_dict.hot_spot', {})
+    config.insert('stock.stock_focus_dict.low_cost', stock_observation_low_cost_dict)
+    config.insert('stock.stock_focus_dict.hot_spot', stock_observation_hot_dict)
+
+    tmp_config = ConfigManager('../config/schema_tmp_config.yaml')
+    tmp_config.insert('etf.etf_current_observation_pool_dict', {})
+    tmp_config.insert('stock.stock_current_observation_pool_dict', {})

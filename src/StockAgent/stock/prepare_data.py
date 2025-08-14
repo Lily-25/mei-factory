@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 from src.StockAgent.common.abstract_schema_define import SchemaManager
-from src.StockAgent.utils.operate_files import walk_directory, create_directory
+from src.StockAgent.utils.operate_files import walk_directory, create_directory, check_whether_files_created_today
 
 
 class DataFactory(SchemaManager):
@@ -17,10 +17,17 @@ class DataFactory(SchemaManager):
                                      os.path.abspath(self.price_and_fund_merger_dir) + '/')
 
     def align_price_and_fund_flow(self, history_price_file):
-        if not os.path.exists(history_price_file):
+
+        if (not os.path.exists(history_price_file)
+                or not check_whether_files_created_today(history_price_file,
+                                                         self.schema_tmp_config['stock']['refresh_time'])):
             return
 
         filename = os.path.basename(history_price_file)
+        if (os.path.splitext(filename)[0]
+                not in self.stock_current_observation_pool_dict.keys()):
+            return
+
         history_fund_flow_file = (self.schema_config['stock']['hist_fund_flow_dir']
                                          + filename)
 
@@ -55,7 +62,7 @@ class DataFactory(SchemaManager):
         merged_df.to_csv(self.price_and_fund_merger_dir + filename)
 
     def batch_align_price_and_fund_flow(self):
-        create_directory(self.price_and_fund_merger_dir)
+        create_directory(self.price_and_fund_merger_dir, is_empty=True)
 
         walk_directory(self.schema_config['stock']['hist_price_dir'], self.align_price_and_fund_flow)
 

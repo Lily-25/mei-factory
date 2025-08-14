@@ -2,7 +2,11 @@ import time
 from datetime import datetime, timedelta, date
 
 def generate_validated_intern():
-    refer_intern_dict = {"sgement"}
+    refer_intern_dict = {"segment"}
+
+def get_date_tag():
+    date = datetime.now().strftime('%y%m%d')
+    return date
 
 def last_day_of_last_season(backward = 0):
     today = date.today()

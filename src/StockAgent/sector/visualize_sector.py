@@ -143,6 +143,8 @@ class DashBoard(IndicatorMonitor):
         fig.tight_layout()
         plt.show()
 
+        return plt
+
         # create_directory(self.dashboard)
         # plt.savefig(self.dashboard + 'Analysis the relationship between main funds flow and stock price')
 
@@ -155,5 +157,5 @@ if __name__ == '__main__':
     matplotlib.rcParams['axes.unicode_minus'] = False
 
     obj_sector = DashBoard()
-    obj_sector.visualize_sector_spot()
-    # obj_sector.visualize_sector_fund_flow(obj_sector.basic_config['sector']['price_and_fund_merger_dir'] + '半导体.csv')
+    # obj_sector.visualize_sector_spot()
+    obj_sector.visualize_sector_fund_flow(obj_sector.schema_config['sector']['price_and_fund_merger_dir'] + '半导体.csv')
