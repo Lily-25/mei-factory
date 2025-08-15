@@ -101,6 +101,9 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
             if not exist_df.empty:
                 recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df.combine_first(exist_df)
 
+        cols = ['date'] + [col for col in recommend_sectors_and_stocks_df.columns if col != 'date']
+        recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df[cols]
+
         recommend_sectors_and_stocks_df.to_csv(file_path, index=False)
 
         return recommend_sectors_and_stocks_df

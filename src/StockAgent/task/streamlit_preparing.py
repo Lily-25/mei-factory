@@ -9,7 +9,8 @@ from src.StockAgent.sector.visualize_sector import DashBoard as sector_DashBoard
 
 from src.StockAgent.task.offline_task import (discover_low_cost_sector,
                                               discover_low_cost_stocks,
-                                              discover_hot_spot_stocks)
+                                              discover_hot_spot_stocks,
+                                              discover_hot_spot_etfs)
 
 from src.StockAgent.utils.manage_config import ConfigManager
 
@@ -233,59 +234,95 @@ if selected_task != 'None':
 # -----------------------------
 # 2. Analytical Tasks
 # -----------------------------
-def run_analysis(task):
-    """Simulate analytical tasks and log steps."""
-    log_area.write(f'▶ Starting task: **{task}**')
-    time.sleep(0.5)
-
-    result = None
-    if task == 'Discover low-cost sectors':
-        log_area.write('📊 Start discovering low-cost sectors...')
-        time.sleep(0.5)
-        df = discover_low_cost_sector()
-        log_area.write('📊 Complete discovering low-cost sectors...')
-        result = df
-    elif task == 'Discover low-cost stocks':
-        log_area.write('📊 Start discovering low-cost stocks...')
-        time.sleep(0.5)
-        df = discover_low_cost_stocks()
-        log_area.write('📊 Start Complete low-cost stocks...')
-        result = df
-    elif task == 'Discover hot-spot stocks':
-        log_area.write('📊 Start discovering hot-spot stocks...')
-        time.sleep(0.5)
-        df = discover_hot_spot_stocks()
-        log_area.write('📊 Start Complete hot-spot stocks...')
-        result = df
-    else:
-        log_area.write('⚠ Unknown task selected.')
-
-    log_area.write('✅ Task completed.')
-    return result
-
-
 # Sidebar - analysis selection
 st.sidebar.header('Analytical Tasks')
 selected_analysis = st.sidebar.selectbox(
     'Choose an analysis',
-    ['None', 'Discover low-cost sectors', 'Discover low-cost stocks', 'Discover hot-spot stocks']
+    ['None', 'Do the whole offline task', 'Do recommendation task']
 )
 
 # Analysis Output + Log
 st.subheader('🛠 Analytical Task Output')
 
-col1, col2 = st.columns([2, 1])
-with col1:
-    if selected_analysis != 'None':
-        log_area = st.empty()  # placeholder for logs
-        result = run_analysis(selected_analysis)
-        if isinstance(result, pd.DataFrame):
-            st.dataframe(result)
-        elif result is not None:
-            st.write(result)
-    else:
-        st.info('Select a task from the menu to run analysis.')
+if 'log_messages' not in st.session_state:
+    st.session_state.log_messages = []
 
-with col2:
-    st.markdown('### 📜 Log Window')
-    st.info('Logs will appear here as tasks run.')
+def reset_selection():
+    st.session_state.selected_analysis = 'None'
+
+def run_analysis(task):
+    """Simulate analytical tasks and log steps."""
+
+    st.session_state.log_messages.append(f'▶ Starting task: **{task}**')
+    log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+    time.sleep(0.5)
+
+    result = None
+    if task == 'Do the whole offline task':
+
+        st.session_state.log_messages.append('📊 Start discover_low_cost_sector...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_low_cost_sector()
+
+        st.session_state.log_messages.append('📊 Complete discover_low_cost_sector...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Start discover_low_cost_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_low_cost_stocks()
+
+        st.session_state.log_messages.append('📊 Complete discover_low_cost_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Start discover_hot_spot_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_hot_spot_stocks()
+
+        st.session_state.log_messages.append('📊 Complete discover_hot_spot_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Start discover_hot_spot_etfs...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_hot_spot_etfs()
+
+        st.session_state.log_messages.append('📊 Complete discover_hot_spot_etfs...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Complete the offline analytical task...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+
+        st.session_state.log_messages.append('✅ Task completed.')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+    else:
+        st.session_state.log_messages.append(f'⚠ Warning: unknown task **{task}** selected.')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+
+    reset_selection()
+    return result
+
+
+if selected_analysis != 'None':
+    # placeholder for logs
+    log_area = st.empty()
+    run_analysis(selected_analysis)
+    """
+    if isinstance(result, pd.DataFrame):
+        st.dataframe(result)
+    elif result is not None:
+        st.write(result)
+        log_area.write()
+    """
+else:
+    st.info('Select a task from the menu to run analysis.')

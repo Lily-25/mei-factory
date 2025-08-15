@@ -81,6 +81,9 @@ class IndicatorMonitor(StatisticsIndicator, BullishReversal, BearishReversal, Co
             if not exist_df.empty:
                 recommend_etf_df = recommend_etf_df.combine_first(exist_df)
 
+        cols = ['date'] + [col for col in recommend_etf_df.columns if col != 'date']
+        recommend_etf_df = recommend_etf_df[cols]
+
         recommend_etf_df.to_csv(self.recommend_etf_dir + f'{filename}.csv',
                                                index=False)
 
