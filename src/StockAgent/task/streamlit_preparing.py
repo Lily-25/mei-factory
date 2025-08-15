@@ -241,14 +241,8 @@ selected_analysis = st.sidebar.selectbox(
     ['None', 'Do the whole offline task', 'Do recommendation task']
 )
 
-# Analysis Output + Log
-st.subheader('🛠 Analytical Task Output')
-
 if 'log_messages' not in st.session_state:
     st.session_state.log_messages = []
-
-def reset_selection():
-    st.session_state.selected_analysis = 'None'
 
 def run_analysis(task):
     """Simulate analytical tasks and log steps."""
@@ -309,20 +303,21 @@ def run_analysis(task):
         st.session_state.log_messages.append(f'⚠ Warning: unknown task **{task}** selected.')
         log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
 
-    reset_selection()
     return result
 
+# 添加执行按钮
+run_button = st.sidebar.button('Run Analysis')
 
-if selected_analysis != 'None':
-    # placeholder for logs
+# 分析输出区域
+st.subheader('🛠 Analytical Task Output')
+
+if run_button and selected_analysis != 'None':
     log_area = st.empty()
     run_analysis(selected_analysis)
-    """
-    if isinstance(result, pd.DataFrame):
-        st.dataframe(result)
-    elif result is not None:
-        st.write(result)
-        log_area.write()
-    """
-else:
+    # 自动重置选择
+    selected_analysis = 'None'
+    st.rerun()  # 触发页面重新渲染
+elif selected_analysis == 'None':
     st.info('Select a task from the menu to run analysis.')
+
+
