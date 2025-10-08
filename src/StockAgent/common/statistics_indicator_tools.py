@@ -138,6 +138,106 @@ class StatisticsIndicator(IndicatorTools):
         return
 
     @staticmethod
+    def calculate_fluctuation_feature(df:pd.DataFrame,
+                                      observation_item,
+                                      indicator_prefix,
+                                      smooth_win,
+                                      omit_wave_fluctuation_thread,
+                                      omit_hits_fluctuation_thread):
+        """
+        Calculate the moving average per 3 days, measure the fluctuation of this MA indicator in order to validate whether
+        the sample path shaped as a wave
+        """
+
+        overview_dict = {
+            f'{indicator_prefix}_Wave': True,
+            f'{indicator_prefix}_Top_Hits': 0,
+            f'{indicator_prefix}_Bottom_Hits': 0,
+        }
+
+        df[f'{indicator_prefix}_MA{smooth_win}D'] = df[observation_item].rolling(window=smooth_win).mean()
+        max_idx,min_idx,_ = (
+            StatisticsIndicator.discover_extreme_points(df[f'{indicator_prefix}_MA{smooth_win}D'].to_numpy()))
+
+        fluctuation_num = min(len(max_idx), len(min_idx))
+        if fluctuation_num <= 3 :
+            overview_dict[f'{indicator_prefix}_Wave'] = False
+            return df, overview_dict
+
+        fluctuation_amplitude_list = []
+        fluctuation_bottom_list = []
+        fluctuation_top_list = []
+
+        if max_idx[-1] > min_idx[-1]:
+
+            fluctuation_amplitude_list.append(
+                    df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-2]]
+                    - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-1]])
+
+            fluctuation_amplitude_list.append(
+                    df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-2]]
+                    - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-2]])
+
+            fluctuation_amplitude_list.append(
+                    df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-3]]
+                    - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-2]])
+
+            fluctuation_amplitude_list.append(
+                    df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-3]]
+                    - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-3]])
+
+            fluctuation_top_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-2]])
+            fluctuation_top_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-3]])
+            fluctuation_bottom_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-1]])
+            fluctuation_bottom_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-2]])
+            fluctuation_bottom_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-3]])
+
+        else:
+
+            fluctuation_amplitude_list.append(
+                df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-1]]
+                - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-2]])
+
+            fluctuation_amplitude_list.append(
+                df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-2]]
+                - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-2]])
+
+            fluctuation_amplitude_list.append(
+                df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-2]]
+                - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-3]])
+
+            fluctuation_amplitude_list.append(
+                df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-3]]
+                - df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-3]])
+
+            fluctuation_top_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-1]])
+            fluctuation_top_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-2]])
+            fluctuation_top_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[max_idx[-3]])
+            fluctuation_bottom_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-2]])
+            fluctuation_bottom_list.append(df[f'{indicator_prefix}_MA{smooth_win}D'].iloc[min_idx[-3]])
+
+        amplitude_mean = np.mean(fluctuation_amplitude_list)
+        for item in fluctuation_amplitude_list:
+            if abs(item - amplitude_mean) / amplitude_mean < omit_wave_fluctuation_thread:
+                continue
+            else:
+                 overview_dict[f'{indicator_prefix}_Wave'] = False
+
+        top_mean = np.mean(fluctuation_top_list)
+        overview_dict[f'{indicator_prefix}_Top_Hits'] = len(fluctuation_top_list)
+        for item in fluctuation_top_list:
+            if abs(item - top_mean) / top_mean > omit_hits_fluctuation_thread:
+                overview_dict[f'{indicator_prefix}_Top_Hits'] = 0
+
+        bottom_mean = np.mean(fluctuation_bottom_list)
+        overview_dict[f'{indicator_prefix}_Bottom_Hits'] = len(fluctuation_bottom_list)
+        for item in fluctuation_bottom_list:
+            if abs(item - bottom_mean) / bottom_mean > omit_hits_fluctuation_thread:
+                overview_dict[f'{indicator_prefix}_Bottom_Hits'] = 0
+
+        return df, overview_dict
+
+    @staticmethod
     def calculate_ma_fork(df:DataFrame,
                          observation_item,
                          indicator_prefix,
@@ -165,9 +265,6 @@ class StatisticsIndicator(IndicatorTools):
             - The ratio of positive evaluation windows
             - The cumulative return of golden forks across different MA periods
         """
-
-        if not len(df) or not (observation_item in df.columns):
-            return
 
         overview_dict = {}
 
@@ -578,14 +675,13 @@ if __name__ == '__main__':
     obj = StatisticsIndicator()
 
     create_directory(obj.indicator_signal_dir)
-    """
-    active_indicator_list = list(obj.indicator_signal_dict.keys())
+
+    active_indicator_list = ['evaluate_fluctuation_feature',]
 
     obj.refresh_active_indicator(active_indicator_list)
 
-    walk_directory(obj.basic_config['sector']['price_and_fund_merger_dir'], obj.evaluate_single_project)
+    obj.evaluate_single_project(obj.schema_config['stock']['price_and_fund_merger_dir'] + '002077.csv' )
 
-    obj.indicator_signal_df.to_csv(obj.indicator_signal_dir + 'overview.csv')
-    """
+    print(obj.indicator_signal_df)
 
 

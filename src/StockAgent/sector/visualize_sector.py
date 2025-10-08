@@ -50,6 +50,8 @@ class DashBoard(IndicatorMonitor):
         plt.tight_layout()
         plt.show()
 
+        return fig
+
     @staticmethod
     def visualize_sector_fund_flow(filename):
 

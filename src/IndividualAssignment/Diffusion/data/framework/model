@@ -1,0 +1,19 @@
+Reference		Dimensions of Diffusion			Questionnaire
+Ref. Theory	Ref. Dimension	Speed	Breadth	Depth	问题	Question
+Rogers’ Diffusion of Innovations Theory	Relative advantage	9	9	9	自动驾驶技术创新在武汉是否带来明显效益？	Has autonomous driving technology innovation brought significant benefits in Wuhan?
+Rogers’ Diffusion of Innovations Theory	Compatibility	9	7	9	自动驾驶技术创新在武汉是否与现有制度、基础设施、用户习惯兼容？	Is autonomous driving technology innovation compatible with existing systems, infrastructure, and user habits in Wuhan?
+Rogers’ Diffusion of Innovations Theory	Complexity	5	5	6	搭载自动驾驶技术的车辆是否易于理解与操作？	Are vehicles equipped with autonomous driving technology easy to understand and operate?
+Rogers’ Diffusion of Innovations Theory	Trialability	8	6	6	是否提供低门槛体验自动驾驶的机会？	Are there opportunities for low-threshold autonomous driving experiences?
+Rogers’ Diffusion of Innovations Theory	Observability	6	8	3	自动驾驶创新体验和效果是否可见、可传播？	Are the innovative experiences and results of autonomous driving visible and disseminable?
+Innovation Ecosystem Framework	Identification of Complementors	6	8	6	是否有掌握自动驾驶核心技术或资源的企业/支撑机构参与？	Are there companies/supporting organizations with core autonomous driving technologies or resources involved?
+Innovation Ecosystem Framework	Complementor Readiness	9	9	9	是否有政府角色或政策支持	Is there a government role or policy support?
+Innovation Ecosystem Framework	Adoption Interdependencies	6	8	8	是否有智库或政府或盈利或非赢利的机构支持	Is there support from think tanks, government agencies, or for-profit or non-profit organizations?
+Innovation Ecosystem Framework	Conditions for Value Realization	9	6	9	有无官方的反馈机制供各个层级的用户来反馈意见	Is there an official feedback mechanism for users at all levels to provide feedback?
+Innovation Ecosystem Framework	Coordination Costs	3	5	1	是否形成行业发展生态，并形成较成熟的协同机制	Has an industry development ecosystem been established, with a relatively mature collaborative mechanism?
+Innovation Ecosystem Framework	Governance and Leadership	9	9	7	是否形成较为统一的治理框架和规范	Has a relatively unified governance framework and regulations been established?
+Technology Acceptance Model – Trust	Trust	9	7	9	用户是否信任自动驾驶技术创新	Do users trust autonomous driving technology innovation?
+Technology Acceptance Model – Trust	Perceived Usefulness (PU)	9	7	9	用户是否觉得有用	Do users find it useful?
+Technology Acceptance Model – Trust	Perceived Ease of Use (PEOU)	6	8	6	用户是否觉得好用	Do users find it easy to use?
+Technology Acceptance Model – Trust	Attitude Toward Use	6	4	6	用户是否有主动意愿去尝试自动驾驶技术创新	Do users actively want to try autonomous driving technology innovation?
+Technology Acceptance Model – Trust	Behavioral Intention	9	7	9	用户是否愿意去使用自动驾驶技术创新	Are users willing to use autonomous driving technology innovation?
+Technology Acceptance Model – Trust	Safety/Privacy Concerns	3	5	2	用户是否对设备安全，数据安全，个人隐私上有顾虑	Do users have concerns about device security, data security, or personal privacy?

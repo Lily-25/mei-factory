@@ -57,6 +57,13 @@ class DataSourceEM(SchemaManager):
 
         self.schema_tmp_config_mgt.insert('etf.etf_current_observation_pool_dict', self.etf_current_observation_pool_dict)
 
+    def refresh_etf_observation_pool_by_holding(self):
+
+        self.etf_current_observation_pool_dict = self.etf_focus_dict
+
+        self.schema_tmp_config_mgt.insert('etf.etf_current_observation_pool_dict', self.etf_current_observation_pool_dict)
+
+    def refresh_hist_data(self):
         # 获取目标etf历史价格数据
         self.crawl_etf_history_price()
         # 获取目标etf历史资金流入情况

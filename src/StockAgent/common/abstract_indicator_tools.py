@@ -42,7 +42,7 @@ class IndicatorTools(SchemaManager):
         for key in indicator_list:
             if key not in self.indicator_signal_dict.keys():
                 print(f'refresh_active_indicator {key} is invalid')
-                break
+                continue
 
             active_indicator_dict[key] = self.indicator_signal_dict[key]
         self.active_indicator_dict = active_indicator_dict
@@ -65,7 +65,7 @@ class IndicatorTools(SchemaManager):
 
         return validated_df, summary_dict
 
-    def evaluate_single_project(self, filename, validated_flag = True):
+    def evaluate_single_project(self, filename, validated_flag = False):
 
         df = pd.read_csv(filename, index_col=0)
 

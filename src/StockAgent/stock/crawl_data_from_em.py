@@ -163,9 +163,6 @@ class DataSourceEM(SchemaManager):
 
         self.schema_tmp_config_mgt.insert("stock.stock_current_observation_pool_dict", self.stock_current_observation_pool_dict)
 
-        self.batch_crawl_history_price_by_daily()
-        self.batch_crawl_history_fund_flow()
-
     def refresh_stock_observation_pool(self, sector_list, file_name):
 
         """
@@ -201,18 +198,15 @@ class DataSourceEM(SchemaManager):
 
             self.stock_current_observation_pool_dict = dict(zip(df['代码'], df['名称']))
 
-            self.schema_tmp_config_mgt.insert("stock.stock_current_observation_pool_dict",
-                                              self.stock_current_observation_pool_dict)
-
-            self.batch_crawl_history_price_by_daily()
-
-            self.batch_crawl_history_fund_flow()
-
-            self.schema_tmp_config_mgt.insert('stock.refresh_time', get_date_tag())
-
         self.schema_tmp_config_mgt.insert("stock.stock_current_observation_pool_dict",
                                           self.stock_current_observation_pool_dict)
 
+    def refresh_hist_data(self):
+        self.batch_crawl_history_price_by_daily()
+
+        self.batch_crawl_history_fund_flow()
+
+        self.schema_tmp_config_mgt.insert('stock.refresh_time', get_date_tag())
 
 if __name__ == '__main__':
     obj_stock = DataSourceEM()

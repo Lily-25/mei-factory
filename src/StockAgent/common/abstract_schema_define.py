@@ -79,6 +79,9 @@ class SchemaManager():
 
 if __name__ == '__main__':
     etf_observation_dict = {
+        '510300': '沪深300ETF',
+        '510500': '中证500ETF',
+        '512100': '中证1000ETF',
         '515790': '光伏ETF',
         '513090': '香港证券ETF',
         '560090': '证券ETF龙头',
@@ -91,16 +94,27 @@ if __name__ == '__main__':
     }
 
     stock_observation_low_cost_dict = {
-            '001215' : '千味央厨',
-            '603605' : '珀莱雅'}
+            '603619' : '中曼石油',
+            '002557' : '恰恰食品'}
 
     stock_observation_hot_dict = {
-            '002074' : '国轩高科',
-            '600809' : '山西汾酒'}
+        '002065' : '东华软件',
+        '002405' : '四维图新',
+        '000034' : '神州数码',
+        '600100' : '同方股份',
+        '000733' : '振华科技',
+    }
 
     config = ConfigManager('../config/schema_config.yaml')
-    config.insert('sector.sector_focus_dict.hot_spot', {})
-    config.insert('sector.sector_focus_dict.low_cost', {})
+    sector_focus_list = ['消费电子',
+                         '电子元件',
+                         '软件开发',
+                         '计算机设备',
+                         '半导体',
+                         '电池']
+
+    config.insert('sector.sector_focus_list.hot_spot', sector_focus_list)
+    config.insert('sector.sector_focus_list.low_cost', [])
 
     config.insert('etf.etf_focus_dict.hot_spot', etf_observation_dict)
     config.insert('etf.etf_focus_dict.low_cost', {})

@@ -75,7 +75,7 @@ def check_installed_font():
 def check_whether_files_created_today(filename, date=''):
 
     if not os.path.exists(filename):
-        return  False
+        return False
 
     # Get the creation time of the file
     creation_time = os.path.getctime(filename)

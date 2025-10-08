@@ -69,20 +69,19 @@ class IndicatorMonitor(StatisticsIndicator, BullishReversal, BearishReversal, Co
             return recommend_etf_df
 
         recommend_etf_df['date'] = get_date_tag()
+        cols = ['date'] + [col for col in recommend_etf_df.columns if col != 'date']
+        recommend_etf_df = recommend_etf_df[cols]
 
         create_directory(self.recommend_etf_dir)
         file_path = self.recommend_etf_dir + filename
         if os.path.exists(file_path):
-            exist_df = pd.read_csv(file_path)
+            exist_df = pd.read_csv(file_path, dtype={'date': 'string'})
 
             # just keep the latest analytical data per day
             exist_df = exist_df[exist_df['date'] != get_date_tag()]
 
             if not exist_df.empty:
                 recommend_etf_df = recommend_etf_df.combine_first(exist_df)
-
-        cols = ['date'] + [col for col in recommend_etf_df.columns if col != 'date']
-        recommend_etf_df = recommend_etf_df[cols]
 
         recommend_etf_df.to_csv(self.recommend_etf_dir + f'{filename}.csv',
                                                index=False)

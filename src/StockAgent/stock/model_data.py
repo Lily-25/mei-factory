@@ -1,6 +1,9 @@
 import pandas as pd
 import os
 
+from keras.src.ops import dtype
+from tomlkit import string
+
 from src.StockAgent.common.candlestick_pattern_tools import BullishReversal, BearishReversal, ContinuationTrend
 from src.StockAgent.common.statistics_indicator_tools import StatisticsIndicator
 from src.StockAgent.utils.customize_timer import get_date_tag
@@ -90,19 +93,19 @@ class IndicatorMonitor(BullishReversal, BearishReversal, ContinuationTrend,Stati
 
         recommend_sectors_and_stocks_df['date'] = get_date_tag()
 
+        cols = ['date'] + [col for col in recommend_sectors_and_stocks_df.columns if col != 'date']
+        recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df[cols]
+
         create_directory(self.recommend_stock_dir)
         file_path = self.recommend_stock_dir + filename
         if os.path.exists(file_path):
-            exist_df = pd.read_csv(file_path)
+            exist_df = pd.read_csv(file_path, dtype={'date': 'string'})
 
             # just keep the latest analytical data per day
             exist_df = exist_df[exist_df['date'] != get_date_tag()]
 
             if not exist_df.empty:
                 recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df.combine_first(exist_df)
-
-        cols = ['date'] + [col for col in recommend_sectors_and_stocks_df.columns if col != 'date']
-        recommend_sectors_and_stocks_df = recommend_sectors_and_stocks_df[cols]
 
         recommend_sectors_and_stocks_df.to_csv(file_path, index=False)
 

@@ -5,6 +5,7 @@ import numpy as np
 
 from sympy.physics.control.control_plots import matplotlib
 
+from offline_task import discover_holding_stocks
 from src.StockAgent.sector.visualize_sector import DashBoard as sector_DashBoard
 
 from src.StockAgent.task.offline_task import (discover_low_cost_sector,
@@ -12,12 +13,18 @@ from src.StockAgent.task.offline_task import (discover_low_cost_sector,
                                               discover_hot_spot_stocks,
                                               discover_hot_spot_etfs)
 
+from src.StockAgent.stock.visualize_stock import visualize_relation_between_interest_and_index
+
 from src.StockAgent.utils.manage_config import ConfigManager
 
 g_schema_config = ConfigManager('../config/schema_config.yaml').config
 
 st.set_page_config(page_title='📊 Financial Tool Demo', layout='wide')
 st.title('📊 Financial Tool Dashboard')
+
+"""
+Section 1: Display recommend products
+"""
 
 def load_sector_overview_data():
     sector_df = None
@@ -196,6 +203,10 @@ with st.sidebar.expander('Show Filters', expanded=False):
 st.subheader(f'📄 {selected_table} (Filtered)')
 st.dataframe(filtered_df)
 
+"""
+Section 2: visualize key indicators
+"""
+
 def visualize_fund_flow_by_sector():
     # Set font to a Chinese-supported one (e.g., PingFang SC)
     matplotlib.rcParams['font.family'] = 'Songti SC'
@@ -206,39 +217,56 @@ def visualize_fund_flow_by_sector():
     obj_sector = sector_DashBoard()
 
     # This assumes visualize_sector_spot() plots on the current matplotlib figure
-    fig = obj_sector.visualize_sector_spot()
-
-    return fig
+    return obj_sector.visualize_sector_spot()
 
 def visualize_sector_fund_flow_relationship(symbol):
     obj_sector = sector_DashBoard()
     return  obj_sector.visualize_sector_fund_flow(obj_sector.schema_config['sector']['price_and_fund_merger_dir']
                                                   + f'{symbol}.csv')
 
+# Sidebar - analysis selection
+st.sidebar.header('Main Index Chart')
+selected_main_index = st.sidebar.selectbox(
+    'Choose an index',
+    ['None', 'Overview'])
+
+# 分析输出区域
+st.subheader(f'📄 The relationship between interest and index  (Index Name : {selected_main_index})')
+
+if selected_main_index != 'None':
+    log_area = st.empty()  # placeholder for logs
+    if selected_main_index == 'Overview':
+        fig = visualize_relation_between_interest_and_index()
+        st.pyplot(fig)
+
+
 # ----------------- Streamlit App -----------------
 # Sidebar - analysis selection
-st.sidebar.header('Main Boards Comparison')
+st.sidebar.header('Main Board Chart')
 selected_task = st.sidebar.selectbox(
     'Choose an task',
-    ['None'] + list(DATA_SOURCES['sector focus']()['sector name'])
+    ['None', 'Overview',] + list(DATA_SOURCES['sector focus']()['sector name'])
 )
 
-st.subheader(f'📄 {selected_task} (main board chart)')
+# 分析输出区域
+st.subheader(f'📄 The relationship between Fund Flow and Price  (Board Name : {selected_task})')
 
 if selected_task != 'None':
     log_area = st.empty()  # placeholder for logs
-    fig = visualize_sector_fund_flow_relationship(selected_task)
+    if selected_task == 'Overview':
+        fig = visualize_fund_flow_by_sector()
+    else:
+        fig = visualize_sector_fund_flow_relationship(selected_task)
     st.pyplot(fig)
 
-
 # -----------------------------
-# 2. Analytical Tasks
+# 3. Analytical Tasks
 # -----------------------------
 # Sidebar - analysis selection
 st.sidebar.header('Analytical Tasks')
 selected_analysis = st.sidebar.selectbox(
     'Choose an analysis',
-    ['None', 'Do the whole offline task', 'Do recommendation task']
+    ['None', 'Do the whole offline task', 'Do stock recommendation task']
 )
 
 if 'log_messages' not in st.session_state:
@@ -268,6 +296,49 @@ def run_analysis(task):
         log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
         time.sleep(0.5)
 
+        discover_low_cost_stocks(refresh_data_flag=True)
+
+        st.session_state.log_messages.append('📊 Complete discover_low_cost_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Start discover_hot_spot_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_hot_spot_stocks(refresh_data_flag=True)
+
+        st.session_state.log_messages.append('📊 Complete discover_hot_spot_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Start discover_hot_spot_etfs...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_hot_spot_etfs(refresh_data_flag=True)
+
+        st.session_state.log_messages.append('📊 Complete discover_hot_spot_etfs...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('✅ Task completed.')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+    elif task == 'Do stock recommendation task':
+        st.session_state.log_messages.append('📊 Start discover_holding_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        discover_holding_stocks()
+
+        st.session_state.log_messages.append('📊 Complete discover_holding_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
+        st.session_state.log_messages.append('📊 Start discover_low_cost_stocks...')
+        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
+        time.sleep(0.5)
+
         discover_low_cost_stocks()
 
         st.session_state.log_messages.append('📊 Complete discover_low_cost_stocks...')
@@ -283,19 +354,6 @@ def run_analysis(task):
         st.session_state.log_messages.append('📊 Complete discover_hot_spot_stocks...')
         log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
         time.sleep(0.5)
-
-        st.session_state.log_messages.append('📊 Start discover_hot_spot_etfs...')
-        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
-        time.sleep(0.5)
-
-        discover_hot_spot_etfs()
-
-        st.session_state.log_messages.append('📊 Complete discover_hot_spot_etfs...')
-        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
-        time.sleep(0.5)
-
-        st.session_state.log_messages.append('📊 Complete the offline analytical task...')
-        log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)
 
         st.session_state.log_messages.append('✅ Task completed.')
         log_area.text_area("Log Output", "\n".join(st.session_state.log_messages), height=300)

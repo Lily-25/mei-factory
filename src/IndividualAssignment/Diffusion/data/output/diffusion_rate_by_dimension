@@ -1,0 +1,18 @@
+	Ref. Theory	Ref. Dimension	Speed Weight	Breadth Weight	Depth Weight	question	Arbitration Score	Speed Score	Breadth Score	Depth Score
+0	Rogers’ Diffusion of Innovations Theory	Relative advantage	9	9	9	自动驾驶技术创新在武汉是否带来明显效益？	2	3.6	3.6	3.6
+1	Rogers’ Diffusion of Innovations Theory	Compatibility	9	7	9	自动驾驶技术创新在武汉是否与现有制度、基础设施、用户习惯兼容？	1	1.8	1.4	1.8
+2	Rogers’ Diffusion of Innovations Theory	Complexity	5	5	6	搭载自动驾驶技术的车辆是否易于理解与操作？	2	2	2	2.4
+3	Rogers’ Diffusion of Innovations Theory	Trialability	8	6	6	是否提供低门槛体验自动驾驶的机会？	3	4.8	3.6	3.6
+4	Rogers’ Diffusion of Innovations Theory	Observability	6	8	3	自动驾驶创新体验和效果是否可见、可传播？	3	3.6	4.8	1.8
+5	Innovation Ecosystem Framework	Identification of Complementors	6	8	6	是否有掌握自动驾驶核心技术或资源的企业/支撑机构参与？	3	3.6	4.8	3.6
+6	Innovation Ecosystem Framework	Complementor Readiness	9	9	9	是否有政府角色或政策支持	4	7.2	7.2	7.2
+7	Innovation Ecosystem Framework	Adoption Interdependencies	6	8	8	是否有智库或政府或盈利或非赢利的机构支持	3	3.6	4.8	4.8
+8	Innovation Ecosystem Framework	Conditions for Value Realization	9	6	9	有无官方的反馈机制供各个层级的用户来反馈意见	0	0	0	0
+9	Innovation Ecosystem Framework	Coordination Costs	3	5	1	是否形成行业发展生态，并形成较成熟的协同机制	2.5	1.5	2.5	0.5
+10	Innovation Ecosystem Framework	Governance and Leadership	9	9	7	是否形成较为统一的治理框架和规范	2	3.6	3.6	2.8
+11	Technology Acceptance Model – Trust	Trust	9	7	9	用户是否信任自动驾驶技术创新	1	1.8	1.4	1.8
+12	Technology Acceptance Model – Trust	Perceived Usefulness (PU)	9	7	9	用户是否觉得有用	2	3.6	2.8	3.6
+13	Technology Acceptance Model – Trust	Perceived Ease of Use (PEOU)	6	8	6	用户是否觉得好用	2	2.4	3.2	2.4
+14	Technology Acceptance Model – Trust	Attitude Toward Use	6	4	6	用户是否有主动意愿去尝试自动驾驶技术创新	2.5	3	2	3
+15	Technology Acceptance Model – Trust	Behavioral Intention	9	7	9	用户是否愿意去使用自动驾驶技术创新	1	1.8	1.4	1.8
+16	Technology Acceptance Model – Trust	Safety/Privacy Concerns	3	5	2	用户是否对设备安全，数据安全，个人隐私上有顾虑	2	1.2	2	0.8
