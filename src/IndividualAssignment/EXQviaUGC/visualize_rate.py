@@ -134,7 +134,7 @@ def draw_visitor():
     # Visitor data (unit: 10,000 visitors)
     visitors_data = {
         'Longlinshan Park': [3, 2.8],
-        'Zhongshan Park': [4, 12]
+        'Zhongshan Park': [4, 6]
     }
 
     # Calculate growth rates
