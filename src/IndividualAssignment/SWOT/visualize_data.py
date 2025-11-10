@@ -6,7 +6,8 @@ plt.rcParams['font.sans-serif'] = ['Arial', 'Helvetica']
 plt.rcParams['axes.unicode_minus'] = False
 
 import matplotlib.pyplot as plt
-def create_swot_bubble_chart(swot_metrics):
+def create_swot_bubble_chart(swot_metrics,
+                             title = 'SWOT Analysis: Autonomous Driving Technology in Park'):
     # Create figure and axis
     fig, ax = plt.subplots(1, 1, figsize=(16, 12))
 
@@ -72,7 +73,7 @@ def create_swot_bubble_chart(swot_metrics):
             fontsize=10, style='italic', color='#2c3e50')
 
     # Add main title
-    ax.text(0.5, 1.02, 'SWOT Analysis: Autonomous Driving Technology in Park\n(Bubble Size Represents Impact Level)',
+    ax.text(0.5, 1.02, title + '\n(Bubble Size Represents Impact Level)',
             ha='center', va='bottom', fontsize=18, fontweight='bold',
             color='#2c3e50')
 
@@ -165,7 +166,7 @@ if __name__ == "__main__":
     print("Generating SWOT Bubble Charts...")
 
     # SWOT data with scores (for bubble sizes) and positions
-    swot_metrics = {
+    swot_metrics_549 = {
         'Strengths': [
             {'text': 'Media coverage from\nauthoritative sources', 'score': 3, 'x': 0.15, 'y': 0.75},
             {'text': 'First-mover advantage\nin Central China', 'score': 2, 'x': 0.35, 'y': 0.65},
@@ -185,8 +186,48 @@ if __name__ == "__main__":
         ]
     }
 
+    swot_metrics_5001_Jackson = {
+        'Strengths': [
+            {'text': 'High Market Share\n in North America', 'score': 3, 'x': 0.15, 'y': 0.75},
+            {'text': 'Partnership with \n the Red Cross', 'score': 2, 'x': 0.35, 'y': 0.65},
+            {'text': 'FDA application\ncycle', 'score': 2, 'x': 0.35, 'y': 0.85},
+        ],
+        'Weaknesses': [
+            {'text': 'Low Initial Payment', 'score': 2, 'x': 0.2, 'y': 0.25},
+            {'text': 'Exclusive License\nfor North America', 'score': 2, 'x': 0.4, 'y': 0.2}
+        ],
+        'Opportunities': [
+            {'text': 'Establish the\nindustry standard.', 'score': 3, 'x': 0.85, 'y': 0.75}
+        ],
+        'Threats': [
+            {'text': 'Distribution\nmarket uncertainty', 'score': 2, 'x': 0.9, 'y': 0.25},
+            {'text': 'Creating a\nFuture Competitor', 'score': 2, 'x': 0.7, 'y': 0.3},
+        ]
+    }
+
+    swot_metrics_5001_hemaglobal = {
+        'Strengths': [
+            {'text': 'Large Market Share\nin Europe', 'score': 3, 'x': 0.15, 'y': 0.75},
+            {'text': 'Actively Embraces\nInnovation', 'score': 1, 'x': 0.35, 'y': 0.65},
+        ],
+        'Weaknesses': [
+            {'text': 'Exclusive Ownership of\nDerivative Technologies', 'score': 3, 'x': 0.2, 'y': 0.25},
+            {'text': 'No Foundation\nin North American\nor Asian Markets', 'score': 2, 'x': 0.4, 'y': 0.2},
+            {'text': 'Requests\na Shared License\nfor North America', 'score': 1, 'x': 0.4, 'y': 0.4},
+        ],
+        'Opportunities': [
+            {'text': 'Jointly Develop\nthe Animal Blood\nSegment', 'score': 3, 'x': 0.85, 'y': 0.75}
+        ],
+        'Threats': [
+            {'text': 'Disrupting\nNorth American\npartnership', 'score': 2, 'x': 0.8, 'y': 0.4},
+            {'text': 'Creating a\nFuture Competitor', 'score': 1, 'x': 0.7, 'y': 0.3},
+            {'text': 'Distribution\nmarket uncertainty', 'score': 3, 'x': 0.8, 'y': 0.15},
+        ]
+    }
+    title_5001 = 'SWOT Analysis: Agreement with Hemaglobal'
+
     # Generate detailed bubble chart
-    fig1, ax1 = create_swot_bubble_chart(swot_metrics)
+    fig1, ax1 = create_swot_bubble_chart(swot_metrics_5001_hemaglobal, title=title_5001)
     plt.figure(fig1.number)
     print("Detailed SWOT bubble chart saved as 'swot_bubble_detailed.png'")
 

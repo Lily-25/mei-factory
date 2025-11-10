@@ -1,0 +1,6 @@
+prompt_template_en:
+Dear, I need to do a task:
+Please help me write a prompt which could efficiently communicate with LLMs to get their analysis results.
+In order to do this work personally, I hope you can command LLM to notice some principles as follows:
+1. Using theoretical models to build a framework as guide
+2. Using the reference material which come form reliable sources–the source can be visited
