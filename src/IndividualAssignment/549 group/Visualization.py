@@ -2,13 +2,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.colors as mcolors
 import pandas as pd
-from adjustText import adjust_text
+
 
 # 设置中文字体
 plt.rcParams['font.family'] = 'Songti SC'
 plt.rcParams['axes.unicode_minus'] = False
 
-def draw_porter_5_forces_fan():
+def draw_porter_detail():
     # 数据整理
     data = {
         "Existing Rivalry": {
@@ -44,8 +44,8 @@ def draw_porter_5_forces_fan():
             "Buyer Price Sensitivity": 3,
             "Buyer Ability to Backward Integrate": 1,
             "Importance of Product to Buyer": 3,
-            "Availability of Alternatives": 2,
-            "Total": 2.0
+            "Availability of Alternatives": 4,
+            "Total": 2.4
         },
         "Threat of Substitutes": {
             "Availability of Substitutes": 2,
@@ -175,7 +175,7 @@ def draw_porter_bar():
         "Bargaining Power of Buyers",
         "Threat of Substitutes"
     ]
-    scores = [4.16, 1.75, 2.5, 2.0, 2.8]
+    scores = [4.16, 1.75, 2.5, 2.4, 2.8]
 
     # 自定义颜色（按您的表格）
     colors = ['#FF0000', '#00CC00', '#D3D3D3', '#D3D3D3', '#FFA500']  # 红、绿、黄、橙、橙
@@ -204,7 +204,7 @@ def draw_porter_bar():
     plt.savefig('data/output/porter')
 
 
-def create_competitive_advantage_stack_chart(figsize=(14, 8), subplot_figsize=(16, 6)):
+def draw_competitive_advantage_stack_chart(figsize=(14, 8), subplot_figsize=(16, 6)):
     """
     Create stacked bar charts showing competitive advantage distribution across value chain activities.
 
@@ -342,7 +342,7 @@ def create_competitive_advantage_stack_chart(figsize=(14, 8), subplot_figsize=(1
     plt.savefig('data/output/internal_env_stack_chart.png')
 
 
-def create_vrio_scatter_plot(figsize=(14, 10)):
+def draw_vrio_scatter_plot(figsize=(14, 10)):
     """
     Create a color-coded scatter plot showing the relationship between Rarity and Imitability
     of resources/capabilities, with color indicating Competitive Implication.
@@ -569,4 +569,4 @@ if __name__ == '__main__':
 
 
     # Use the function to create charts
-    create_vrio_scatter_plot()
+    draw_porter_detail()
