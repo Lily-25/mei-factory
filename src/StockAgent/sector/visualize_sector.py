@@ -31,7 +31,7 @@ class DashBoard(IndicatorMonitor):
         # Plot price fluctuations on primary Y-axis
         bar1 = ax1.bar(x - 0.2, mni_amount, width=0.4, label='Main Net Fund inFlow', color='orange')
         ax1.set_xticks(x)
-        ax1.set_xticklabels(sectors, rotation=45, ha='right')  # rotate for readability
+        ax1.set_xtickLabel(sectors, rotation=45, ha='right')  # rotate for readability
         ax1.set_xlabel('头尾部板块')
 
         # Create secondary Y-axis
@@ -100,12 +100,12 @@ class DashBoard(IndicatorMonitor):
         # ax1.xaxis.set_major_locator(mdates.DayLocator(interval=1))
         ax1.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
 
-        # Combine all lines and labels manually
+        # Combine all lines and Label manually
         all_lines = [line1, line2, line3, line4]
-        all_labels = [line.get_label() for line in all_lines]
+        all_Label = [line.get_label() for line in all_lines]
 
         # Use ax1 to draw the legend, even for lines from ax2
-        legend = ax2.legend(all_lines, all_labels, loc='upper right')
+        legend = ax2.legend(all_lines, all_Label, loc='upper right')
 
         # Make legend items interactive
         lined = {legline: origline for legline, origline in zip(legend.get_lines(), all_lines)}

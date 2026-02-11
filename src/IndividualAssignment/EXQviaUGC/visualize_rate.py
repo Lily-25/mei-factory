@@ -49,13 +49,13 @@ def draw_rate():
     ax1.plot(angles, values_radar, 'o-', linewidth=2, label='Scores', color=colors[0])
     ax1.fill(angles, values_radar, alpha=0.25, color=colors[0])
     ax1.set_xticks(angles[:-1])
-    ax1.set_xticklabels(categories_radar[:-1])
+    ax1.set_xtickLabel(categories_radar[:-1])
     ax1.set_ylim(0, 5)
     ax1.set_yticks([1, 2, 3, 4, 5])
     ax1.grid(True)
     ax1.set_title('User Experience Quality Radar Chart Analysis', size=14, fontweight='bold', pad=20)
     
-    # Add value labels on radar chart
+    # Add value Label on radar chart
     for angle, value, category in zip(angles[:-1], values, categories):
         ax1.text(angle, value + 0.3, f'{value:.1f}', ha='center', va='center', fontweight='bold')
     
@@ -118,7 +118,7 @@ def draw_rate():
     plt.grid(True, alpha=0.3)
     plt.legend()
     
-    # Add value labels
+    # Add value Label
     for i, v in enumerate(values):
         plt.text(i, v + 0.1, f'{v:.2f}', ha='center', va='bottom', fontweight='bold')
     
@@ -162,7 +162,7 @@ def draw_visitor():
     #ax1.set_xlabel('Year')
     ax1.set_ylabel('Visitors (10,000 persons)', fontsize=12)
     ax1.set_xticks(x)
-    ax1.set_xticklabels(years)
+    ax1.set_xtickLabel(years)
     ax1.legend(loc='upper left')
 
     # Create right Y-axis (growth rate)
@@ -178,25 +178,25 @@ def draw_visitor():
     ax2.set_ylabel('Growth Rate (%)', fontsize=12)
     ax2.legend(loc='upper right')
 
-    # Add data labels
-    def add_labels(bars, ax):
+    # Add data Label
+    def add_Label(bars, ax):
         for bar in bars:
             height = bar.get_height()
             ax.text(bar.get_x() + bar.get_width() / 2., height,
                     f'{height:.0f}',
                     ha='center', va='bottom', fontsize=10)
 
-    def add_line_labels(lines, ax):
+    def add_line_Label(lines, ax):
         for line in lines:
             for x_val, y_val in zip(line.get_xdata(), line.get_ydata()):
-                if y_val > 0:  # Only add labels for non-zero values
+                if y_val > 0:  # Only add Label for non-zero values
                     ax.text(x_val, y_val, f'{y_val:.1f}%',
                             ha='center', va='bottom', fontsize=10)
 
-    add_labels(bars1, ax1)
-    add_labels(bars2, ax1)
-    add_line_labels(line1, ax2)
-    add_line_labels(line2, ax2)
+    add_Label(bars1, ax1)
+    add_Label(bars2, ax1)
+    add_line_Label(line1, ax2)
+    add_line_Label(line2, ax2)
 
     # Set title and grid
     plt.title('Park Visitors Comparison: 2019 vs 2023 with Growth Rate Analysis', fontsize=14, pad=20)
@@ -230,7 +230,7 @@ def draw_park_review_chart():
     # Create bar chart
     bars = ax1.bar(review_types, review_counts, color=colors, alpha=0.8, width=0.6)
 
-    # Add value labels on bars
+    # Add value Label on bars
     for bar in bars:
         height = bar.get_height()
         ax1.text(bar.get_x() + bar.get_width() / 2., height + 20,
@@ -260,7 +260,7 @@ def draw_park_review_chart():
                     markerfacecolor='#C73E1D', markeredgecolor='black',
                     markeredgewidth=1, label='Annual Reviews')
 
-    # Add data point labels
+    # Add data point Label
     for i, (x, y) in enumerate(zip(x_positions, annual_reviews)):
         ax2.annotate(f'{y}', (x, y),
                      textcoords="offset points",
@@ -276,7 +276,7 @@ def draw_park_review_chart():
     ax2.set_title('Annual Review Trends (2019-2025)',
                   fontsize=14, fontweight='bold', pad=20)
     ax2.set_xticks(x_positions)
-    ax2.set_xticklabels(years)
+    ax2.set_xtickLabel(years)
     ax2.grid(True, alpha=0.3)
     ax2.set_axisbelow(True)
 

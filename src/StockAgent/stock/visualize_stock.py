@@ -62,9 +62,9 @@ def visualize_relation_between_interest_and_index():
     ax2.tick_params(axis='y')
 
     # Combine legends
-    lines_1, labels_1 = ax1.get_legend_handles_labels()
-    lines_2, labels_2 = ax2.get_legend_handles_labels()
-    ax2.legend(lines_1 + lines_2, labels_1 + labels_2, loc='upper left')
+    lines_1, Label_1 = ax1.get_legend_handles_Label()
+    lines_2, Label_2 = ax2.get_legend_handles_Label()
+    ax2.legend(lines_1 + lines_2, Label_1 + Label_2, loc='upper left')
 
     # Grid and layout
     ax1.grid(True)

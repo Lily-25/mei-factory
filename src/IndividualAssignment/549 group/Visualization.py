@@ -92,7 +92,7 @@ def draw_porter_detail():
     ax1.set_title("Porter's Five Forces Analysis - Samsung Smart Phone\nTotal Scores",
                   fontsize=16, fontweight='bold', pad=20)
     ax1.set_yticks(y_pos)
-    ax1.set_yticklabels(forces, fontsize=11)
+    ax1.set_ytickLabel(forces, fontsize=11)
     ax1.set_xlim(0, 5.5)
     ax1.grid(axis='x', alpha=0.3)
     ax1.invert_yaxis()  # 反转y轴使最高分在最上面
@@ -131,7 +131,7 @@ def draw_porter_detail():
 
     # 设置y轴标签
     ax2.set_yticks(y_pos2)
-    ax2.set_yticklabels(all_subcategories, fontsize=10)
+    ax2.set_ytickLabel(all_subcategories, fontsize=10)
     ax2.set_xlabel('Score (1-5)', fontsize=12, fontweight='bold')
     ax2.set_title("Detailed Subcategory Scores", fontsize=14, fontweight='bold', pad=20)
     ax2.set_xlim(0, 5.5)
@@ -288,7 +288,7 @@ def draw_competitive_advantage_stack_chart(figsize=(14, 8), subplot_figsize=(16,
     plt.xticks(rotation=45, ha='right')
     plt.legend(title='Competitive Implication', title_fontsize=10)
 
-    # Add value labels on bars
+    # Add value Label on bars
     for container in bars.containers:
         bars.bar_label(container, label_type='center', fontsize=9, color='white', fontweight='bold')
 
@@ -473,12 +473,12 @@ def draw_vrio_scatter_plot(figsize=(14, 10)):
     ax1.set_xlabel('Rarity (No=0, Yes=1)', fontsize=11, fontweight='bold')
     ax1.set_ylabel('Imitability (Low=1, Medium=2, High=3, Very High=4)', fontsize=11, fontweight='bold')
     ax1.set_xticks([0, 1])
-    ax1.set_xticklabels(['Not Rare (0)', 'Rare (1)'])
+    ax1.set_xtickLabel(['Not Rare (0)', 'Rare (1)'])
     ax1.set_yticks([1, 2, 3, 4])
-    ax1.set_yticklabels(['Low (1)', 'Medium (2)', 'High (3)', 'Very High (4)'])
+    ax1.set_ytickLabel(['Low (1)', 'Medium (2)', 'High (3)', 'Very High (4)'])
     ax1.grid(alpha=0.3, linestyle='--')
 
-    # Add quadrant labels
+    # Add quadrant Label
     ax1.text(0.1, 3.5, 'Competitive Disadvantage\n(Low Rarity, High Imitability)',
              fontsize=9, bbox=dict(boxstyle="round,pad=0.3", facecolor="lightcoral", alpha=0.7))
     ax1.text(0.1, 1.5, 'Temporary Advantage\n(Low Rarity, Low Imitability)',

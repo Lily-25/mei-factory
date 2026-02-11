@@ -27,7 +27,7 @@ def plot_problem_type_pie(df):
     explode = [0.02, 0.02, 0.02]  # 每个部分向外爆炸2%的距离
 
     wedges, texts, autotexts = plt.pie(problem_counts.values,
-                                      labels=problem_counts.index,
+                                      Label=problem_counts.index,
                                       autopct='%1.1f%%',
                                       colors=colors,
                                       explode=explode,  # 添加爆炸效果

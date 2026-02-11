@@ -57,10 +57,10 @@ def create_radar_chart(df, title="Technical Innovation Diffusion Analysis"):
     # Initialize the spider plot
     fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(projection='polar'))
 
-    # Draw one axe per variable + add labels
+    # Draw one axe per variable + add Label
     plt.xticks(angles[:-1], categories, color='grey', size=12)
 
-    # Draw ylabels
+    # Draw yLabel
     ax.set_rlabel_position(30)
     plt.yticks([0.2, 0.4, 0.6], ["0.2", "0.4", "0.6"], color="grey", size=10)
     plt.ylim(0, 1)  # Adjust based on your score range
@@ -173,7 +173,7 @@ def create_bar_chart(df):
     bars = plt.bar(['Speed', 'Breadth', 'Depth'], scores,
                    color=['#FFB6C1', '#ADD8E6', '#D3D3D3'])
 
-    # Add value labels on bars
+    # Add value Label on bars
     for bar in bars:
         height = bar.get_height()
         plt.text(bar.get_x() + bar.get_width() / 2., height + 0.1,
@@ -222,7 +222,7 @@ def uncover_key_points(score_c_name, weight_c_name, file_name):
 
     bars = ax1.barh(range(len(all_top)), all_top[score_c_name], color=colors, height=0.5,  edgecolor='black')
     ax1.set_yticks(range(len(all_top)))
-    ax1.set_yticklabels(all_top['Ref. Dimension'])
+    ax1.set_ytickLabel(all_top['Ref. Dimension'])
     ax1.set_xlabel(score_c_name)
     ax1.set_title('The indicator with the greatest impact on the dimension')
 
@@ -235,7 +235,7 @@ def uncover_key_points(score_c_name, weight_c_name, file_name):
     ax2.axis('off')
     table_data = all_top[['Ref. Dimension', score_c_name, 'Arbitration Score', weight_c_name]].round(3)
     table = ax2.table(cellText=table_data.values,
-                      colLabels=['Ref. Dimension', score_c_name, 'Arbitration Score', weight_c_name],
+                      colLabel=['Ref. Dimension', score_c_name, 'Arbitration Score', weight_c_name],
                       cellLoc='center',
                       loc='center')
     table.auto_set_font_size(False)

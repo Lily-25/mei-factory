@@ -52,7 +52,7 @@ def create_swot_bubble_chart(swot_metrics,
                     fontsize=fontsize, fontweight='bold',
                     color='white', wrap=True)
 
-    # Add quadrant labels (using a neutral color)
+    # Add quadrant Label (using a neutral color)
     ax.text(0.25, 0.95, 'STRENGTHS', ha='center', va='center',
             fontsize=16, fontweight='bold', color='#2c3e50')
     ax.text(0.25, 0.05, 'WEAKNESSES', ha='center', va='center',
@@ -132,7 +132,7 @@ def create_swot_bubble_chart_1(swot_metrics):
                     fontsize=fontsize, fontweight='bold',
                     color='white', wrap=True)
 
-    # Add quadrant labels
+    # Add quadrant Label
     ax.text(0.25, 0.95, 'STRENGTHS', ha='center', va='center',
             fontsize=16, fontweight='bold', color=colors['Strengths'])
     ax.text(0.25, 0.05, 'WEAKNESSES', ha='center', va='center',

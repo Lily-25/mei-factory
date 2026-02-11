@@ -573,10 +573,10 @@ class StatisticsIndicator(IndicatorTools):
 
         # Combine all into one legend
         handles = [line1, line2, line3]
-        labels = [h.get_label() for h in handles]
-        legend = ax2.legend(handles, labels, loc='upper right')
+        Label = [h.get_label() for h in handles]
+        legend = ax2.legend(handles, Label, loc='upper right')
 
-        # Axis labels
+        # Axis Label
         ax1.set_ylabel("Fund flow")
         ax2.set_ylabel("Price")
         ax1.set_title("Two Y-Axis Plot with Extrema")

@@ -1,0 +1,15 @@
+No	Organization	Knowledge Assets	Format	Owner	Users	Location	Rating
+1	Intranet	Requirement Specification	Doc	Senior Manager	Consultant	DMS	5
+2	Intranet	Internal Case Analysis Report	Doc	Senior Consultant	Consultant	DMS	2
+3	Intranet	AI generated insight Report	Doc	AI Assistants	Consultant	BIQ	1
+4	Roland Berger China	Application Specification	Doc	Consultants	Manager in Info Center	Info Center	4
+5	Roland Berger China	Special Topic	Email / Doc	Specialist in Info Center	Consultant	Info Center	4
+	Roland Berger China	Insight Report
+6	Roland Berger China	Industrial Report	Email / Doc	Specialist in Info Center	Consultant	Info Center	4
+7	Intranet	Topic Experience in interview	missed	Senior Consultant	Consultant	/	0
+8	Intranet	Topic insights in brainstorming	missed	Consultant	Consultant	/	0
+9	Intranet	Clarification Report	missed	Partner	Consultant	/	0
+10	Roland Berger Global	External Consulting Topic Insight Reports	Email	Expert in RB Group	Consultant	RB Group	4
+11	Intranet	Contracts	Doc	Partners	Senior Manager	DMS	5
+12	Roland Berger China	Specific Topic Insight Report	Doc	External Expert	Specialist in Info Center	Info Center	3
+13	Roland Berger China	External Expert List	Doc	Specialist in Info Center	consultant	Info Center	3
