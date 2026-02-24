@@ -1,0 +1,240 @@
+activity,technology,tacit knowledge types,count
+Deliberate Practice,Virtual Reality,Somatic Tacit Knowledge,51
+Deliberate Practice,Virtual Reality,Intellectual Tacit Knowledge,36
+Deliberate Practice,AI,Intellectual Tacit Knowledge,21
+Deliberate Practice,Augment Reality,Intellectual Tacit Knowledge,18
+Deliberate Practice,Augment Reality,Somatic Tacit Knowledge,14
+Deliberate Practice,AI,Somatic Tacit Knowledge,13
+Mentoring,AI,Intellectual Tacit Knowledge,11
+Job shadowing,Virtual Reality,Somatic Tacit Knowledge,8
+Job shadowing,Virtual Reality,Intellectual Tacit Knowledge,8
+Deliberate Practice,Big Data,Intellectual Tacit Knowledge,6
+Job shadowing,Augment Reality,Somatic Tacit Knowledge,6
+Deliberate Practice,Virtual Reality,other,6
+Mentoring,Digital Twins,Intellectual Tacit Knowledge,6
+Mentoring,Big Data,Intellectual Tacit Knowledge,5
+Mentoring,Virtual Reality,Intellectual Tacit Knowledge,5
+Communities of practice,AI,Intellectual Tacit Knowledge,5
+Deliberate Practice,Serious Games,Somatic Tacit Knowledge,4
+Deliberate Practice,Virtual Reality,Relational Tacit Knowledge,4
+Communities of practice,Virtual Reality,Intellectual Tacit Knowledge,4
+Communities of practice,Big Data,Collective Tacit Knowledge,4
+Mentoring,Virtual Reality,Somatic Tacit Knowledge,4
+Storytelling,AI,Intellectual Tacit Knowledge,4
+Job shadowing,Augment Reality,Intellectual Tacit Knowledge,4
+Mentoring,Augment Reality,Intellectual Tacit Knowledge,4
+Storytelling,Digital Twins,Somatic Tacit Knowledge,3
+Mentoring,Big Data,Collective Tacit Knowledge,3
+Simulation-based training,Augment Reality,Somatic Tacit Knowledge,3
+Storytelling,Virtual Reality,Intellectual Tacit Knowledge,3
+Storytelling,Virtual Reality,Somatic Tacit Knowledge,3
+Communities of practice,Big Data,Relational Tacit Knowledge,3
+Storytelling,Digital Twins,Intellectual Tacit Knowledge,3
+Communities of practice,Virtual Reality,Somatic Tacit Knowledge,3
+Deliberate Practice,AI,Relational Tacit Knowledge,3
+Communities of practice,AI,Collective Tacit Knowledge,3
+Mentoring,Augment Reality,Somatic Tacit Knowledge,3
+Deliberate Practice,AI,other,3
+Deliberate Practice,Augment Reality,other,3
+Deliberate Practice,Virtual Reality,Collective Tacit Knowledge,3
+After-Action Reviews,AI,Intellectual Tacit Knowledge,3
+Job shadowing,Digital Twins,Somatic Tacit Knowledge,3
+Communities of practice,Virtual Reality,Relational Tacit Knowledge,3
+Storytelling,Augment Reality,Somatic Tacit Knowledge,3
+Simulation-based training,Virtual Reality,Somatic Tacit Knowledge,3
+Storytelling,Augment Reality,Intellectual Tacit Knowledge,3
+Personalized AI-driven Education,AI,Intellectual Tacit Knowledge,2
+Training Experience,Digital Twins,Intellectual Tacit Knowledge,2
+Training Experience,Virtual Reality,Intellectual Tacit Knowledge,2
+Job shadowing,AI,Intellectual Tacit Knowledge,2
+Job shadowing,Virtual Reality,other,2
+Deliberate Practice,Big Data,Relational Tacit Knowledge,2
+Personalized AI-driven Education,Voice Cloning Technology,Intellectual Tacit Knowledge,2
+Personalized AI-driven Education,AI,Somatic Tacit Knowledge,2
+Personalized AI-driven Education,Voice Cloning Technology,Somatic Tacit Knowledge,2
+Deliberate Practice,Mobile Learning,Intellectual Tacit Knowledge,2
+Deliberate Practice,Mobile Learning,Somatic Tacit Knowledge,2
+Job shadowing,AI,Somatic Tacit Knowledge,2
+Mentoring,AI,Somatic Tacit Knowledge,2
+Communities of practice,AI,Relational Tacit Knowledge,2
+Simulation-based training,Augment Reality,Intellectual Tacit Knowledge,2
+Mentoring,Big Data,other,2
+Mentoring,Big Data,Relational Tacit Knowledge,2
+Communities of practice,Big Data,Somatic Tacit Knowledge,2
+Simulation-based training,Virtual Reality,Intellectual Tacit Knowledge,2
+Simulation-based learning,Virtual Reality,Intellectual Tacit Knowledge,2
+Storytelling,AI,Collective Tacit Knowledge,2
+Simulation-based learning,Virtual Reality,Somatic Tacit Knowledge,2
+Communities of practice,Virtual Reality,Collective Tacit Knowledge,2
+Personalized learning,AI,Intellectual Tacit Knowledge,1
+Personalized learning,AI,Somatic Tacit Knowledge,1
+Microlearning,Gamification,Intellectual Tacit Knowledge,1
+Mentoring,Big Data,Somatic Tacit Knowledge,1
+Personalized learning,Augment Reality,Somatic Tacit Knowledge,1
+Mentoring,Mobile Technology,Somatic Tacit Knowledge,1
+Mentoring,Enterprise Social Networks,Relational Tacit Knowledge,1
+Mentoring,Online Learning Platforms,Somatic Tacit Knowledge,1
+Mentoring,Enterprise Social Networks,Collective Tacit Knowledge,1
+Personalized learning,Augment Reality,Intellectual Tacit Knowledge,1
+Periodic knowledge audits,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+Mentoring,e-learning,Intellectual Tacit Knowledge,1
+Mentoring,Mobile Technology,Intellectual Tacit Knowledge,1
+Microlearning,Mobile apps,Intellectual Tacit Knowledge,1
+Mentoring,e-learning,Somatic Tacit Knowledge,1
+Patient Education,Augment Reality,other,1
+Patient Education,3D Modeling,other,1
+Mentoring,Gamified platforms,Somatic Tacit Knowledge,1
+Monitoring,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+Mentoring,Gamified platforms,Intellectual Tacit Knowledge,1
+Mentoring,Digital Twins,Somatic Tacit Knowledge,1
+Microlearning,Online platforms,Intellectual Tacit Knowledge,1
+Mentoring,Online Learning Platforms,Intellectual Tacit Knowledge,1
+Simulation,Virtual Reality,Relational Tacit Knowledge,1
+Personalized learning,Virtual Reality,Intellectual Tacit Knowledge,1
+Succession Planning,Enterprise Social Networks,Relational Tacit Knowledge,1
+Storytelling,Big Data,Collective Tacit Knowledge,1
+Storytelling,Big Data,Intellectual Tacit Knowledge,1
+Storytelling,Big Data,Relational Tacit Knowledge,1
+Storytelling,Big Data,Somatic Tacit Knowledge,1
+Storytelling,Mobile Technology,Intellectual Tacit Knowledge,1
+Storytelling,Mobile Technology,Somatic Tacit Knowledge,1
+Storytelling,Online Learning Platforms,Intellectual Tacit Knowledge,1
+Storytelling,Online Learning Platforms,Somatic Tacit Knowledge,1
+Succession Planning,Enterprise Social Networks,Collective Tacit Knowledge,1
+Teacher training programs,Digital resources,Intellectual Tacit Knowledge,1
+Personalized learning,Virtual Reality,Somatic Tacit Knowledge,1
+Teacher training programs,Interactive learning platforms,Intellectual Tacit Knowledge,1
+Teacher training programs,Multimedia content,Intellectual Tacit Knowledge,1
+Training,Digital Twins,Intellectual Tacit Knowledge,1
+User Acceptance Testing,Digital Twins,Intellectual Tacit Knowledge,1
+Virtual simulations,AI,Intellectual Tacit Knowledge,1
+Virtual simulations,AI,Somatic Tacit Knowledge,1
+Virtual simulations,Augment Reality,Intellectual Tacit Knowledge,1
+Virtual simulations,Augment Reality,Somatic Tacit Knowledge,1
+Virtual simulations,Virtual Reality,Intellectual Tacit Knowledge,1
+Storytelling,AI,Somatic Tacit Knowledge,1
+Storytelling,3D Printing,Somatic Tacit Knowledge,1
+Storytelling,3D Printing,Intellectual Tacit Knowledge,1
+Simulation-based training,Mixed Reality,Somatic Tacit Knowledge,1
+Practical sessions,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+Safety training,Augment Reality,Somatic Tacit Knowledge,1
+Safety training,Virtual Reality,Somatic Tacit Knowledge,1
+Simulation,AI,Relational Tacit Knowledge,1
+Simulation,AI,Somatic Tacit Knowledge,1
+Simulation,Augment Reality,Relational Tacit Knowledge,1
+Simulation,Augment Reality,Somatic Tacit Knowledge,1
+Simulation,Virtual Reality,Intellectual Tacit Knowledge,1
+Mentoring,3D Printing,Intellectual Tacit Knowledge,1
+Simulation,Virtual Reality,Somatic Tacit Knowledge,1
+Simulation Exercises,Virtual Reality,other,1
+Simulation-based learning,Augment Reality,Intellectual Tacit Knowledge,1
+Simulation-based learning,Augment Reality,Somatic Tacit Knowledge,1
+Simulation-based learning,e-learning,Intellectual Tacit Knowledge,1
+Simulation-based learning,e-learning,Somatic Tacit Knowledge,1
+Simulation-based training,AI,Intellectual Tacit Knowledge,1
+Simulation-based training,AI,Somatic Tacit Knowledge,1
+Simulation-based training,Gamified platforms,Intellectual Tacit Knowledge,1
+Simulation-based training,Gamified platforms,Somatic Tacit Knowledge,1
+Mentoring,3D Printing,Somatic Tacit Knowledge,1
+After-Action Reviews,3D Printing,Intellectual Tacit Knowledge,1
+Meetings,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+Collaborative projects,Interactive learning platforms,Intellectual Tacit Knowledge,1
+Case-Based Learning,Virtual Reality,Intellectual Tacit Knowledge,1
+Case-Based Learning,Virtual Reality,Somatic Tacit Knowledge,1
+Case-based learning,Virtual Reality,other,1
+Chatbot-assisted learning,AI,Intellectual Tacit Knowledge,1
+Chatbot-assisted learning,AI,Somatic Tacit Knowledge,1
+Chatbot-assisted learning,Augment Reality,Intellectual Tacit Knowledge,1
+Chatbot-assisted learning,Augment Reality,Somatic Tacit Knowledge,1
+Chatbot-assisted learning,Virtual Reality,Intellectual Tacit Knowledge,1
+Chatbot-assisted learning,Virtual Reality,Somatic Tacit Knowledge,1
+Collaborative projects,Digital resources,Intellectual Tacit Knowledge,1
+Collaborative projects,Multimedia content,Intellectual Tacit Knowledge,1
+Deliberate Practice,AI,Collective Tacit Knowledge,1
+Communities of practice,AI,Somatic Tacit Knowledge,1
+Communities of practice,Augment Reality,Collective Tacit Knowledge,1
+Communities of practice,Augment Reality,Intellectual Tacit Knowledge,1
+Communities of practice,Augment Reality,Relational Tacit Knowledge,1
+Communities of practice,Augment Reality,Somatic Tacit Knowledge,1
+Communities of practice,Big Data,Intellectual Tacit Knowledge,1
+Communities of practice,Enterprise Social Networks,Collective Tacit Knowledge,1
+Communities of practice,Enterprise Social Networks,Relational Tacit Knowledge,1
+Communities of practice,Virtual Reality,other,1
+Deliberate Practice,3D Printing,Intellectual Tacit Knowledge,1
+Brainstorming,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+Blended teaching,Big Data,Intellectual Tacit Knowledge,1
+Blended teaching,AI,Intellectual Tacit Knowledge,1
+Blended assessment methods,Multimedia content,Intellectual Tacit Knowledge,1
+After-Action Reviews,AI,Somatic Tacit Knowledge,1
+After-Action Reviews,Augment Reality,Intellectual Tacit Knowledge,1
+After-Action Reviews,Augment Reality,Somatic Tacit Knowledge,1
+After-Action Reviews,Big Data,Intellectual Tacit Knowledge,1
+After-Action Reviews,Big Data,Relational Tacit Knowledge,1
+After-Action Reviews,Digital Twins,Intellectual Tacit Knowledge,1
+After-Action Reviews,Digital Twins,Somatic Tacit Knowledge,1
+After-Action Reviews,Mobile Technology,Intellectual Tacit Knowledge,1
+After-Action Reviews,Mobile Technology,Somatic Tacit Knowledge,1
+After-Action Reviews,Online Learning Platforms,Intellectual Tacit Knowledge,1
+After-Action Reviews,Online Learning Platforms,Somatic Tacit Knowledge,1
+After-Action Reviews,Virtual Reality,Intellectual Tacit Knowledge,1
+After-Action Reviews,Virtual Reality,Somatic Tacit Knowledge,1
+Automated assessments,AI,Intellectual Tacit Knowledge,1
+Automated assessments,AI,Somatic Tacit Knowledge,1
+Automated assessments,Augment Reality,Intellectual Tacit Knowledge,1
+Automated assessments,Augment Reality,Somatic Tacit Knowledge,1
+Automated assessments,Virtual Reality,Intellectual Tacit Knowledge,1
+Automated assessments,Virtual Reality,Somatic Tacit Knowledge,1
+Blended assessment methods,Digital resources,Intellectual Tacit Knowledge,1
+Blended assessment methods,Interactive learning platforms,Intellectual Tacit Knowledge,1
+Deliberate Practice,3D Printing,Somatic Tacit Knowledge,1
+Deliberate Practice,Augment Reality,Collective Tacit Knowledge,1
+Knowledge Harvesting Workshops,Big Data,Somatic Tacit Knowledge,1
+Job shadowing,Augment Reality,Collective Tacit Knowledge,1
+Hands-on workshops,Virtual Reality,other,1
+In-house training programmes,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+International fellowships,Augment Reality,Intellectual Tacit Knowledge,1
+International fellowships,Augment Reality,Somatic Tacit Knowledge,1
+International fellowships,Virtual Reality,Intellectual Tacit Knowledge,1
+International fellowships,Virtual Reality,Somatic Tacit Knowledge,1
+International fellowships,e-learning,Intellectual Tacit Knowledge,1
+International fellowships,e-learning,Somatic Tacit Knowledge,1
+Job shadowing,3D Printing,Intellectual Tacit Knowledge,1
+Job shadowing,3D Printing,Somatic Tacit Knowledge,1
+After-Action Reviews,3D Printing,Somatic Tacit Knowledge,1
+Deliberate Practice,Augment Reality,Relational Tacit Knowledge,1
+Job shadowing,Digital Twins,Intellectual Tacit Knowledge,1
+Job shadowing,Gamified platforms,Intellectual Tacit Knowledge,1
+Job shadowing,Gamified platforms,Somatic Tacit Knowledge,1
+Job shadowing,Mobile Technology,Intellectual Tacit Knowledge,1
+Job shadowing,Mobile Technology,Somatic Tacit Knowledge,1
+Job shadowing,Online Learning Platforms,Intellectual Tacit Knowledge,1
+Job shadowing,Online Learning Platforms,Somatic Tacit Knowledge,1
+Job shadowing,Virtual Reality,Collective Tacit Knowledge,1
+Knowledge Harvesting Workshops,Big Data,Collective Tacit Knowledge,1
+Knowledge Harvesting Workshops,Big Data,Intellectual Tacit Knowledge,1
+Hands-on training sessions,Virtual Reality,Somatic Tacit Knowledge,1
+Hands-on training sessions,Augment Reality,Somatic Tacit Knowledge,1
+Gamification,Virtual Reality,Somatic Tacit Knowledge,1
+Gamification,Virtual Reality,Intellectual Tacit Knowledge,1
+Deliberate Practice,Big Data,Collective Tacit Knowledge,1
+Deliberate Practice,Big Data,Somatic Tacit Knowledge,1
+Deliberate Practice,Big Data,other,1
+Deliberate Practice,Digital Twins,Intellectual Tacit Knowledge,1
+Deliberate Practice,Digital Twins,Somatic Tacit Knowledge,1
+Deliberate Practice,Digital Twins,other,1
+Deliberate Practice,Mobile Technology,Intellectual Tacit Knowledge,1
+Deliberate Practice,Mobile Technology,Somatic Tacit Knowledge,1
+Deliberate Practice,Online Learning Platforms,Intellectual Tacit Knowledge,1
+Deliberate Practice,Online Learning Platforms,Somatic Tacit Knowledge,1
+Dialogue,Information and Communication Technology (ICT) tools,Intellectual Tacit Knowledge,1
+Executive Development Programme,Big Data,Collective Tacit Knowledge,1
+Executive Development Programme,Big Data,Relational Tacit Knowledge,1
+Formative Assessment,Technology-based Learning,Intellectual Tacit Knowledge,1
+Gamification,AI,Intellectual Tacit Knowledge,1
+Gamification,AI,Somatic Tacit Knowledge,1
+Gamification,AI,other,1
+Gamification,Augment Reality,Intellectual Tacit Knowledge,1
+Gamification,Augment Reality,Somatic Tacit Knowledge,1
+Gamification,Digital Games,Intellectual Tacit Knowledge,1
+Gamification,Edge computing,other,1
+Virtual simulations,Virtual Reality,Somatic Tacit Knowledge,1
