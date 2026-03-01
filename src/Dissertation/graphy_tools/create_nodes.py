@@ -1,6 +1,6 @@
 import csv
 import json
-
+import os
 from PIL.ImImagePlugin import split
 from neo4j import GraphDatabase
 
@@ -10,30 +10,31 @@ import numpy as np
 # === CONFIG ===
 URI = "bolt://localhost:7687"
 AUTH = ("neo4j", "MyNewPass123!")  # 🔐 replace!
-CSV_FILE = "../data/graph/nodes"
+CSV_DIR = "../data/graph/nodes/"
 
-
-def read_nodes_from_csv(filepath):
+def read_nodes_from_csv():
     nodes = []
+    for root, dirs, files in os.walk(CSV_DIR):
+        for file in files:
+            file = os.path.join(root, file)
+            df = pd.read_csv(file, sep='\t')
+            df = df.astype(str)
 
-    df = pd.read_csv(CSV_FILE, sep='\t')
-    df = df.astype(str)
+            for index, item in df.iterrows():
+                if not len(item['Label']):
+                    continue
+                props={}
+                Label = item['Label']
+                for prop_title in item.keys():
+                    if prop_title != 'Label' and item[prop_title] != 'nan':
+                        props[prop_title] = item[prop_title]
 
-    for index, item in df.iterrows():
-        if not len(item['Label']):
-            continue
-        props={}
-        Label = item['Label']
-        for prop_title in item.keys():
-            if prop_title != 'Label' and item[prop_title] != 'nan':
-                props[prop_title] = item[prop_title]
+                nodes.append({
+                    "Label": Label,
+                    "properties": props
+                })
 
-        nodes.append({
-            "Label": Label,
-            "properties": props
-        })
     return nodes
-
 
 def create_nodes_with_apoc(session, nodes_data):
     query = """
@@ -64,9 +65,10 @@ def create_nodes_fallback(session, nodes_data):
 
 # === MAIN ===
 if __name__ == "__main__":
+
     print("📥 Reading nodes from CSV...")
     try:
-        nodes = read_nodes_from_csv(CSV_FILE)
+        nodes = read_nodes_from_csv()
         print(f"✅ Loaded {len(nodes)} nodes.")
         for i, n in enumerate(nodes[:3], 1):  # preview first 3
             print(f"  {i}. Label: {n['Label']}, Props keys: {list(n['properties'].keys())}")

@@ -43,7 +43,7 @@ AND (AB("technology") OR AB("technologies"))
 AND pd(20220101-20260127)
 
 Web of Service
-(knowledge retention(Abstract)OR knowledge loss(Abstract) or loss of knowledge(abstract)) and 
+(knowledge retention(Abstract) OR knowledge loss(Abstract) or loss of knowledge(abstract)) and 
 technolog*(Abstract)
 
 Commands

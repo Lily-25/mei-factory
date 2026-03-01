@@ -3,21 +3,8 @@ import pandas as pd
 
 
 def visualization():
-    input_json_path = f'../data/papers/midput/ssp_abstract_extract_deepseek.json'
-    with open(input_json_path,
-              'r',
-              encoding='utf-8') as f:
-        documents = json.load(f)
-
-    df = pd.DataFrame(documents).fillna("other")
-
-    # Define the columns to check
-    columns_to_check = ['methods', 'correlation', 'activities', 'technologies', 'findings', 'industries', 'tacit knowledge types']
-
-    # Filter out rows where ALL specified columns are 'other'
-    df = df[~(df[columns_to_check] == 'other').all(axis=1)]
-
-    df.to_csv(f'../data/papers/midput/ssp_abstract_extract_deepseek.csv')
+    input_file = f'../data/papers/output/activity_combinations.csv'
+    df = pd.read_json(input_file)
 
     df_exploded = (
         df
@@ -30,7 +17,7 @@ def visualization():
     # Step 3: 按三列分组并计数
     result = (
         df_exploded
-        .groupby(['activities', 'technologies', 'tacit knowledge types'], as_index=False)
+        .groupby(['activity_name', 'technologies', 'tacit knowledge types'], as_index=False)
         .size()
         .rename(columns={'size': 'count'})
         .sort_values('count', ascending=False)
@@ -44,7 +31,7 @@ def visualization():
         'technologies': 'technology',
         'tacit knowledge types': 'tacit knowledge types'
     })
-    result.to_csv('../data/papers/midput/ssp_abstract_extract_3d.csv', index=False)
+    result.to_csv('../data/papers/midput/ssp_extract_relevance_3d.csv', index=False)
 
 if __name__ == '__main__':
     visualization()

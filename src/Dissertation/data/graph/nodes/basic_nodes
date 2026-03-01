@@ -1,0 +1,29 @@
+Label	Name	Definition	Author	Date	Work	Tansfer	Example	Location	Explicability
+Root	Fundamental Model
+Fundamental_Theories	Foundational Tacit Knowledge		Michael Polanyi	1966	We can know more than we can tell
+Fundamental_Theories	SECI Model		Nonaka & Takeuchi	1995	The Knowledge-Creating Company
+Fundamental_Theories	Tacit Knowledge Typologies		Harry Collins	2010	Tacit and Explicit Knowledge
+Fundamental_Theories	Organizational Justice Theory		Greenberg, J. 	1987	A taxonomy of organizational justice theories
+Fundamental_Theories	Social Exchange Theory		Homans, G. C.	1958	Social Behavior as Exchange. American Journal of Sociology.
+Fundamental_Theories	Interpersonal Contact Theory		Allport, G. W. 	1954	The Nature of Prejudice.
+Fundamental_Theories	Social-Technical System Theory		Trist, E. L. & Bamforth, K. W. 	1951	Some social and psychological consequences of the longwall method of coal-getting
+SECI	Socialization					Tacit > Tacit	"Transferring a chef's feel for dough consistency (STK)
+Understanding a team's unwritten social rules (CTK)"
+SECI	Externalization					Tacit > Explicit	"Recording an executive's judgment for risk assessment (ITK)
+Using sensor mapping to document the sound of a failing machine (STK)"
+SECI	Internalization					Explicit > Tacit	"A surgeon practicing a documented procedure until it becomes muscle memory (STK).
+A technician memorizing a new protocol until it becomes an automatic workflow (ITK)."
+SECI	Combination					Explicit plus Explicitcit	"Creating a new financial model by synthesizing explicit economic data and market reports.
+Integrating safety manuals from three different regions into one global standard."
+TK_Taxonomy	Relational TK	Knowledge located in the Individual, relating to relationships, context, or procedures. This is knowledge that could be articulated but hasn't been due to contingent factors (lack of time, oversight, context dependency)						Individual	Weak Resistance
+TK_Taxonomy	Somatic TK	Knowledge located in the body and physical habits (muscle memory, physical skills, refined motor control).						Body	Medium Resistance
+TK_Taxonomy	Intellectual TK	Knowledge located in the mind (judgment, intuition, mental models, "rules of thumb," cognitive heuristics).						Mind	Medium Resistance
+TK_Taxonomy	Collective TK	Knowledge located in the Group, culture, or routines. It is inherently tied to social interaction and context.						Group	Strong Resistance
+OM_Taxonomy	Organizational Justice
+OM_Taxonomy	Social Exchange
+OM_Taxonomy	Interpersonal Contact
+Intervention_Strategies	Implementing Targeted Recognition and Rewards
+Intervention_Strategies	Training Managers on Age Awareness and Bias
+Intervention_Strategies	Job Redesign for Knowledge Transfer Roles
+Intervention_Strategies	Creating Reverse Mentoring Programs
+Intervention_Strategies	Promoting Intergenerational Contact and Rapport

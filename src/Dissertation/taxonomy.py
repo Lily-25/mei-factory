@@ -1,4 +1,12 @@
-
+class LiteratureReview:
+    """
+    """
+    literature_style_taxonomy = ['Original Research',
+                        'Narrative Review',
+                        'Systematic Review',
+                        'Case Study',
+                        'Meta-Analysis',
+                        'Other']
 
 class RetentionTaxonomy:
     """

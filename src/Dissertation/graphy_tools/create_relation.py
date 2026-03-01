@@ -1,10 +1,10 @@
-import csv
+import csv,os
 from neo4j import GraphDatabase
 
 URI = "bolt://localhost:7687"
 AUTH = ("neo4j", "MyNewPass123!")  # ✅ Confirm this password is correct!
 
-File_name = '../data/graph/Relationship'
+CSV_DIR = '../data/graph/relations/'
 
 def create_relationships(tx, batch):
     tx.run("""
@@ -27,26 +27,29 @@ def create_relationships(tx, batch):
     """, batch=batch)
 
 rels = []
-try:
-    with open(File_name, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f, delimiter='\t')
-        for row in reader:
-            # Skip empty or malformed rows
-            if not row.get('Src_Name') or not row.get('Dst_Name') or not row.get('Relationship'):
-                continue
-            rels.append({
-                'src_label':row['Src_Label'].strip(),
-                'src': row['Src_Name'].strip(),
-                'dst_label':row['Dst_Label'].strip(),
-                'tgt': row['Dst_Name'].strip(),
-                'type': row['Relationship'].strip()  # e.g., "BASED_ON", "EXTENDS"
-            })
-except FileNotFoundError:
-    print("❌ File not found! Check path: 'graph/Root_R_Fundamental_Model'")
-    exit(1)
-except Exception as e:
-    print(f"❌ Error reading file: {e}")
-    exit(1)
+for root, dirs, files in os.walk(CSV_DIR):
+    for file in files:
+        file = os.path.join(root, file)
+        try:
+            with open(file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f, delimiter='\t')
+                for row in reader:
+                    # Skip empty or malformed rows
+                    if not row.get('Src_Name') or not row.get('Dst_Name') or not row.get('Relationship'):
+                        continue
+                    rels.append({
+                        'src_label':row['Src_Label'].strip(),
+                        'src': row['Src_Name'].strip(),
+                        'dst_label':row['Dst_Label'].strip(),
+                        'tgt': row['Dst_Name'].strip(),
+                        'type': row['Relationship'].strip()  # e.g., "BASED_ON", "EXTENDS"
+                    })
+        except FileNotFoundError:
+            print("❌ File not found! Check path: 'graph/Root_R_Fundamental_Model'")
+            exit(1)
+        except Exception as e:
+            print(f"❌ Error reading file: {e}")
+            exit(1)
 
 if not rels:
     print("⚠️ No relationships loaded — check file format & headers.")

@@ -1,0 +1,73 @@
+Label	Name	Definition	Author	Date	Work	Tansfer	Example	Location	Explicability
+Root	Fundamental Model
+Fundamental_Theories	Foundational Tacit Knowledge		Michael Polanyi	1966	We can know more than we can tell
+Fundamental_Theories	SECI Model		Nonaka & Takeuchi	1995	The Knowledge-Creating Company
+Fundamental_Theories	Tacit Knowledge Typologies		Harry Collins	2010	Tacit and Explicit Knowledge
+Fundamental_Theories	Organizational Justice Theory		Greenberg, J. 	1987	A taxonomy of organizational justice theories
+Fundamental_Theories	Social Exchange Theory		Homans, G. C.	1958	Social Behavior as Exchange. American Journal of Sociology.
+Fundamental_Theories	Interpersonal Contact Theory		Allport, G. W. 	1954	The Nature of Prejudice.
+Fundamental_Theories	Social-Technical System Theory		Trist, E. L. & Bamforth, K. W. 	1951	Some social and psychological consequences of the longwall method of coal-getting
+SECI	Socialization					Tacit > Tacit	"Transferring a chef's feel for dough consistency (STK)
+Understanding a team's unwritten social rules (CTK)"
+SECI	Externalization					Tacit > Explicit	"Recording an executive's judgment for risk assessment (ITK)
+Using sensor mapping to document the sound of a failing machine (STK)"
+SECI	Internalization					Explicit > Tacit	"A surgeon practicing a documented procedure until it becomes muscle memory (STK).
+A technician memorizing a new protocol until it becomes an automatic workflow (ITK)."
+SECI	Combination					Explicit plus Explicitcit	"Creating a new financial model by synthesizing explicit economic data and market reports.
+Integrating safety manuals from three different regions into one global standard."
+Actionable_Tools	Apprenticeship	Long-term, hands-on training where a novice works under a master.
+Actionable_Tools	Mentoring	A relational partnership for professional growth and wisdom transfer.
+Actionable_Tools	Job Shadowing	Following an expert during their workday to observe behaviors and routines.
+Actionable_Tools	Reverse Shadowing	The expert observes the novice and provides real-time feedback.
+Actionable_Tools	Knowledge Cafés	Structured, informal group conversations around a specific challenge.
+	Storytelling	Sharing narratives of past experiences to convey values, norms, or lessons.
+Actionable_Tools	Critical Incident Technique	Interviewing experts about specific, high-stakes "events" and their responses.
+Actionable_Tools	Metaphor Mapping	Using symbolic imagery to describe complex or abstract processes.
+Actionable_Tools	Knowledge Interview	A guided conversation designed to elicit hidden expertise and mental models.
+Actionable_Tools	Cognitive Task Analysis (CTA)	A highly structured interview focusing on the "cues" and "strategies" experts use in crisis.
+Actionable_Tools	Episodic Interview	An interview that focuses on specific "episodes" or past projects.
+Actionable_Tools	Knowledge Harvesting	A structured workshop to extract and document an expert’s "hidden" know-how.
+	Communities of Practice (CoP)	Groups of people who share a passion and interact regularly to learn how to do it better.
+Actionable_Tools	Deliberate Practice	Repetitive, focused practice with immediate feedback to master a skill.
+Actionable_Tools	Job Rotation	Moving employees through different roles to broaden their perspective.
+Actionable_Tools	After-Action Reviews	A debrief session after a project to analyze "what happened" and "why."
+	Lessons Learned Database	A digital repository of insights gained from past projects.
+Actionable_Tools	Data Mining and Analytics	Using software to discover hidden patterns in large sets of explicit data.
+Actionable_Tools	Taxonomy and Ontology Building	Organizing knowledge into structured categories and relationships.
+Actionable_Tools	Expert Systems	AI or software that mimics the decision-making ability of a human expert.
+TK_Taxonomy	Relational TK	Knowledge located in the Individual, relating to relationships, context, or procedures. This is knowledge that could be articulated but hasn't been due to contingent factors (lack of time, oversight, context dependency)						Individual	Weak Resistance
+TK_Taxonomy	Somatic TK	Knowledge located in the body and physical habits (muscle memory, physical skills, refined motor control).						Body	Medium Resistance
+TK_Taxonomy	Intellectual TK	Knowledge located in the mind (judgment, intuition, mental models, "rules of thumb," cognitive heuristics).						Mind	Medium Resistance
+TK_Taxonomy	Collective TK	Knowledge located in the Group, culture, or routines. It is inherently tied to social interaction and context.						Group	Strong Resistance
+Retention_Strategies	Influence Mapping
+Retention_Strategies	Social Heuristic Extraction
+Retention_Strategies	Socialization
+Retention_Strategies	Practice
+Retention_Strategies	Technological Externalization
+Retention_Strategies	Elicitation
+Retention_Strategies	Modeling
+Retention_Strategies	Narrative Capture
+Retention_Strategies	Structural Embedding
+Retention_Strategies	Social Continuity
+Reallife_Instances	Trust
+Reallife_Instances	Influence
+Reallife_Instances	Negotiation Nuance
+Reallife_Instances	Muscle memory
+Reallife_Instances	Physical skills
+Reallife_Instances	Refined motor control
+Reallife_Instances	Judgment
+Reallife_Instances	Intuition
+Reallife_Instances	Mental models
+Reallife_Instances	Rules of thumb
+Reallife_Instances	Cognitive heuristics
+Reallife_Instances	Cognitive Mapping
+Reallife_Instances	Metaphor Mapping
+Reallife_Instances	Failure Analysis Debriefs
+OM_Taxonomy	Organizational Justice
+OM_Taxonomy	Social Exchange
+OM_Taxonomy	Interpersonal Contact
+Intervention_Strategies	Implementing Targeted Recognition and Rewards
+Intervention_Strategies	Training Managers on Age Awareness and Bias
+Intervention_Strategies	Job Redesign for Knowledge Transfer Roles
+Intervention_Strategies	Creating Reverse Mentoring Programs
+Intervention_Strategies	Promoting Intergenerational Contact and Rapport
