@@ -1,0 +1,534 @@
+uuid,division,majorGroup,activity_name,knowledge_flows,tacit_knowledge_types,technologies
+c8d41b6b-127e-4e6f-b197-938f48f4df4a,B. Division B: Mining,Major Group 10: Metal Mining,Deliberate Practice,,,Virtual Reality
+c8d41b6b-127e-4e6f-b197-938f48f4df4a,B. Division B: Mining,Major Group 10: Metal Mining,Deliberate Practice,,,Augment Reality
+9b579826-b0b7-41ed-9e14-f34b7cc78580,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,AI
+9b579826-b0b7-41ed-9e14-f34b7cc78580,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,Big Data
+9b579826-b0b7-41ed-9e14-f34b7cc78580,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,Virtual Reality
+9b579826-b0b7-41ed-9e14-f34b7cc78580,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,AI
+9b579826-b0b7-41ed-9e14-f34b7cc78580,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,Big Data
+9b579826-b0b7-41ed-9e14-f34b7cc78580,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,Virtual Reality
+894b3b3f-40f2-418c-966b-205108adf925,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,,Virtual Reality
+894b3b3f-40f2-418c-966b-205108adf925,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,,Augment Reality
+f70503b9-87cc-4314-a9c8-c7a7e3523ad3,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Mentoring,,,Augment Reality
+a9f53cc7-9f3e-456c-8010-e13a9d251bf9,I. Division I: Services,Major Group 73: Business Services,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+a9f53cc7-9f3e-456c-8010-e13a9d251bf9,I. Division I: Services,Major Group 73: Business Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+a9f53cc7-9f3e-456c-8010-e13a9d251bf9,I. Division I: Services,Major Group 73: Business Services,Mentoring,Socialization,Relational Tacit Knowledge,AI
+a9f53cc7-9f3e-456c-8010-e13a9d251bf9,I. Division I: Services,Major Group 73: Business Services,Mentoring,Socialization,Somatic Tacit Knowledge,AI
+a9f53cc7-9f3e-456c-8010-e13a9d251bf9,I. Division I: Services,Major Group 73: Business Services,Mentoring,Internalization,Relational Tacit Knowledge,AI
+a9f53cc7-9f3e-456c-8010-e13a9d251bf9,I. Division I: Services,Major Group 73: Business Services,Mentoring,Internalization,Somatic Tacit Knowledge,AI
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Externalization,Somatic Tacit Knowledge,AI
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Externalization,Somatic Tacit Knowledge,Big Data
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Externalization,Relational Tacit Knowledge,AI
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Externalization,Relational Tacit Knowledge,Big Data
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Combination,Somatic Tacit Knowledge,AI
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Combination,Somatic Tacit Knowledge,Big Data
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Combination,Relational Tacit Knowledge,AI
+76bcda04-3996-4a33-a0b3-ba5460783452,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Critical Incident Technique,Combination,Relational Tacit Knowledge,Big Data
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Internalization,Somatic Tacit Knowledge,Virtual Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Internalization,Somatic Tacit Knowledge,Augment Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Internalization,Intellectual Tacit Knowledge,Virtual Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Internalization,Intellectual Tacit Knowledge,Augment Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Somatic Tacit Knowledge,Virtual Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Somatic Tacit Knowledge,Augment Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Intellectual Tacit Knowledge,Virtual Reality
+9e08641b-d6a9-411c-9447-368b3130ae80,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Intellectual Tacit Knowledge,Augment Reality
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Big Data
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Big Data
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+cc5b72e6-fc7c-499c-98ab-36376401f7f7,D. Division D: Manufacturing,"Major Group 38: Measuring, Analyzing, And Controlling Instruments; Photographic, Medical And Optical Goods; Watches And Clocks",Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,Big Data
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Big Data
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,Big Data
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+99a7d6f0-21fa-49aa-806c-0b115dc43eb7,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+f3086762-6a34-4349-8295-4158aba5f439,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 08: Forestry,Communities of practice,,,AI
+f3086762-6a34-4349-8295-4158aba5f439,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 08: Forestry,Communities of practice,,,Big Data
+85f4a561-760d-4270-9fd5-7d8849a00833,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,,AI
+85f4a561-760d-4270-9fd5-7d8849a00833,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,,AI
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Socialization,Somatic Tacit Knowledge,Virtual Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Socialization,Somatic Tacit Knowledge,Augment Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Socialization,Relational Tacit Knowledge,Virtual Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Socialization,Relational Tacit Knowledge,Augment Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Externalization,Somatic Tacit Knowledge,Virtual Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Externalization,Somatic Tacit Knowledge,Augment Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Externalization,Relational Tacit Knowledge,Virtual Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Storytelling,Externalization,Relational Tacit Knowledge,Augment Reality
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Combination,Collective Tacit Knowledge,AI
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Combination,Collective Tacit Knowledge,Big Data
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Combination,Intellectual Tacit Knowledge,AI
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Combination,Intellectual Tacit Knowledge,Big Data
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Internalization,Collective Tacit Knowledge,AI
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Internalization,Collective Tacit Knowledge,Big Data
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+1f27a5d1-606e-47c1-b3a9-c28cc06cd9aa,D. Division D: Manufacturing,Major Group 23: Apparel And Other Finished Products Made From Fabrics And Similar Materials,Communities of practice,Internalization,Intellectual Tacit Knowledge,Big Data
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Virtual Reality
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Big Data
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Virtual Reality
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Big Data
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Virtual Reality
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+6c18f2b7-1de7-4679-8408-071bb10a2ec2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Virtual Reality
+59a9b128-0ccc-409d-aa1b-fffb6c3c6194,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Communities of practice,,,AI
+59a9b128-0ccc-409d-aa1b-fffb6c3c6194,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Communities of practice,,,Big Data
+8416355c-0617-4d48-a174-cd5b3fa433e7,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Communities of practice,,Relational Tacit Knowledge,AI
+8416355c-0617-4d48-a174-cd5b3fa433e7,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Communities of practice,,Collective Tacit Knowledge,AI
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Externalization,Somatic Tacit Knowledge,AI
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Externalization,Somatic Tacit Knowledge,Big Data
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Combination,Somatic Tacit Knowledge,AI
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Combination,Somatic Tacit Knowledge,Big Data
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Big Data
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Socialization,Collective Tacit Knowledge,Virtual Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Socialization,Collective Tacit Knowledge,Augment Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Socialization,Intellectual Tacit Knowledge,Virtual Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Socialization,Intellectual Tacit Knowledge,Augment Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Internalization,Collective Tacit Knowledge,Virtual Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Internalization,Collective Tacit Knowledge,Augment Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Internalization,Intellectual Tacit Knowledge,Virtual Reality
+ef171fd1-bb26-4c8e-ad93-10bd37f8f9a4,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,Internalization,Intellectual Tacit Knowledge,Augment Reality
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Big Data
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Big Data
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+0d4dc4e7-18d9-4c24-8a18-3d85f0a4d69a,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+4ccaf54a-9e9c-4519-b035-3ad7d16afc4f,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,Relational Tacit Knowledge,AI
+4ccaf54a-9e9c-4519-b035-3ad7d16afc4f,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,Relational Tacit Knowledge,Virtual Reality
+4ccaf54a-9e9c-4519-b035-3ad7d16afc4f,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,Collective Tacit Knowledge,AI
+4ccaf54a-9e9c-4519-b035-3ad7d16afc4f,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,Collective Tacit Knowledge,Virtual Reality
+f06136b0-2463-44e9-8aeb-468860f2f73b,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,AI
+f06136b0-2463-44e9-8aeb-468860f2f73b,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,AI
+ba1d9787-d3cc-4a9f-8d6f-126e75775b07,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Deliberate Practice,Externalization,Intellectual Tacit Knowledge,AI
+ba1d9787-d3cc-4a9f-8d6f-126e75775b07,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Deliberate Practice,Combination,Intellectual Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Somatic Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Intellectual Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Internalization,Somatic Tacit Knowledge,AI
+50b7835c-7ab5-4c05-9723-46fea133e019,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+5d3782ef-582c-4c7c-8717-5fbd9f9862fe,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,AI
+5d3782ef-582c-4c7c-8717-5fbd9f9862fe,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,Virtual Reality
+5d3782ef-582c-4c7c-8717-5fbd9f9862fe,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,Augment Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Externalization,Somatic Tacit Knowledge,Virtual Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Externalization,Somatic Tacit Knowledge,Augment Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Externalization,Collective Tacit Knowledge,Virtual Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Externalization,Collective Tacit Knowledge,Augment Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Somatic Tacit Knowledge,Virtual Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Somatic Tacit Knowledge,Augment Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Collective Tacit Knowledge,Virtual Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Combination,Collective Tacit Knowledge,Augment Reality
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Communities of practice,Socialization,Collective Tacit Knowledge,AI
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Communities of practice,Socialization,Relational Tacit Knowledge,AI
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Communities of practice,Combination,Collective Tacit Knowledge,AI
+f06f07f8-51d8-4dd7-b78c-6f285b06e6df,I. Division I: Services,Major Group 80: Health Services,Communities of practice,Combination,Relational Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Mentoring,Socialization,Somatic Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Mentoring,Socialization,Relational Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Mentoring,Internalization,Somatic Tacit Knowledge,AI
+93e90a7c-51a8-480d-88ce-89a77ee4dc65,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Mentoring,Internalization,Relational Tacit Knowledge,AI
+2c05d406-51cd-4ac2-9286-8bc9bf83f918,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+2c05d406-51cd-4ac2-9286-8bc9bf83f918,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+2c05d406-51cd-4ac2-9286-8bc9bf83f918,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+2c05d406-51cd-4ac2-9286-8bc9bf83f918,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,Externalization,Intellectual Tacit Knowledge,Virtual Reality
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,Externalization,Intellectual Tacit Knowledge,Augment Reality
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,Combination,Intellectual Tacit Knowledge,Virtual Reality
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,Combination,Intellectual Tacit Knowledge,Augment Reality
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Collective Tacit Knowledge,AI
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Collective Tacit Knowledge,Big Data
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Combination,Collective Tacit Knowledge,AI
+0fb2114b-6c4d-4b2e-bc6d-f024730e146c,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Combination,Collective Tacit Knowledge,Big Data
+4d240863-f377-4ba0-a30e-f2879023d4fa,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+4d240863-f377-4ba0-a30e-f2879023d4fa,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+4d240863-f377-4ba0-a30e-f2879023d4fa,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+4d240863-f377-4ba0-a30e-f2879023d4fa,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+a1305120-b63b-41b4-ac22-54ba888c3b71,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Communities of practice,,Collective Tacit Knowledge,AI
+a1305120-b63b-41b4-ac22-54ba888c3b71,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Communities of practice,,Collective Tacit Knowledge,Big Data
+a1305120-b63b-41b4-ac22-54ba888c3b71,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Communities of practice,,Intellectual Tacit Knowledge,AI
+a1305120-b63b-41b4-ac22-54ba888c3b71,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Communities of practice,,Intellectual Tacit Knowledge,Big Data
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,Big Data
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Internalization,Collective Tacit Knowledge,AI
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Internalization,Collective Tacit Knowledge,Big Data
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Internalization,Intellectual Tacit Knowledge,AI
+eb181bc8-1464-446e-aad8-fbee9b835fd5,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Internalization,Intellectual Tacit Knowledge,Big Data
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Socialization,Somatic Tacit Knowledge,AI
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Socialization,Somatic Tacit Knowledge,Big Data
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Socialization,Relational Tacit Knowledge,AI
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Socialization,Relational Tacit Knowledge,Big Data
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Somatic Tacit Knowledge,AI
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Somatic Tacit Knowledge,Big Data
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+48116f92-f57d-4563-8e45-077c25535d5e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+67433d51-d982-447b-9563-13d6ac498087,"A. Division A: Agriculture, Forestry, And Fishing","Major Group 09: Fishing, hunting, and trapping",Communities of practice,,,Virtual Reality
+67433d51-d982-447b-9563-13d6ac498087,"A. Division A: Agriculture, Forestry, And Fishing","Major Group 09: Fishing, hunting, and trapping",Communities of practice,,,Augment Reality
+e608be15-6c14-414c-a8f5-b5bd70e9df78,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Deliberate Practice,,,AI
+e608be15-6c14-414c-a8f5-b5bd70e9df78,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Deliberate Practice,,,Computer Vision
+057bb6f1-1f94-4650-a935-6f3e4d1274cd,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+057bb6f1-1f94-4650-a935-6f3e4d1274cd,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+057bb6f1-1f94-4650-a935-6f3e4d1274cd,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+057bb6f1-1f94-4650-a935-6f3e4d1274cd,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+9fa3ca1c-5664-4458-8da9-4b8e0522b610,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Communities of practice,,,Digital Twins
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,AI
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,Big Data
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,Virtual Reality
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,Augment Reality
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,Digital Twins
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Intellectual Tacit Knowledge,AI
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Intellectual Tacit Knowledge,Big Data
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Intellectual Tacit Knowledge,Virtual Reality
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Intellectual Tacit Knowledge,Augment Reality
+c800211d-04fa-4848-8425-5b43a639a169,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Intellectual Tacit Knowledge,Digital Twins
+5b71a2b5-4839-4b84-b9b0-a579ab95d3a8,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+5b71a2b5-4839-4b84-b9b0-a579ab95d3a8,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+5b71a2b5-4839-4b84-b9b0-a579ab95d3a8,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+5b71a2b5-4839-4b84-b9b0-a579ab95d3a8,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+36ab4b46-a31b-4310-bc61-43e06da08bc2,I. Division I: Services,Major Group 82: Educational Services,Mentoring,,,Virtual Reality
+36ab4b46-a31b-4310-bc61-43e06da08bc2,I. Division I: Services,Major Group 82: Educational Services,Mentoring,,,Augment Reality
+de7925d0-0574-4d2a-9da1-40de58260ec7,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,,AI
+de7925d0-0574-4d2a-9da1-40de58260ec7,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,,Big Data
+f55adbe8-9c42-4428-8db5-6089ac03d482,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,,Relational Tacit Knowledge,AI
+f55adbe8-9c42-4428-8db5-6089ac03d482,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,,Collective Tacit Knowledge,AI
+f55adbe8-9c42-4428-8db5-6089ac03d482,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,,Intellectual Tacit Knowledge,AI
+d89af7c9-df83-493c-a2ec-c47298007751,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,Virtual Reality
+d89af7c9-df83-493c-a2ec-c47298007751,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,Augment Reality
+d89af7c9-df83-493c-a2ec-c47298007751,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,AI
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Socialization,Somatic Tacit Knowledge,Virtual Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Socialization,Somatic Tacit Knowledge,Augment Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Socialization,Relational Tacit Knowledge,Virtual Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Socialization,Relational Tacit Knowledge,Augment Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Socialization,Collective Tacit Knowledge,Virtual Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Socialization,Collective Tacit Knowledge,Augment Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Externalization,Somatic Tacit Knowledge,Virtual Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Externalization,Somatic Tacit Knowledge,Augment Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Externalization,Relational Tacit Knowledge,Virtual Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Externalization,Relational Tacit Knowledge,Augment Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Externalization,Collective Tacit Knowledge,Virtual Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Storytelling,Externalization,Collective Tacit Knowledge,Augment Reality
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Combination,Collective Tacit Knowledge,AI
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Combination,Collective Tacit Knowledge,Big Data
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Combination,Intellectual Tacit Knowledge,AI
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Combination,Intellectual Tacit Knowledge,Big Data
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Internalization,Collective Tacit Knowledge,AI
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Internalization,Collective Tacit Knowledge,Big Data
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+741528ef-f5c1-4caa-9078-70eed3ade483,I. Division I: Services,Major Group 83: Social Services,Communities of practice,Internalization,Intellectual Tacit Knowledge,Big Data
+77836a2d-a6c1-4b8c-9f4b-9932504d8dae,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Relational Tacit Knowledge,AI
+77836a2d-a6c1-4b8c-9f4b-9932504d8dae,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Relational Tacit Knowledge,Big Data
+77836a2d-a6c1-4b8c-9f4b-9932504d8dae,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,AI
+77836a2d-a6c1-4b8c-9f4b-9932504d8dae,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,Collective Tacit Knowledge,Big Data
+d70c9332-e4d7-42ae-8245-b945ef70ea6a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+d70c9332-e4d7-42ae-8245-b945ef70ea6a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+d70c9332-e4d7-42ae-8245-b945ef70ea6a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+d70c9332-e4d7-42ae-8245-b945ef70ea6a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+2300fc98-e570-4d87-be66-655b543aaa95,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,,Virtual Reality
+2300fc98-e570-4d87-be66-655b543aaa95,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,,Augment Reality
+fa59e0db-0a14-427b-b834-4918265b22b9,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,,Virtual Reality
+e5bbba6a-1735-4004-a700-ec80d3d53006,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Thematic analysis with coding method,Combination,Intellectual Tacit Knowledge,AI
+e5bbba6a-1735-4004-a700-ec80d3d53006,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Thematic analysis with coding method,Combination,Intellectual Tacit Knowledge,Big Data
+e5bbba6a-1735-4004-a700-ec80d3d53006,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Thematic analysis with coding method,Internalization,Intellectual Tacit Knowledge,AI
+e5bbba6a-1735-4004-a700-ec80d3d53006,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Thematic analysis with coding method,Internalization,Intellectual Tacit Knowledge,Big Data
+f82951fe-4e96-4ff0-b33f-84556b255376,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Critical Incident Technique,Externalization,Somatic Tacit Knowledge,AI
+f82951fe-4e96-4ff0-b33f-84556b255376,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Critical Incident Technique,Externalization,Relational Tacit Knowledge,AI
+f82951fe-4e96-4ff0-b33f-84556b255376,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Critical Incident Technique,Combination,Somatic Tacit Knowledge,AI
+f82951fe-4e96-4ff0-b33f-84556b255376,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Critical Incident Technique,Combination,Relational Tacit Knowledge,AI
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Big Data
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Big Data
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,Socialization,Somatic Tacit Knowledge,AI
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,Socialization,Intellectual Tacit Knowledge,AI
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,Internalization,Somatic Tacit Knowledge,AI
+dfbbef16-9b8d-4c0c-9c77-b98ff46809f9,D. Division D: Manufacturing,Major Group 37: Transportation Equipment,Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+8c92f130-b564-4cbc-bde0-5d1d0bde6a90,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Communities of practice,,Relational Tacit Knowledge,AI
+8c92f130-b564-4cbc-bde0-5d1d0bde6a90,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Communities of practice,,Relational Tacit Knowledge,Big Data
+8c92f130-b564-4cbc-bde0-5d1d0bde6a90,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Communities of practice,,Collective Tacit Knowledge,AI
+8c92f130-b564-4cbc-bde0-5d1d0bde6a90,I. Division I: Services,"Major Group 87: Engineering, Accounting, Research, Management, And Related Services",Communities of practice,,Collective Tacit Knowledge,Big Data
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",System-Dynamics Models,Internalization,Intellectual Tacit Knowledge,Big Data
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",System-Dynamics Models,Internalization,Somatic Tacit Knowledge,Big Data
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",System-Dynamics Models,Combination,Intellectual Tacit Knowledge,Big Data
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",System-Dynamics Models,Combination,Somatic Tacit Knowledge,Big Data
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",Techno-Economic Feasibility Analysis,Externalization,Relational Tacit Knowledge,AI
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",Techno-Economic Feasibility Analysis,Externalization,Intellectual Tacit Knowledge,AI
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",Techno-Economic Feasibility Analysis,Combination,Relational Tacit Knowledge,AI
+72db1f29-20be-482a-b00e-a52b1988f015,B. Division B: Mining,"Major Group 12: Coal Mining, Major Group 13: Oil And Gas Extraction",Techno-Economic Feasibility Analysis,Combination,Intellectual Tacit Knowledge,AI
+6a3a7a82-6228-414a-aa2e-b9cae9b381fc,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,AI
+6a3a7a82-6228-414a-aa2e-b9cae9b381fc,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,Big Data
+6a3a7a82-6228-414a-aa2e-b9cae9b381fc,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,Virtual Reality
+6a3a7a82-6228-414a-aa2e-b9cae9b381fc,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,Augment Reality
+6a3a7a82-6228-414a-aa2e-b9cae9b381fc,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,Digital Twins
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Combination,Somatic Tacit Knowledge,Virtual Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Combination,Somatic Tacit Knowledge,Augment Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Combination,Intellectual Tacit Knowledge,Virtual Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Combination,Intellectual Tacit Knowledge,Augment Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Internalization,Somatic Tacit Knowledge,Virtual Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Internalization,Somatic Tacit Knowledge,Augment Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Internalization,Intellectual Tacit Knowledge,Virtual Reality
+c9196b03-9ba4-4fa5-ad6f-66499cacbe90,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Training,Internalization,Intellectual Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Critical Incident Technique,Socialization,Relational Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Critical Incident Technique,Socialization,Somatic Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Critical Incident Technique,Externalization,Relational Tacit Knowledge,Augment Reality
+26853a45-3d4c-42b8-9248-804c9b5a8b3e,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Critical Incident Technique,Externalization,Somatic Tacit Knowledge,Augment Reality
+b8f33092-6a6d-4a79-8653-d00fed7d134a,,,Mentoring,,,AI
+2bdc9dc8-d5d6-4169-8b4e-65406bb89e91,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,,,Virtual Reality
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Socialization,Somatic Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Socialization,Somatic Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Socialization,Relational Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Socialization,Relational Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Socialization,Intellectual Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Socialization,Intellectual Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Externalization,Somatic Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Externalization,Somatic Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Externalization,Relational Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Externalization,Relational Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Externalization,Intellectual Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Externalization,Intellectual Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Internalization,Somatic Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Internalization,Somatic Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Internalization,Relational Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Internalization,Relational Tacit Knowledge,Big Data
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Internalization,Intellectual Tacit Knowledge,AI
+5b09e640-ca90-4f15-92cc-ddc6a3c389d4,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Mentoring,Internalization,Intellectual Tacit Knowledge,Big Data
+a2b0488a-a676-4fe6-ba23-8e0a78413cbd,I. Division I: Services,Major Group 79: Amusement And Recreation Services,Deliberate Practice,,,Virtual Reality
+a2b0488a-a676-4fe6-ba23-8e0a78413cbd,I. Division I: Services,Major Group 79: Amusement And Recreation Services,Deliberate Practice,,,Augment Reality
+7ac2b8d6-98fe-4e8b-8048-9c3c546e6256,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,,,AI
+7ac2b8d6-98fe-4e8b-8048-9c3c546e6256,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Knowledge Harvesting Workshops,,,Big Data
+7ac2b8d6-98fe-4e8b-8048-9c3c546e6256,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,,,AI
+7ac2b8d6-98fe-4e8b-8048-9c3c546e6256,D. Division D: Manufacturing,Major Group 20: Food And Kindred Products,Communities of practice,,,Big Data
+1676320e-a327-44da-be2d-ee95360dd361,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Communities of practice,,Relational Tacit Knowledge,Digital Twins
+1676320e-a327-44da-be2d-ee95360dd361,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Communities of practice,,Collective Tacit Knowledge,Digital Twins
+9d43813e-c365-47ae-974c-748508ce4e7a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 45: Transportation By Air,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+9d43813e-c365-47ae-974c-748508ce4e7a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 45: Transportation By Air,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+9d43813e-c365-47ae-974c-748508ce4e7a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 45: Transportation By Air,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+9d43813e-c365-47ae-974c-748508ce4e7a,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 45: Transportation By Air,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+8bced323-29fc-4fdd-a3d8-909de3d88a9f,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,,Virtual Reality
+8bced323-29fc-4fdd-a3d8-909de3d88a9f,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,,Augment Reality
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Socialization,Somatic Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Socialization,Intellectual Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Internalization,Somatic Tacit Knowledge,AI
+cccc404a-e150-4f1f-a094-c9f1947a4e8b,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+39b5dcdb-3342-4005-a0fa-ad1ec3fc313c,B. Division B: Mining,Major Group 10: Metal Mining,Knowledge Harvesting Workshops,,,Virtual Reality
+39b5dcdb-3342-4005-a0fa-ad1ec3fc313c,B. Division B: Mining,Major Group 10: Metal Mining,Knowledge Harvesting Workshops,,,Augment Reality
+5714281b-9f2c-4c5c-8d4b-d7f182c04bbf,B. Division B: Mining,Major Group 10: Metal Mining,Mentoring,,,Virtual Reality
+5714281b-9f2c-4c5c-8d4b-d7f182c04bbf,B. Division B: Mining,Major Group 10: Metal Mining,Mentoring,,,Augment Reality
+30740fc5-632e-417c-9fd3-09c6e733b34c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+30740fc5-632e-417c-9fd3-09c6e733b34c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+30740fc5-632e-417c-9fd3-09c6e733b34c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+30740fc5-632e-417c-9fd3-09c6e733b34c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+c189b335-250e-435a-8d0a-a2e6c34ff4eb,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,,AI
+c189b335-250e-435a-8d0a-a2e6c34ff4eb,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,,Big Data
+44128de4-fb5f-40e1-b796-e2241ca0dde2,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,Somatic Tacit Knowledge,Virtual Reality
+44128de4-fb5f-40e1-b796-e2241ca0dde2,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,Somatic Tacit Knowledge,Augment Reality
+44128de4-fb5f-40e1-b796-e2241ca0dde2,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,Intellectual Tacit Knowledge,Virtual Reality
+44128de4-fb5f-40e1-b796-e2241ca0dde2,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,Intellectual Tacit Knowledge,Augment Reality
+2f137b2a-3280-41cf-aaee-b1cb10457e29,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Socialization,Somatic Tacit Knowledge,Virtual Reality
+2f137b2a-3280-41cf-aaee-b1cb10457e29,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Socialization,Intellectual Tacit Knowledge,Virtual Reality
+2f137b2a-3280-41cf-aaee-b1cb10457e29,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Internalization,Somatic Tacit Knowledge,Virtual Reality
+2f137b2a-3280-41cf-aaee-b1cb10457e29,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,Internalization,Intellectual Tacit Knowledge,Virtual Reality
+088b5ce3-5137-4061-8359-89dc61c69275,D. Division D: Manufacturing,"Major Group 36: Electronic And Other Electrical Equipment And Components, Except Computer Equipment",Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+088b5ce3-5137-4061-8359-89dc61c69275,D. Division D: Manufacturing,"Major Group 36: Electronic And Other Electrical Equipment And Components, Except Computer Equipment",Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+088b5ce3-5137-4061-8359-89dc61c69275,D. Division D: Manufacturing,"Major Group 36: Electronic And Other Electrical Equipment And Components, Except Computer Equipment",Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+088b5ce3-5137-4061-8359-89dc61c69275,D. Division D: Manufacturing,"Major Group 36: Electronic And Other Electrical Equipment And Components, Except Computer Equipment",Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+eeca8327-3dc7-48fe-a46e-184dc5dbfa18,I. Division I: Services,Major Group 82: Educational Services,Virtual Reality Learning Module,,,Virtual Reality
+133ab701-f6d8-4883-98fb-82bd03675d6a,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+133ab701-f6d8-4883-98fb-82bd03675d6a,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+133ab701-f6d8-4883-98fb-82bd03675d6a,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+133ab701-f6d8-4883-98fb-82bd03675d6a,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+ab30da37-5c4a-4f6a-9355-d6e6f3a3087d,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Socialization,Relational Tacit Knowledge,Virtual Reality
+ab30da37-5c4a-4f6a-9355-d6e6f3a3087d,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Socialization,Collective Tacit Knowledge,Virtual Reality
+ab30da37-5c4a-4f6a-9355-d6e6f3a3087d,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Externalization,Relational Tacit Knowledge,Virtual Reality
+ab30da37-5c4a-4f6a-9355-d6e6f3a3087d,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Externalization,Collective Tacit Knowledge,Virtual Reality
+a067aba0-e407-4935-93ac-4fde0ff28772,I. Division I: Services,Major Group 80: Health Services,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+a067aba0-e407-4935-93ac-4fde0ff28772,I. Division I: Services,Major Group 80: Health Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+a067aba0-e407-4935-93ac-4fde0ff28772,I. Division I: Services,Major Group 80: Health Services,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+a067aba0-e407-4935-93ac-4fde0ff28772,I. Division I: Services,Major Group 80: Health Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Socialization,Relational Tacit Knowledge,AI
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Socialization,Relational Tacit Knowledge,Big Data
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Socialization,Collective Tacit Knowledge,AI
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Socialization,Collective Tacit Knowledge,Big Data
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Externalization,Relational Tacit Knowledge,AI
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Externalization,Relational Tacit Knowledge,Big Data
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Externalization,Collective Tacit Knowledge,AI
+498774e9-dbdb-4afb-b34d-dac36128b0c2,I. Division I: Services,Major Group 82: Educational Services,Knowledge Cafés,Externalization,Collective Tacit Knowledge,Big Data
+754a2314-802b-4382-a91a-47e1fd12e2cf,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Simulation-based Learning,,,Virtual Reality
+754a2314-802b-4382-a91a-47e1fd12e2cf,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services","Major Group 49: Electric, Gas, And Sanitary Services",Simulation-based Learning,,,Augment Reality
+cd9a0642-b43e-406c-9403-978a1a75dbe9,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Externalization,Relational Tacit Knowledge,AI
+cd9a0642-b43e-406c-9403-978a1a75dbe9,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Externalization,Collective Tacit Knowledge,AI
+cd9a0642-b43e-406c-9403-978a1a75dbe9,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Combination,Relational Tacit Knowledge,AI
+cd9a0642-b43e-406c-9403-978a1a75dbe9,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Combination,Collective Tacit Knowledge,AI
+7e8de737-3faf-4cb6-b40f-2f585c1a5fcf,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,,,AI
+7e8de737-3faf-4cb6-b40f-2f585c1a5fcf,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,,,Big Data
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Socialization,Somatic Tacit Knowledge,Digital Twins
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Socialization,Relational Tacit Knowledge,Digital Twins
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Socialization,Collective Tacit Knowledge,Digital Twins
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Externalization,Somatic Tacit Knowledge,Digital Twins
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Externalization,Relational Tacit Knowledge,Digital Twins
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Storytelling,Externalization,Collective Tacit Knowledge,Digital Twins
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Combination,Intellectual Tacit Knowledge,AI
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Combination,Intellectual Tacit Knowledge,Big Data
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Combination,Collective Tacit Knowledge,AI
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Combination,Collective Tacit Knowledge,Big Data
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Internalization,Intellectual Tacit Knowledge,Big Data
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Internalization,Collective Tacit Knowledge,AI
+4f43ca52-7db0-4465-afa7-34ab8b5356e4,I. Division I: Services,"Major Group 84: Museums, Art Galleries, And Botanical And Zoological Gardens",Communities of practice,Internalization,Collective Tacit Knowledge,Big Data
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,Relational Tacit Knowledge,AI
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,Relational Tacit Knowledge,Big Data
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,Collective Tacit Knowledge,AI
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Knowledge Harvesting Workshops,,Collective Tacit Knowledge,Big Data
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Relational Tacit Knowledge,AI
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Relational Tacit Knowledge,Big Data
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Collective Tacit Knowledge,AI
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Socialization,Collective Tacit Knowledge,Big Data
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Externalization,Relational Tacit Knowledge,AI
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Externalization,Relational Tacit Knowledge,Big Data
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Externalization,Collective Tacit Knowledge,AI
+eee16e67-bce6-4afe-b359-93694cbc2e91,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,Externalization,Collective Tacit Knowledge,Big Data
+a2f72fe8-9bbb-4701-b609-97472ee2c776,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,Virtual Reality
+a2f72fe8-9bbb-4701-b609-97472ee2c776,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,Augment Reality
+a2f72fe8-9bbb-4701-b609-97472ee2c776,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,Virtual Reality
+a2f72fe8-9bbb-4701-b609-97472ee2c776,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,Augment Reality
+ac57dc03-d375-469f-acc0-f3c1b814018e,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Communities of practice,,Relational Tacit Knowledge,AI
+ac57dc03-d375-469f-acc0-f3c1b814018e,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Communities of practice,,Relational Tacit Knowledge,Big Data
+ac57dc03-d375-469f-acc0-f3c1b814018e,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Communities of practice,,Collective Tacit Knowledge,AI
+ac57dc03-d375-469f-acc0-f3c1b814018e,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Communities of practice,,Collective Tacit Knowledge,Big Data
+ac57dc03-d375-469f-acc0-f3c1b814018e,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Communities of practice,,Intellectual Tacit Knowledge,AI
+ac57dc03-d375-469f-acc0-f3c1b814018e,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Communities of practice,,Intellectual Tacit Knowledge,Big Data
+cf7a34a5-4f47-435f-94a0-48778a68a1a9,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,AI
+b2066b10-bc05-4cbe-b9ed-4f7c1efa5d11,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,,AI
+b2066b10-bc05-4cbe-b9ed-4f7c1efa5d11,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,,Big Data
+232d233d-11b4-4d5e-8059-4ed2b9b1a24d,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,,AI
+232d233d-11b4-4d5e-8059-4ed2b9b1a24d,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,,Big Data
+314cc5af-da37-466b-a715-c13704e1113c,I. Division I: Services,Major Group 80: Health Services,Deliberate Practice,,,Virtual Reality
+cb06596e-b7bc-4add-ba36-1b9e1d51d510,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+cb06596e-b7bc-4add-ba36-1b9e1d51d510,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+cb06596e-b7bc-4add-ba36-1b9e1d51d510,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+cb06596e-b7bc-4add-ba36-1b9e1d51d510,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+f9e14968-ecda-4efe-92b0-ab47d95a292b,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Storytelling,Socialization,,AI
+f9e14968-ecda-4efe-92b0-ab47d95a292b,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Storytelling,Socialization,,Big Data
+f9e14968-ecda-4efe-92b0-ab47d95a292b,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Storytelling,Externalization,,AI
+f9e14968-ecda-4efe-92b0-ab47d95a292b,C. Division C: Construction,Major Group 16: Heavy Construction Other Than Building Construction Contractors,Storytelling,Externalization,,Big Data
+06eb4da0-23c2-4f87-9bd0-7e07505c8299,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,Somatic Tacit Knowledge,Virtual Reality
+06eb4da0-23c2-4f87-9bd0-7e07505c8299,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,Intellectual Tacit Knowledge,Virtual Reality
+4daed8b9-94c2-4e1c-853d-8ee1af487d33,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Digital Twins
+4daed8b9-94c2-4e1c-853d-8ee1af487d33,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Digital Twins
+4daed8b9-94c2-4e1c-853d-8ee1af487d33,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Digital Twins
+4daed8b9-94c2-4e1c-853d-8ee1af487d33,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Digital Twins
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Socialization,Relational Tacit Knowledge,AI
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Socialization,Relational Tacit Knowledge,Big Data
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Socialization,Collective Tacit Knowledge,AI
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Socialization,Collective Tacit Knowledge,Big Data
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,AI
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Externalization,Relational Tacit Knowledge,Big Data
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,Big Data
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,AI
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Combination,Relational Tacit Knowledge,Big Data
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+1b8493b7-259b-43c1-92ed-01b8df027a39,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+908bd7c0-fda2-4c14-b38c-d62aa7ef96c2,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,,AI
+908bd7c0-fda2-4c14-b38c-d62aa7ef96c2,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,,Big Data
+908bd7c0-fda2-4c14-b38c-d62aa7ef96c2,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,,Virtual Reality
+908bd7c0-fda2-4c14-b38c-d62aa7ef96c2,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,,,Augment Reality
+2109107d-ed4e-4462-8e28-5a25961c7eef,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,,AI
+2109107d-ed4e-4462-8e28-5a25961c7eef,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,,Big Data
+ed517a82-db71-4065-8441-e14d9ed5f68f,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Deliberate Practice,,,Virtual Reality
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Externalization,Relational Tacit Knowledge,AI
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Externalization,Relational Tacit Knowledge,Big Data
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Externalization,Collective Tacit Knowledge,AI
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Externalization,Collective Tacit Knowledge,Big Data
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Combination,Relational Tacit Knowledge,AI
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Combination,Relational Tacit Knowledge,Big Data
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Combination,Collective Tacit Knowledge,AI
+12b3599c-eb9d-42e4-863a-abdba51f51e4,I. Division I: Services,Major Group 82: Educational Services,Critical Incident Technique,Combination,Collective Tacit Knowledge,Big Data
+5e5119a1-a135-4073-8ea1-ea053e3ed8ba,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,AI
+5e5119a1-a135-4073-8ea1-ea053e3ed8ba,I. Division I: Services,Major Group 80: Health Services,Communities of practice,,,Big Data
+6b80d474-1474-4024-b6a7-461059edb77b,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,AI
+6b80d474-1474-4024-b6a7-461059edb77b,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Relational Tacit Knowledge,Big Data
+6b80d474-1474-4024-b6a7-461059edb77b,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,AI
+6b80d474-1474-4024-b6a7-461059edb77b,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,Collective Tacit Knowledge,Big Data
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,Big Data
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,Big Data
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Internalization,Collective Tacit Knowledge,AI
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Internalization,Collective Tacit Knowledge,Big Data
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Internalization,Intellectual Tacit Knowledge,AI
+e6268b84-d57f-46f5-baf4-f2598080a9ea,"E. Division E: Transportation, Communications, Electric, Gas, And Sanitary Services",Major Group 48: Communications,Knowledge Harvesting Workshops,Internalization,Intellectual Tacit Knowledge,Big Data
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Socialization,Collective Tacit Knowledge,AI
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Socialization,Collective Tacit Knowledge,Big Data
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Socialization,Intellectual Tacit Knowledge,AI
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Socialization,Intellectual Tacit Knowledge,Big Data
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Combination,Collective Tacit Knowledge,AI
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Combination,Collective Tacit Knowledge,Big Data
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Combination,Intellectual Tacit Knowledge,AI
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Combination,Intellectual Tacit Knowledge,Big Data
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Internalization,Collective Tacit Knowledge,AI
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Internalization,Collective Tacit Knowledge,Big Data
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Internalization,Intellectual Tacit Knowledge,AI
+08f09a30-07d9-48ab-89a1-7ec58b9081cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 07: Agricultural Services,Communities of practice,Internalization,Intellectual Tacit Knowledge,Big Data
+52d3c73d-743e-440d-9638-ee9ba27cc208,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,,Virtual Reality
+52d3c73d-743e-440d-9638-ee9ba27cc208,I. Division I: Services,Major Group 82: Educational Services,Communities of practice,,,Augment Reality
+ba20c38d-b797-4815-b3b9-f7cce1a2a4f0,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Communities of practice,,Relational Tacit Knowledge,Digital Twins
+ba20c38d-b797-4815-b3b9-f7cce1a2a4f0,C. Division C: Construction,Major Group 15: Building Construction General Contractors And Operative Builders,Communities of practice,,Collective Tacit Knowledge,Digital Twins
+8c6ed83c-03b3-47c9-b22a-b30a83db8d15,D. Division D: Manufacturing,"Major Group 24: Lumber And Wood Products, Except Furniture",Communities of practice,,,Digital Twins
+f1df3b08-9e2a-4587-8ff3-c3c8c6435f38,D. Division D: Manufacturing,Major Group 28: Chemicals And Allied Products,Communities of practice,,,AI
+f1df3b08-9e2a-4587-8ff3-c3c8c6435f38,D. Division D: Manufacturing,Major Group 28: Chemicals And Allied Products,Communities of practice,,,Big Data
+6cb691cf-55f5-4b70-8818-d1519b1fc18d,I. Division I: Services,Major Group 82: Educational Services,Deliberate Practice,,,Augment Reality
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Intellectual Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Externalization,Collective Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Intellectual Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Knowledge Harvesting Workshops,Combination,Collective Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Socialization,Relational Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Socialization,Somatic Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Internalization,Relational Tacit Knowledge,AI
+0c28a50c-e601-4d92-9a23-a97ddbce109c,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Internalization,Somatic Tacit Knowledge,AI
+601ca045-35ac-4b2b-b53f-ba5b2337a8ae,I. Division I: Services,Major Group 82: Educational Services,Storytelling,Socialization,Somatic Tacit Knowledge,AI
+601ca045-35ac-4b2b-b53f-ba5b2337a8ae,I. Division I: Services,Major Group 82: Educational Services,Storytelling,Socialization,Relational Tacit Knowledge,AI
+601ca045-35ac-4b2b-b53f-ba5b2337a8ae,I. Division I: Services,Major Group 82: Educational Services,Storytelling,Socialization,Collective Tacit Knowledge,AI
+601ca045-35ac-4b2b-b53f-ba5b2337a8ae,I. Division I: Services,Major Group 82: Educational Services,Storytelling,Externalization,Somatic Tacit Knowledge,AI
+601ca045-35ac-4b2b-b53f-ba5b2337a8ae,I. Division I: Services,Major Group 82: Educational Services,Storytelling,Externalization,Relational Tacit Knowledge,AI
+601ca045-35ac-4b2b-b53f-ba5b2337a8ae,I. Division I: Services,Major Group 82: Educational Services,Storytelling,Externalization,Collective Tacit Knowledge,AI
+406026e5-b8c9-456e-b49f-14737ef899cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,Relational Tacit Knowledge,AI
+406026e5-b8c9-456e-b49f-14737ef899cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,Relational Tacit Knowledge,Big Data
+406026e5-b8c9-456e-b49f-14737ef899cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,Collective Tacit Knowledge,AI
+406026e5-b8c9-456e-b49f-14737ef899cc,"A. Division A: Agriculture, Forestry, And Fishing",Major Group 01: Agricultural Production Crops,Communities of practice,,Collective Tacit Knowledge,Big Data
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,After-Action Reviews,Externalization,Relational Tacit Knowledge,AI
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,After-Action Reviews,Externalization,Collective Tacit Knowledge,AI
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,After-Action Reviews,Combination,Relational Tacit Knowledge,AI
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,After-Action Reviews,Combination,Collective Tacit Knowledge,AI
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Socialization,Somatic Tacit Knowledge,Big Data
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Socialization,Intellectual Tacit Knowledge,Big Data
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Internalization,Somatic Tacit Knowledge,Big Data
+c0fd11b0-6b56-4c8c-9e48-11871343e570,D. Division D: Manufacturing,Major Group 35: Industrial And Commercial Machinery And Computer Equipment,Communities of practice,Internalization,Intellectual Tacit Knowledge,Big Data
+6fd2ce8f-c4bc-4e59-8d2c-72d2fb134334,J. Division J: Public Administration,"Major Group 91: Executive, Legislative, And General Government, Except Finance",Communities of practice,,Relational Tacit Knowledge,AI
+6fd2ce8f-c4bc-4e59-8d2c-72d2fb134334,J. Division J: Public Administration,"Major Group 91: Executive, Legislative, And General Government, Except Finance",Communities of practice,,Relational Tacit Knowledge,Big Data
+6fd2ce8f-c4bc-4e59-8d2c-72d2fb134334,J. Division J: Public Administration,"Major Group 91: Executive, Legislative, And General Government, Except Finance",Communities of practice,,Collective Tacit Knowledge,AI
+6fd2ce8f-c4bc-4e59-8d2c-72d2fb134334,J. Division J: Public Administration,"Major Group 91: Executive, Legislative, And General Government, Except Finance",Communities of practice,,Collective Tacit Knowledge,Big Data

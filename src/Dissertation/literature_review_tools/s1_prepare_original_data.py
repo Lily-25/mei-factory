@@ -189,7 +189,7 @@ class PreparePaper:
 
     @staticmethod
     def prepare_proquest():
-        input_file = "../data/papers/input/Cmd_3_Proquest/ProQuest-Cmd3-20260206.txt"
+        input_file = "../data/papers/input/combine-1-proquest/ProQuestDocuments-2026-03-02.txt"
         output_file = "../data/papers/midput/ProQuest-original-text.json"
         PrepareProQuest().semi_structure_papers(input_file, output_file)
 
@@ -198,7 +198,7 @@ class PreparePaper:
 
     @staticmethod
     def prepare_wos():
-        input_file = "../data/papers/input/Cmd_3_WoS/WoS-Cmd3-20260206.csv"
+        input_file = "../data/papers/input/combine-1-wos/savedrecs.csv"
         output_dir = "../data/papers/midput/"
         PrepareWoS().select_fields(input_file, output_dir)
 

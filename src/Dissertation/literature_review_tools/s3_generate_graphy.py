@@ -2,6 +2,7 @@ import json
 
 from llm_mgmt.gemini_api_interface import batch_extract as batch_extract_by_gemini
 from llm_mgmt.qwen_api_interface import batch_extract as batch_extract_by_qwen
+from utils.translator import translate_with_truncation
 import pandas as pd
 import uuid
 import itertools
@@ -45,29 +46,34 @@ class GraphyGenerator:
 
     @staticmethod
     def generate_graphy():
-        input_file = "../data/papers/midput/ssp_extract_activities.json"
-        output_file = "../data/papers/output/activity_combinations.csv"
+        input_file = "../data/papers/midput/ssp_extract_activities.csv"
+        output_extract_file = "../data/papers/output/ssp_extract_activities.csv"
+        output_activity_file = "../data/papers/output/activity_combinations.csv"
 
-        with open(input_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+        df = pd.read_csv(input_file)
 
         relation_rows = []
         activity_node_rows = []
         tech_node_rows = []
-        for item in data:
+        selected_uuid = []
+        for i, item in df.iterrows():
             industries = ast.literal_eval(item['industries'])
             activities = ast.literal_eval(item["activities"])
-            for activity in activities:
 
+            selected_uuid_flag = False
+            for activity in activities:
+                if not len(activity["technologies"]) or not len(activity["activity_name"]):
+                    continue
+
+                selected_uuid_flag = True
                 if len(activity["knowledge_flows"]) == 4:
                     activity["knowledge_flows"] = ['']
                 kf_list = activity["knowledge_flows"] if len(activity["knowledge_flows"]) > 0 else ['']
 
                 if len(activity["tacit_knowledge_types"]) == 4:
                     activity["tacit_knowledge_types"] = ['']
-                tkt_list = activity["tacit_knowledge_types"] if len(activity["tacit_knowledge_types"]) > 0 else ['']
-
-                tech_list = activity["technologies"] if len(activity["technologies"]) > 0 else ['']
+                tkt_list = activity["tacit_knowledge_types"]
+                tech_list = activity["technologies"]
 
                 activity_node_rows.append({
                     "Label": "KR_Activities",
@@ -89,11 +95,14 @@ class GraphyGenerator:
                         "tacit_knowledge_types": tkt,
                         "technologies": tech
                     })
-        # 创建DataFrame
 
+            if selected_uuid_flag:
+                selected_uuid.append(item['uuid'])
 
-        df = pd.DataFrame(relation_rows)
-        df.to_csv(output_file, index=False)
+        df[df['uuid'].isin(selected_uuid)].to_csv(output_extract_file, index=False)
+
+        df_activities = pd.DataFrame(relation_rows)
+        df_activities.to_csv(output_activity_file, index=False)
 
         graphy_dir = "../data/graph/"
 
@@ -113,7 +122,7 @@ class GraphyGenerator:
         activity_and_tk = []
         activity_and_tech = []
 
-        for i, item in df.iterrows():
+        for i, item in df_activities.iterrows():
 
             if not len(item['activity_name']):
                 continue
@@ -157,9 +166,26 @@ class GraphyGenerator:
         df_activity_and_tech = df_activity_and_tech.drop_duplicates()
         df_activity_and_tech.to_csv(f'{graphy_dir}/activity_and_tech.csv', index=False, sep='\t')
 
+    @staticmethod
+    def generate_review_template():
+        extract_file = "../data/papers/output/ssp_extract_activities.csv"
+
+        df = pd.read_csv(extract_file)
+
+        translate_list = []
+        for i, item in df.iterrows():
+            text = translate_with_truncation(item['Abstract'])
+            print(text)
+            translate_list.append(text)
+
+        df['Abstract_zh'] = translate_list
+
+        df.to_csv(extract_file, index=False)
+
 
 if __name__ == '__main__':
     #GraphyGenerator.generate_activity_by_qwen(count=1000)
-    GraphyGenerator.combine_activities()
-    GraphyGenerator.generate_graphy()
+    #GraphyGenerator.combine_activities()
+    #GraphyGenerator.generate_graphy()
+    GraphyGenerator.generate_review_template()
 
