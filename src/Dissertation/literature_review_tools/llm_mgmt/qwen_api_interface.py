@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-from src.IndividualAssignment.utiles.llm_api import get_qwen_obj
+from utils.llm_api import get_qwen_obj
 from Dissertation.literature_review_tools.llm_mgmt.prompt_generator import LiteratureReviewPrompt
 
 

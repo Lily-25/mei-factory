@@ -1,6 +1,6 @@
 import pandas as pd
 import json
-from src.IndividualAssignment.utiles.llm_api import get_deepseek_obj
+from utils.llm_api import get_deepseek_obj
 
 llm = get_deepseek_obj()
 

@@ -14,9 +14,10 @@ You are an expert academic researcher. Please read the following abstract and ex
 \- "findings": Key results or outcomes  
 \- "style": the style to research, the scope of value: {LiteratureReview.literature_style_taxonomy}  
 \- "knowledge_flows": Identify which phases of the SECI model {RetentionTaxonomy.SECI_taxonomy} are directly discussed or can be reasonably inferred from the research context, intervention design, or the nature of the knowledge being transferred. For example, does the study imply converting personal experience into explicit information, or learning through shared practice?
-\- "tacit_knowledge_types": Identify which types of tacit knowledge {RetentionTaxonomy.collins_based_tacit_knowledge_taxonomy}  are directly discussed or can be reasonably inferred as being essential to the subject matter or outcome. For example, does the research involve physical skills (Somatic), team dynamics (Relational), organizational culture (Collective), or mental models/craft (Intellectual)?
 \- "approaches": the knowledge retention approaches discussed, the preferred scope of value:  {RetentionTaxonomy.knowledge_retention_activities_taxonomy}. If the abstract clearly indicates another academically valid knowledge-retention practice not listed above, use the more appropriate term instead. 
 \- "relevance": the relevance between the research object in this paper and knowledge retention, the scope of value from 0 to 1
+\- "retiring_flag": Whether the research objective discussed knowledge retention from older workforce. the scope of value: 0 or 1
+\- "tech_flag": Whether the research objective discussed knowledge retention from older workforce. the scope of value: 0 or 1
 
 Abstract:  
 {abstract} 
@@ -30,9 +31,10 @@ Use this exact structure:
     "findings": "",
     "style": "",
     "knowledge_flows": "",
-    "tacit_knowledge_types": [],
     "approaches": [],
     "relevance": "",
+    "retiring_flag": "",
+    "tech_flag": "",
 }}""",
 
             'Cmd_Ext_Activity': f"""
@@ -49,9 +51,9 @@ industries: Identify the relevant SIC industry classification. Select the best m
 activities: This is an array of objects. For each distinct knowledge-management activity identified, you must create a separate object. This serves as the relational key to link specific flows, knowledge types, and technologies to their relevant context.
 Field Values of activities:
 activity_name: Preferred values: {RetentionTaxonomy.knowledge_retention_activities_taxonomy}.
-knowledge_flows: SECI processes occurring within that specific activity. Preferred values: {RetentionTaxonomy.SECI_taxonomy}.
-tacit_knowledge_types: Types of tacit knowledge involved in that specific activity. Preferred values: {RetentionTaxonomy.collins_based_tacit_knowledge_taxonomy}.
-technologies: Digital technologies used to facilitate that specific activity. Preferred values: {DigitalTechTaxonomy.digital_technology_taxonomy}.
+knowledge_flows: SECI processes occurring within that specific activity. Select the best match from: {RetentionTaxonomy.SECI_taxonomy}.
+tacit_knowledge_types: Types of tacit knowledge involved in that specific activity. Identify which types of tacit knowledge {RetentionTaxonomy.collins_based_tacit_knowledge_taxonomy}  are directly discussed or can be reasonably inferred as being essential to the subject matter or outcome. For example, does the research involve physical skills (Somatic), team dynamics (Relational), organizational culture (Collective), or mental models/craft (Intellectual)?
+technologies: Digital technologies used to facilitate that specific activity. Preferred values: {DigitalTechTaxonomy.digital_technology_taxonomy}.If the abstract clearly indicates another academically valid knowledge-retention practice not listed above, use the more appropriate term instead. 
 
 Output Format Rules (Strict):
 Output must be only one valid JSON object. Do not include any markdown formatting, code block indicators, backticks, or explanatory text. The response must start with {{ and end with }}.

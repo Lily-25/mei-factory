@@ -27,13 +27,12 @@ class AssessPapers:
 
         df = pd.read_csv(input_file)
 
-        filtered_df = df[(df['relevance'] > 0.5) | (df['approaches'].apply(len) > 2)]
+        filtered_df = df[((df['relevance'] > 0.5) | (df['approaches'].apply(len) > 2)) & df['tech_flag']]
 
         cols_to_drop = ['challenges',
                         'methods',
                         'findings',
                         'knowledge_flows',
-                        'tacit_knowledge_types',
                         'approaches']
         filtered_df = filtered_df.drop(columns=cols_to_drop)
 

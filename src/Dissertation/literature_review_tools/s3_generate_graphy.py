@@ -2,6 +2,7 @@ import json
 
 from llm_mgmt.gemini_api_interface import batch_extract as batch_extract_by_gemini
 from llm_mgmt.qwen_api_interface import batch_extract as batch_extract_by_qwen
+from llm_mgmt.deepseek_api_interface import DeepSeekAPI
 from utils.translator import translate_with_truncation
 import pandas as pd
 import uuid
@@ -31,8 +32,16 @@ class GraphyGenerator:
         batch_extract_by_qwen(input_file, output_file, cmd, count=count)
 
     @staticmethod
+    def generate_activity_by_deepseek(count=1):
+        input_file = "../data/papers/midput/ssp_extract_relevance.json"
+        output_file = "../data/papers/midput/ssp_extract_activities_deepseek"
+        cmd = "Cmd_Ext_Activity"
+
+        DeepSeekAPI(model_name='Reasoner').batch_extract(input_file, output_file, cmd, count=count)
+
+    @staticmethod
     def combine_activities():
-        input_file = "../data/papers/midput/ssp_extract_activities_qwen.csv"
+        input_file = "../data/papers/midput/ssp_extract_activities_deepseek.csv"
         output_file = "../data/papers/midput/ssp_extract_activities"
 
         df = pd.read_csv(input_file)
@@ -184,8 +193,11 @@ class GraphyGenerator:
 
 
 if __name__ == '__main__':
-    #GraphyGenerator.generate_activity_by_qwen(count=1000)
-    #GraphyGenerator.combine_activities()
-    #GraphyGenerator.generate_graphy()
+    GraphyGenerator.generate_activity_by_qwen()
+    """
+    GraphyGenerator.generate_activity_by_deepseek(count=1000)
+    GraphyGenerator.combine_activities()
+    GraphyGenerator.generate_graphy()
     GraphyGenerator.generate_review_template()
+    """
 
